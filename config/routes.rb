@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   resources :mainmenus, only: :index
   resources :halls, only: [:index, :new, :create]
 
-
 end
