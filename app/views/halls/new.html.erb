@@ -1,1 +1,21 @@
-new
+d<%= render "shared/header" %>
+
+<div class="item-registration">
+  <%= form_with model: @hall, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class='image'>写真</div>
+    <%= f.file_field :images, id:"item-image" %>
+    <div class='name'>名前</div>
+    <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    <div class='detail'>詳細</div>
+    <%= f.text_area :detail, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+    <div class="register-btn">
+      <%= f.submit "登録する" ,class:"register" %>
+    </div>
+  <% end %>
+
+</div>
+
+
+      
