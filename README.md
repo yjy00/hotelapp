@@ -1,24 +1,81 @@
-# README
+お世話になっております、yanooと申します。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+いただいたご指摘をもとにER図を修正しましたので、再レビューをお願いできますでしょうか？
 
-Things you may want to cover:
+アプリ概要は以下です。
 
-* Ruby version
+■アプリテーマ
+前職のホテルの料飲部において、キッチンとホールのコミュニケーションの課題を解決するアプリ
 
-* System dependencies
 
-* Configuration
+■概要
+◇基本機能
+最初にキッチンかホールかを選んでもらい、それぞれの管理画面に飛ぶ
+キッチン：仕込みをしたら登録する
+ホール：キッチンが仕込みをしたものを冷蔵庫から取り出す際に、いくつ取り出すか登録する。
+また、新しい飲み物を開ける際に登録する。→発注リストに飛ぶ。
 
-* Database creation
+◇その他機能
+使ったものを発注リストに飛ばす
+キッチンとホール間でのチャット機能
+その日の予約等確認事項を管理する機能
+常連のゲストを管理する機能　など
 
-* Database initialization
+こういった機能がコミュニケーションの解決につながると考えています。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+■機能一覧
+・冷蔵庫管理機能
+・ビバレージ管理機能
+・備品管理機能
+・発注リスト管理機能
+・発注通知機能
+・ユーザー管理機能
+・日毎の確認事項を管理する機能
+・常連のゲスト一覧機能
+・引き継ぎ帳機能
+・メニュー情報管理機能
+・スタッフとゲストの人数を管理する機能
+・チャット機能
+・チャット通知機能
+・ページネーション機能
 
-* ...
+
+■開発段階
+◇段階0  設計作業
+◇段階1　基本機能実装　AWS(EC2)でのデプロイ　テスト
+◇段階2　その他機能の実装　UIブラッシュアップ
+◇段階3　vue.js, docker, circle CI導入, SPA化
+
+
+■使用技術一覧
+◇フロントエンド
+・HTML/CSS
+・JavaScript
+・vue.js
+
+◇バックエンド
+・Ruby(3.0.0)
+・Ruby on Rails(6.1.3)
+・MySQL(8.0)
+
+◇インフラ
+・AWS(EC2/S3/EC2/RDS/ALB/S3/ACM/Route53/ECS)
+・Nginx/puma
+
+◇テスト
+・RSpec
+
+◇CI/CD
+・CircleCI
+・Capistrano
+
+◇バージョン管理
+・Git/GitHub
+
+◇開発環境
+・VScode
+・Docker
+
+よろしくお願いします。:man-bowing:
