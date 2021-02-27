@@ -1,0 +1,2 @@
+class MainmenusController < ApplicationController
+end
