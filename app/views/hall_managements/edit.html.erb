@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="item-registration">
-  <%= form_with url: hall_managements_path, model: @hall, local: true do |f| %>
+  <%= form_with url: hall_management_path, model: @hall, local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 

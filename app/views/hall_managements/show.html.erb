@@ -2,6 +2,11 @@
 
 <%= image_tag @hall.image %>
 <%= @hall.name %>
-<%= @hall.detail %>
+<% if @hall.detail.present? %>
+  <div class="hall-detail">
+    <p>詳細</p>
+    <%= @hall.detail %>
+  </div>
+<% end %>
 
 <%= link_to '編集する',  edit_hall_management_path(@hall), class: "register-new-btn" %>
