@@ -1,7 +1,7 @@
 class HallManagementsController < ApplicationController
 
   def index
-    @halls = Hall.order('updated_at DESK')
+    @halls = Hall.order('updated_at DESC')
   end
 
   def new
@@ -25,5 +25,5 @@ class HallManagementsController < ApplicationController
   def hall_params
     params.require(:hall).permit(:image, :name, :detail)
   end
-  
+
 end

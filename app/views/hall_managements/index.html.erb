@@ -1,7 +1,20 @@
 <%= render "shared/header" %>
 
 <% @halls.each do |hall| %>
-  <% hall.image %>
-  <% hall.name %>
-  <% hall.detail %>
-<% end %>>
+  <ul>
+    <li>
+      <%= link_to edit_hall_management_path(hall), class: 'edit-hall' do %>
+        <div class="hall-name">
+          <p>名前</p>
+          <%= hall.name %>
+        </div>
+        <% if hall.detail.present? %>
+          <div class="hall-detail">
+            <p>詳細</p>
+            <%= hall.detail %>
+          </div>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+<% end %>
