@@ -1,5 +1,4 @@
 class KitchenManagementsController < ApplicationController
-
   def index
     @kitchens = Kitchen.order('updated_at DESC')
   end
@@ -24,7 +23,6 @@ class KitchenManagementsController < ApplicationController
 
   def show
     @kitchen = Kitchen.find(params[:id])
-    
   end
 
   def update
@@ -41,5 +39,4 @@ class KitchenManagementsController < ApplicationController
   def kitchen_params
     params.require(:kitchen).permit(:name, :category_id, :count_id, :place_id, :detail)
   end
-
 end

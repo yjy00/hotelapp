@@ -1,5 +1,4 @@
 class Count < ActiveHash::Base
-
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '1' },
@@ -51,13 +50,10 @@ class Count < ActiveHash::Base
     { id: 48, name: '47' },
     { id: 49, name: '48' },
     { id: 50, name: '49' },
-    { id: 51, name: '50' },
+    { id: 51, name: '50' }
   ]
 
   include ActiveHash::Associations
-    has_many :halls
-    has_many :kitchens
-
-  
+  has_many :halls
+  has_many :kitchens
 end
-  

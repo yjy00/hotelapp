@@ -1,5 +1,4 @@
 class HallManagementsController < ApplicationController
-
   def index
     @halls = Hall.order('updated_at DESC')
   end
@@ -24,7 +23,6 @@ class HallManagementsController < ApplicationController
 
   def show
     @hall = Hall.find(params[:id])
-    
   end
 
   def update
@@ -41,5 +39,4 @@ class HallManagementsController < ApplicationController
   def hall_params
     params.require(:hall).permit(:image, :name, :category_id, :count_id, :place_id, :detail)
   end
-
 end

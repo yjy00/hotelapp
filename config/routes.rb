@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :mainmenus,         only: :index
   resources :halls,             only: :index
   resources :hall_managements
-  resources :kitchens,          only: :index
+  resources :kitchens, only: :index
   resources :kitchen_managements
-
 end
