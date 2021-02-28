@@ -3,7 +3,7 @@
 <% @halls.each do |hall| %>
   <ul>
     <li>
-      <%= link_to edit_hall_management_path(hall), class: 'edit-hall' do %>
+      <%= link_to hall_management_path(hall), class: 'edit-hall' do %>
         <div class="hall-name">
           <p>名前</p>
           <%= hall.name %>

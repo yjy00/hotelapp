@@ -10,6 +10,7 @@ class HallManagementsController < ApplicationController
 
   def create
     @hall = Hall.new(hall_params)
+    # binding.pry
     if @hall.save
       redirect_to root_path
     else
@@ -19,6 +20,20 @@ class HallManagementsController < ApplicationController
 
   def edit
     @hall = Hall.find(params[:id])
+  end
+
+  def show
+    @hall = Hall.find(params[:id])
+    
+  end
+
+  def update
+    @hall = Hall.find(params[:id])
+    if @hall.update(hall_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private

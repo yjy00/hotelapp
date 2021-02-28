@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   resources :mainmenus, only: :index
   resources :halls, only: :index
-  resources :hall_managements, only: [:index, :new, :create, :edit, :update]
+  resources :hall_managements
 
 end

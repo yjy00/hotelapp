@@ -1,4 +1,19 @@
 <%= render "shared/header" %>
 
-<%= @hall.name %>
-<%= @hall.detail %>
+<div class="item-registration">
+  <%= form_with url: hall_managements_path, model: @hall, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# <div class='count'>数量
+      <%= f.number_field :count, class:"item-count", placeholder:"数量" 
+    </div>%>
+    <div class="register-btn">
+      <%= f.submit "登録する", class:"register" %>
+    </div>
+  <% end %>
+
+</div>
+
+
+      
