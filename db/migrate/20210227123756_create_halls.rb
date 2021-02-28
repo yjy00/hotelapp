@@ -4,7 +4,7 @@ class CreateHalls < ActiveRecord::Migration[6.1]
       t.string        :name,         null: false
       # t.integer       :category_id,  null: false
       # t.integer       :place_id,     null: false
-      t.integer       :count,        null: false
+      # t.string       :count,        null: false
       t.text          :detail
 
       t.timestamps
