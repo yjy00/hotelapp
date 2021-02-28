@@ -12,12 +12,13 @@
     <div class="category">カテゴリー
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
     </div>
-    <div class="category">場所
-    <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
-    </div>
     <div class="category">数
     <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
     </div>
+    <div class="category">場所
+    <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
+    </div>
+    
     <div class='detail'>詳細
       <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
     </div>
@@ -31,6 +32,3 @@
   <% end %>
 
 </div>
-
-
-      
