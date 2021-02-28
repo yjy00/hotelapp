@@ -8,6 +8,7 @@ class Place < ActiveHash::Base
 
   include ActiveHash::Associations
     has_many :halls
+    has_many :kitchens
 
   
 end

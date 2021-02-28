@@ -1,10 +1,13 @@
+
 <%= render "shared/header" %>
 
 <% @kitchens.each do |kitchen| %>
   <ul>
     <li>
-      <%= link_to kitchen_management_path(kitchen), class: 'edit-hall' do %>
-        <div class="hall-name">
+
+      <%= link_to kitchen_management_path(kitchen), class: 'edit-kitchen' do %>
+        <div class="kitchen-name">
+
           <p>名前</p>
           <%= kitchen.name %>
         </div>
@@ -14,4 +17,5 @@
       <% end %>
     </li>
   </ul>
+
 <% end %>

@@ -1,9 +1,12 @@
+
 <%= render "shared/header" %>
 
 <%#<%= image_tag @kitchen.image %>
 <%= @kitchen.name %>
 <% if @kitchen.detail.present? %>
+
   <div class="hall-detail">
+
     <p>詳細</p>
     <%= @kitchen.detail %>
   </div>
