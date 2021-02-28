@@ -4,14 +4,9 @@
       <h2 class='menu-sentence'>
         ホール　メインメニュー
       </h2>
-    <%= link_to '新規登録', new_hall_path, class: "register-new-btn" %>
+    <%= link_to '新規登録',  new_hall_management_path, class: "register-new-btn" %>
     <div class=manage-choices>
-      <p class='manage-existing'>
-        既存管理
-      </p>
-        <%= link_to 'Bar', bars_path, class: "bar-btn" %>
-        <%= link_to 'Restaurant', root_path, class: "restaurant-btn" %>
-      </p>
+      <%= link_to '既存管理', hall_managements_path, class: "bar-btn" %>
     </div>
 </div>
 

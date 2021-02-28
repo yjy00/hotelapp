@@ -1,6 +1,7 @@
 class HallManagementsController < ApplicationController
 
   def index
+    @halls = Hall.order('updated_at DESK')
   end
 
   def new
@@ -10,7 +11,7 @@ class HallManagementsController < ApplicationController
   def create
     @hall = Hall.new(hall_params)
     if @hall.save
-      redirect_to halls_path
+      redirect_to root_path
     else
       render :new
     end
@@ -22,6 +23,7 @@ class HallManagementsController < ApplicationController
   private
 
   def hall_params
-    params.require(:hall).permit(:image, :name, :detail, :count)
+    params.require(:hall).permit(:image, :name, :detail)
   end
+  
 end

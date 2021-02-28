@@ -1,3 +1,3 @@
 class Hall < ApplicationRecord
-  validates :name, :count, presence: true
+  validates :name, presence: true
 end
