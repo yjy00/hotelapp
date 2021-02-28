@@ -31,6 +31,7 @@ class KitchenManagementsController < ApplicationController
     @kitchen = Kitchen.find(params[:id])
     if @kitchen.update(kitchen_params)
       redirect_to kitchen_managements_path
+
     else
       render :edit
     end

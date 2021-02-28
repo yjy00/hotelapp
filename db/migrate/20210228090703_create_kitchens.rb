@@ -8,7 +8,6 @@ class CreateKitchens < ActiveRecord::Migration[6.1]
       t.integer    :count_id,     null: false
       t.text       :detail
 
-
       t.timestamps
     end
   end

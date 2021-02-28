@@ -18,7 +18,6 @@
     <div class="category">場所
     <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
-    
     <div class='detail'>詳細
       <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
     </div>
