@@ -18,6 +18,7 @@ class HallManagementsController < ApplicationController
   end
 
   def edit
+    @hall = Hall.find(params[:id])
   end
 
   private
