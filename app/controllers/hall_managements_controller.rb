@@ -22,6 +22,20 @@ class HallManagementsController < ApplicationController
     @hall = Hall.find(params[:id])
   end
 
+  def show
+    @hall = Hall.find(params[:id])
+    
+  end
+
+  def update
+    @hall = Hall.find(params[:id])
+    if @hall.update(hall_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def hall_params

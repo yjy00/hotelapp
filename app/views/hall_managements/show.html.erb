@@ -1,0 +1,7 @@
+<%= render "shared/header" %>
+
+<%= image_tag @hall.image %>
+<%= @hall.name %>
+<%= @hall.detail %>
+
+<%= link_to '編集する',  edit_hall_management_path(@hall), class: "register-new-btn" %>
