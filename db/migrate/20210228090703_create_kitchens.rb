@@ -4,7 +4,7 @@ class CreateKitchens < ActiveRecord::Migration[6.1]
 
       t.string     :name,         null: false
       t.integer    :category_id,  null: false
-      t.integer     :place_id,     null: false
+      t.integer    :place_id,     null: false
       t.integer    :count_id,     null: false
       t.text       :detail
 
