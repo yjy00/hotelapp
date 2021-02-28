@@ -12,7 +12,7 @@ class HallManagementsController < ApplicationController
     @hall = Hall.new(hall_params)
     # binding.pry
     if @hall.save
-      redirect_to root_path
+      redirect_to hall_managements_path
     else
       render :new
     end
@@ -30,7 +30,7 @@ class HallManagementsController < ApplicationController
   def update
     @hall = Hall.find(params[:id])
     if @hall.update(hall_params)
-      redirect_to root_path
+      redirect_to hall_managements_path
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class HallManagementsController < ApplicationController
   private
 
   def hall_params
-    params.require(:hall).permit(:image, :name, :detail)
+    params.require(:hall).permit(:image, :name, :category_id, :detail)
   end
 
 end

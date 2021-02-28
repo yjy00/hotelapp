@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_02_28_044357) do
 
   create_table "halls", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "category_id", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
