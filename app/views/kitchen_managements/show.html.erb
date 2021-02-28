@@ -1,0 +1,17 @@
+
+
+
+
+<%= render "shared/header" %>
+
+<%#<%= image_tag @kitchen.image %>
+<%= @kitchen.name %>
+<% if @kitchen.detail.present? %>
+  <div class="kitchen-detail">
+    <p>詳細</p>
+    <%= @kitchen.detail %>
+  </div>
+<% end %>
+
+<%= link_to '編集する',  edit_kitchen_management_path(@kitchen), class: "register-new-btn" %>
+
