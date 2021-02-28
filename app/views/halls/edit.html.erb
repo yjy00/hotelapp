@@ -1,0 +1,11 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <h2 class='which-question'>
+    場所を選んでください
+  </h2>
+  <div class='choices'>
+    <%= link_to 'Bar', halls_path, class: "bar-btn" %>
+    <%= link_to 'Restaurant', halls_path, class: "restaurant-btn" %>
+  </div>
+</div>
+

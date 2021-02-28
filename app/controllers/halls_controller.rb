@@ -17,6 +17,9 @@ class HallsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   private
 
   def hall_params
