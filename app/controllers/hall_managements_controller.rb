@@ -39,7 +39,7 @@ class HallManagementsController < ApplicationController
   private
 
   def hall_params
-    params.require(:hall).permit(:image, :name, :category_id, :detail)
+    params.require(:hall).permit(:image, :name, :category_id, :count_id, :place_id, :detail)
   end
 
 end

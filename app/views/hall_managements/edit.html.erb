@@ -5,9 +5,9 @@
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <%# <div class='count'>数量
-      <%= f.number_field :count, class:"item-count", placeholder:"数量" 
-    </div>%>
+    <div class="category">数
+      <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
+    </div>
     <div class="register-btn">
       <%= f.submit "登録する", class:"register" %>
     </div>
