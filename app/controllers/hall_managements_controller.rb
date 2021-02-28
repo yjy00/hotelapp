@@ -10,6 +10,7 @@ class HallManagementsController < ApplicationController
 
   def create
     @hall = Hall.new(hall_params)
+    # binding.pry
     if @hall.save
       redirect_to root_path
     else
