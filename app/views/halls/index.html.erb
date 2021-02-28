@@ -1,7 +1,13 @@
 <%= render "shared/header" %>
   <div class='main'>
-    <%= link_to '新規登録', new_hall_path, class: "register-new-btn" %>
-    <%= link_to '既存管理', root_path, class: "manage-existing-btn" %>
+    <div class='main-menu'>
+      <h2 class='menu-sentence'>
+        ホール　メインメニュー
+      </h2>
+    <%= link_to '新規登録',  new_hall_management_path, class: "register-new-btn" %>
+    <div class=manage-choices>
+      <%= link_to '既存管理', hall_managements_path, class: "management-existing-btn" %>
+    </div>
 </div>
 
     
