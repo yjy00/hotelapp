@@ -1,0 +1,2 @@
+module HallManagementsHelper
+end
