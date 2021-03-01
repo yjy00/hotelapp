@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 describe Hall do
-
   describe '#create' do
     before do
       @hall = build(:hall)
       # 前のアプリを参考に書いたが、これをコメントアウトを外すとエラーになる
-      # @hall.image = fixture_file_upload("/files/RSpec.image.png")
+      # @hall.image = fixture_file_upload('public/images/RSpec.image.png')
     end
 
     context '登録されること' do
@@ -55,7 +54,7 @@ describe Hall do
         @hall.valid?
         expect(@hall.errors[:prefecture_id]).to include
       end
-      
+
       it '数量idが1のままでは登録できないこと' do
         @hall.count_id = 1
         @hall.valid?

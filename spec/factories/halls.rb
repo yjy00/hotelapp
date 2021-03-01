@@ -6,6 +6,6 @@ FactoryBot.define do
     place_id              {2}
     count_id              {10}
     detail                {"10 boxes of new beer glasses"}
-  end
+end
 
 end
