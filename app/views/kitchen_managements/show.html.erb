@@ -1,7 +1,7 @@
 
 <%= render "shared/header" %>
 
-<%#<%= image_tag @kitchen.image %>
+<%= image_tag @kitchen.image if kitchen.image.present? %>
 <%= @kitchen.name %>
 <% if @kitchen.detail.present? %>
 
