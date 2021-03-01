@@ -5,6 +5,7 @@ RSpec.describe Kitchen, type: :model do
     describe '#create' do
       before do
         @kitchen = build(:kitchen)
+        # 前のアプリを参考に書いたが、これをコメントアウトを外すとエラーになる
         # @kitchen.image = fixture_file_upload('/files/RSpec.image.png')
       end
 
@@ -18,10 +19,10 @@ RSpec.describe Kitchen, type: :model do
           expect(@kitchen).to be_valid
         end
 
-        it '画像がなしでも登録できること' do
-          @kitchen.image = nil
-          expect(@kitchen).to be_valid
-        end
+        # it '画像がなしでも登録できること' do
+        #   @kitchen.image = nil
+        #   expect(@kitchen).to be_valid
+        # end
       end
 
       context '登録されないこと' do
@@ -49,22 +50,22 @@ RSpec.describe Kitchen, type: :model do
           expect(@kitchen.errors[:place_id]).to include("can't be blank")
         end
 
-        it 'カテゴリーidが0のままでは登録できないこと' do
+        it 'カテゴリーidが1のままでは登録できないこと' do
           @kitchen.category_id = 1
           @kitchen.valid?
           expect(@kitchen.errors[:prefecture_id]).to include
         end
         
-        it '数量id0のままでは登録できないこと' do
+        it '数量id1のままでは登録できないこと' do
           @kitchen.count_id = 1
           @kitchen.valid?
           expect(@kitchen.errors[:count_id]).to include
         end
 
-        it '場所idが0のままでは登録できないこと' do
-          @hkitchenall.place_id = 1
+        it '場所idが1のままでは登録できないこと' do
+          @kitchen.place_id = 1
           @kitchen.valid?
-          expect(@hakitchenll.errors[:place_id]).to include
+          expect(@kitchen.errors[:place_id]).to include
         end
 
       end
