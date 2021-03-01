@@ -1,102 +1,75 @@
-# require 'rails_helper'
+require 'rails_helper'
+RSpec.describe Kitchen, type: :model do
 
-# describe Good do
-#   describe '#create' do
-#     before do
-#       @good = build(:good)
-#       @good.image = fixture_file_upload('/files/duffyのコピー.jpeg')
-#     end
+  describe Kitchen do
+    describe '#create' do
+      before do
+        @kitchen = build(:kitchen)
+        # @kitchen.image = fixture_file_upload('/files/RSpec.image.png')
+      end
 
-#     context '登録されること' do
-#       it '全てのフォームが入力されていれば登録できること' do
-#         expect(@good).to be_valid
-#       end
-#     end
+      context '登録されること' do
+        it '全てのフォームが入力されていれば登録できること' do
+          expect(@kitchen).to be_valid
+        end
 
-#     context '登録されないこと' do
-#       it '画像は1枚必須であること(ActiveStorageを使用すること)' do
-#         @good.image = nil
-#         @good.valid?
-#         expect(@good.errors[:image]).to include('を入力してください')
-#       end
+        it '詳細欄が空でも登録できること' do
+          @kitchen.detail = nil
+          expect(@kitchen).to be_valid
+        end
 
-#       it '商品名が必須であること' do
-#         @good.name = nil
-#         @good.valid?
-#         expect(@good.errors[:name]).to include('を入力してください')
-#       end
+        it '画像がなしでも登録できること' do
+          @kitchen.image = nil
+          expect(@kitchen).to be_valid
+        end
+      end
 
-#       it '商品の説明が必須であること' do
-#         @good.detail = nil
-#         @good.valid?
-#         expect(@good.errors[:detail]).to include('を入力してください')
-#       end
+      context '登録されないこと' do
+        it 'アイテム名が必須であること' do
+          @kitchen.name = nil
+          @kitchen.valid?
+          expect(@kitchen.errors[:name]).to include("can't be blank")
+        end
 
-#       it 'カテゴリーの情報が必須であること' do
-#         @good.category_id = nil
-#         @good.valid?
-#         expect(@good.errors[:category_id]).to include('を入力してください')
-#       end
+        it 'カテゴリーの情報が必須であること' do
+          @kitchen.category_id = nil
+          @kitchen.valid?
+          expect(@kitchen.errors[:category_id]).to include("can't be blank")
+        end
 
-#       it '商品の状態についての情報が必須であること' do
-#         @good.condition_id = nil
-#         @good.valid?
-#         expect(@good.errors[:condition_id]).to include('を入力してください')
-#       end
+        it '数量ついての情報が必須であること' do
+          @kitchen.count_id = nil
+          @kitchen.valid?
+          expect(@kitchen.errors[:count_id]).to include("can't be blank")
+        end
 
-#       it '配送料の負担についての情報が必須であること' do
-#         @good.whopay_id = nil
-#         @good.valid?
-#         expect(@good.errors[:whopay_id]).to include('を入力してください')
-#       end
+        it '場所についての情報が必須であること' do
+          @kitchen.place_id = nil
+          @kitchen.valid?
+          expect(@kitchen.errors[:place_id]).to include("can't be blank")
+        end
 
-#       it '発送元の地域についての情報が必須であること' do
-#         @good.prefecture_id = nil
-#         @good.valid?
-#         expect(@good.errors[:prefecture_id]).to include('を入力してください')
-#       end
+        it 'カテゴリーidが0のままでは登録できないこと' do
+          @kitchen.category_id = 1
+          @kitchen.valid?
+          expect(@kitchen.errors[:prefecture_id]).to include
+        end
+        
+        it '数量id0のままでは登録できないこと' do
+          @kitchen.count_id = 1
+          @kitchen.valid?
+          expect(@kitchen.errors[:count_id]).to include
+        end
 
-#       it '発送までの日数についての情報が必須であること' do
-#         @good.whensend_id = nil
-#         @good.valid?
-#         expect(@good.errors[:whensend_id]).to include('を入力してください')
-#       end
+        it '場所idが0のままでは登録できないこと' do
+          @hkitchenall.place_id = 1
+          @kitchen.valid?
+          expect(@hakitchenll.errors[:place_id]).to include
+        end
 
-#       it '価格についての情報が必須であること' do
-#         @good.price = nil
-#         @good.valid?
-#         expect(@good.errors[:price]).to include('を入力してください')
-#       end
+      end
+    end
+  end
+end
 
-#       it '価格299では登録できないこと' do
-#         @good.price = '299'
-#         @good.valid?
-#         expect(@good.errors[:price]).to include('は300以上の値にしてください')
-#       end
 
-#       it '価格300ちょうどで登録できること' do
-#         @good.price = '300'
-#         @good.valid?
-#         expect(@good.errors[:price]).to include
-#       end
-
-#       it '価格が10,000,000では登録できないこと' do
-#         @good.price = '10000000'
-#         @good.valid?
-#         expect(@good.errors[:price]).to include('は9999999以下の値にしてください')
-#       end
-
-#       it '価格が9,999,999ちょうどで登録できること' do
-#         @good.price = '9999999'
-#         @good.valid?
-#         expect(@good.errors[:price]).to include
-#       end
-
-#       it '販売価格は半角数字のみ保存可能であること' do
-#         @good.price = '３００'
-#         @good.valid?
-#         expect(@good.errors[:price]).to include('は数値で入力してください')
-#       end
-#     end
-#   end
-# end
