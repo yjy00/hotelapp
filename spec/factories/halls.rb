@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :user do
+  factory :hall do
     name                  {"beer glass"}
     category_id           {9}
     place_id              {2}
