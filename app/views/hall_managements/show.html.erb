@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<%= image_tag @hall.image %>
+<%= image_tag @hall.image if hall.image.present? %>
 <%= @hall.name %>
 <% if @hall.detail.present? %>
   <div class="hall-detail">

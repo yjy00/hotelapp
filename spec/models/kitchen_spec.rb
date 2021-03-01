@@ -18,10 +18,12 @@ describe Kitchen do
         expect(@kitchen).to be_valid
       end
 
+
       it '画像がなしでも登録できること' do
         @kitchen.image = nil
         expect(@kitchen).to be_valid
       end
+
     end
 
     context '登録されないこと' do

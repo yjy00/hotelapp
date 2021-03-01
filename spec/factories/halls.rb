@@ -1,9 +1,11 @@
 FactoryBot.define do
+
   factory :hall do
-    name { 'beer glass' }
+    name                  { 'beer glass' }
     category_id           { 9 }
     place_id              { 2 }
     count_id              { 10 }
     detail                { '10 boxes of new beer glasses' }
   end
+
 end

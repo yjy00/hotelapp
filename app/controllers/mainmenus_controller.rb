@@ -1,3 +1,4 @@
 class MainmenusController < ApplicationController
-  def index; end
+  def index
+  end
 end
