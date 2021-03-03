@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_074825) do
 
   create_table "beverages", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "category_id", null: false
     t.integer "place_id", null: false
     t.integer "count_id", null: false
     t.text "detail"
@@ -52,7 +51,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_074825) do
 
   create_table "equipment", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "category_id", null: false
     t.integer "place_id", null: false
     t.integer "count_id", null: false
     t.text "detail"
@@ -62,7 +60,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_074825) do
 
   create_table "foods", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "category_id", null: false
     t.integer "place_id", null: false
     t.integer "count_id", null: false
     t.text "detail"

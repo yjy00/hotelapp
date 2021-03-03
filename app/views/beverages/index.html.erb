@@ -3,7 +3,7 @@
 <% @beverages.each do |beverage| %>
   <ul>
     <li>
-      <%= link_to roott_path(beverage), class: 'edit-beverage' do %>
+      <%= link_to root_path(beverage), class: 'edit-beverage' do %>
         <div class="beverage-name">
           <p>名前</p>
           <%= beverage.name %>
