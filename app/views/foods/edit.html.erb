@@ -19,6 +19,10 @@
     <div class='image'>写真
       <%= f.file_field :image, id:"item-image" %>
     </div>
+
+    <%= link_to '詳細ページへ', food_path(@food), method: :get, class: "item-red-btn" %>
+    <%= link_to '削除', food_path(@food), method: :delete, class:'item-destroy' %>
+
   <% end %>
 
 

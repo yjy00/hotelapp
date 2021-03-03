@@ -34,6 +34,15 @@ class BeveragesController < ApplicationController
     end
   end
 
+  def destroy
+    @beverage = Beverage.find(params[:id])
+    if @beverage.destroy
+      redirect_to root_path
+    else
+      redirect_to :edit
+    end
+  end
+
   private
 
   def beverage_params

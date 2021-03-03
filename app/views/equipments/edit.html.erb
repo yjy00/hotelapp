@@ -23,6 +23,9 @@
     </div>
   <% end %>
 
+  <%= link_to '詳細ページへ', equipment_path(@equipment), method: :get, class: "item-red-btn" %>
+  <%= link_to '削除', equipment_path(@equipment), method: :delete, class:'item-destroy' %>
+
 
 </div>
 

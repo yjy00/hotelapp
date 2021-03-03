@@ -34,6 +34,15 @@ class EquipmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @equipment = Equipment.find(params[:id])
+    if @equipment.destroy
+      redirect_to root_path
+    else
+      redirect_to :edit
+    end
+  end
+
   private
 
   def equipment_params

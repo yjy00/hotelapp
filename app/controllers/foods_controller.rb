@@ -34,6 +34,15 @@ class FoodsController < ApplicationController
     end
   end
 
+  def destroy
+    @food = Food.find(params[:id])
+    if @food.destroy
+      redirect_to root_path
+    else
+      redirect_to :edit
+    end
+  end
+
   private
 
   def food_params
