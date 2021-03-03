@@ -1,11 +1,25 @@
 <%= render "shared/header" %>
 
-<div class='main'>
-  <h2 class='which-question'>
-    どちらのサービスをご利用ですか？
-  </h2>
-  <div class=choises>
-    <%= link_to 'ホール', halls_path, class: "hall-btn" %>
-    <%= link_to 'キッチン', kitchens_path, class: "kitchen-btn" %>
-  </div>
-</div>
+一覧
+
+フード一覧
+ドリンク一覧
+備品一覧
+
+フード登録
+ドリンク登録
+備品登録
+
+<%#<% @instances.each do |instance| %
+  <% if instance.class == "Post" %>
+    <%# Postの表示 %
+    <%= instance.user_id %
+    <%= instance.content %
+    <%= instance.image %
+  <% else %>
+    <%# Advertisementの表示 %
+    <%= instance.company_id %
+    <%= instance.content %
+    <%= instance.link_url %
+  <% end %
+<% end %>
