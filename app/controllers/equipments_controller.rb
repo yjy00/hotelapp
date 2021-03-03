@@ -1,7 +1,7 @@
 class EquipmentsController < ApplicationController
 
   def index
-    @equipment = Equipment.order('updated_at DESC')
+    @equipments = Equipment.order('updated_at DESC')
   end
 
   def new

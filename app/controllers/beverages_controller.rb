@@ -1,7 +1,7 @@
 class BeveragesController < ApplicationController
 
   def index
-    @beverage = Beverage.order('updated_at DESC')
+    @beverages = Beverage.order('updated_at DESC')
   end
 
   def new
