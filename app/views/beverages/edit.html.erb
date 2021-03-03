@@ -11,6 +11,17 @@
     <div class="register-btn">
       <%= f.submit "登録する", class:"register" %>
     </div>
+
+    <div class='name'>名前
+      <%= f.text_area :name, class:"item-name", placeholder:"アイテム名", maxlength:"40" %>
+    </div>
+    <div class='detail'>詳細
+      <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+    <div class='image'>写真
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+    
   <% end %>
 
 
