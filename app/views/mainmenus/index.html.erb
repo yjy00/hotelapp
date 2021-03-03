@@ -1,3 +1,4 @@
+
 <%= render "shared/header" %>
 
 一覧
@@ -7,21 +8,3 @@
 <%= link_to 'フード登録', new_food_path, class: "hall-btn" %>
 <%= link_to 'ドリンク登録', new_beverage_path, class: "hall-btn" %>
 <%= link_to '備品登録', new_equipment_path, class: "hall-btn" %>
-
-
-
-
-
-<%#<% @instances.each do |instance| %
-  <% if instance.class == "Post" %>
-    <%# Postの表示 %
-    <%= instance.user_id %
-    <%= instance.content %
-    <%= instance.image %
-  <% else %>
-    <%# Advertisementの表示 %
-    <%= instance.company_id %
-    <%= instance.content %
-    <%= instance.link_url %
-  <% end %
-<% end %>
