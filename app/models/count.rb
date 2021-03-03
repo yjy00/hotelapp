@@ -54,6 +54,7 @@ class Count < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :halls
-  has_many :kitchens
+  has_many :foods
+  has_many :beverages
+  has_many :equipments
 end
