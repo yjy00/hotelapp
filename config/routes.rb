@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :hall_managements
   resources :kitchens, only: :index
   resources :kitchen_managements
+  resources :foods
+  resources :beverages
+  resources :equipments
 end
