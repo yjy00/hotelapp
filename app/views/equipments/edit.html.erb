@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+
+<div class="item-registration">
+  <%= form_with model: @equipment, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="category">数
+      <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
+    </div>
+    <div class="register-btn">
+      <%= f.submit "登録する", class:"register" %>
+    </div>
+  <% end %>
+
+
+</div>
+
+
+      
