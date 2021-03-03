@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<% @equipments.each do |equipment| %>
+  <ul>
+    <li>
+      <%= link_to roott_path(equipment), class: 'edit-equipment' do %>
+        <div class="equipment-name">
+          <p>名前</p>
+          <%= equipment.name %>
+        </div>
+        <%= equipment.category.name %>
+        <%= equipment.count.name %>
+        
+      <% end %>
+    </li>
+  </ul>
+<% end %>

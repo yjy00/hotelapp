@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+
+<% @beverages.each do |beverage| %>
+  <ul>
+    <li>
+      <%= link_to roott_path(beverage), class: 'edit-beverage' do %>
+        <div class="beverage-name">
+          <p>名前</p>
+          <%= beverage.name %>
+        </div>
+        <%= beverage.count.name %>
+        
+      <% end %>
+    </li>
+  </ul>
+<% end %>
