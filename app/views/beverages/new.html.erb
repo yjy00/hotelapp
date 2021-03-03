@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+
+<div class="item-registration">
+  <%= form_with url: hall_managements_path, model: @beverage, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class='name'>名前
+      <%= f.text_area :name, class:"item-name", placeholder:"アイテム名", maxlength:"40" %>
+    </div>
+    <div class="category">数
+    <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
+    </div>
+    <div class="category">場所
+    <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
+    </div>
+    
+
+    <div class='detail'>詳細
+      <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+    <div class='image'>写真
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+    
+    <div class="register-btn">
+      <%= f.submit "登録する", class:"register" %>
+    </div>
+  <% end %>
+
+</div>
+
+
+      
