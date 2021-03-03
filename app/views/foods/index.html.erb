@@ -3,7 +3,7 @@
 <% @foods.each do |food| %>
   <ul>
     <li>
-      <%= link_to root_path(food), class: 'edit-food' do %>
+      <%= link_to edit_food_path(food), class: 'edit-food' do %>
         <div class="food-name">
           <p>名前</p>
           <%= food.name %>
