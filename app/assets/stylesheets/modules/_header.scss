@@ -1,0 +1,30 @@
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  .logo{
+      display:block;
+      background-color: pink;
+      height: 90px;
+      width: 200px;
+      line-height: 100px;
+      padding-left: 70px;
+      margin: 20px;
+    }
+  .menu-list{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-top: 20px;
+    .menu{
+      display:block;
+      background-color: pink;
+      width: 200px;
+      height: 50px;
+      padding-left: 70px;
+      margin-right: 20px;
+      line-height: 50px;
+      margin-top: 20px;
+    }
+  }
+}
