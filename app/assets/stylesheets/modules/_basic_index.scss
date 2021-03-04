@@ -1,0 +1,28 @@
+.basic-menu-list{
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #ddd;
+  .menu-sentence{
+    margin-left: 20px;
+  }
+  .basic-menu-btn{
+    display: block;
+    background-color: rebeccapurple;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+}
+
+.item{
+  width: 800px;
+  margin: 20px auto;
+  background-color: rosybrown;
+  .edit{
+    display:block;
+    background-color: royalblue;
+  }
+  .name{
+    display: flex;
+    justify-content: space-around;
+  }
+}

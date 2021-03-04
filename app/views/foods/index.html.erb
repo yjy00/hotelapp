@@ -27,10 +27,10 @@
   <div>
 
     <% @foods.each do |food| %>
-      <ul class='food-item'>
+      <ul class='item'>
         <li>
-          <%= link_to edit_food_path(food), class: 'edit-food' do %>
-          <div class="food-name">
+          <%= link_to edit_food_path(food), class: 'edit' do %>
+          <div class="name">
             <p>名前</p>
             <%= food.name %>
           </div>
@@ -40,7 +40,3 @@
       </ul>
     <% end %>
 
-
-   <div></div>
-  <div></div>
-  <div></div>
