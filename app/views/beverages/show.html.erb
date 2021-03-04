@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+
+  <ul>
+    <li>
+        <div class="beverage-name">
+          <p>名前</p>
+          <%= image_tag @beverage.image %>
+          <%= @beverage.name %>
+        </div>
+        <%= @beverage.count.name %>
+        <%= @beverage.place.name %>
+        <%= @beverage.detail %>
+        
+    </li>
+  </ul>
