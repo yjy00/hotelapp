@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
-
   def index
     @foods = Food.order('updated_at DESC')
   end

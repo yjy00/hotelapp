@@ -1,5 +1,4 @@
 class BeveragesController < ApplicationController
-
   def index
     @beverages = Beverage.order('updated_at DESC')
   end
