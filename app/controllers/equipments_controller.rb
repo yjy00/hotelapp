@@ -1,5 +1,4 @@
 class EquipmentsController < ApplicationController
-
   def index
     @equipments = Equipment.order('updated_at DESC')
   end
