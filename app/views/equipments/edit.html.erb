@@ -1,11 +1,11 @@
 <%= render "shared/header" %>
 
 <div class="item-registration">
-  <%= form_with model: @equipment, local: true do |f| %>
+  <%= form_with model: @equipment, class:"item-form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <div class="category">数
+    <div class="count">数量
       <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
     </div>
     <div class="register-btn">
@@ -20,6 +20,9 @@
     </div>
     <div class='image'>写真
       <%= f.file_field :image, id:"item-image" %>
+    </div>
+    <div class="place">場所
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
   <% end %>
 

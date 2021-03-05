@@ -1,17 +1,17 @@
 <%= render "shared/header" %>
 
 <div class="item-registration">
-  <%= form_with url: equipments_path, model: @equipment, local: true do |f| %>
+  <%= form_with url: equipments_path, model: @equipment, class:"item-form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class='name'>名前
       <%= f.text_area :name, class:"item-name", placeholder:"アイテム名", maxlength:"40" %>
     </div>
-    <div class="category">数
+    <div class="count">数量
     <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
     </div>
-    <div class="category">場所
+    <div class="place">場所
     <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
     
@@ -19,8 +19,9 @@
     <div class='detail'>詳細
       <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
     </div>
-    <div class='image'>写真
-      <%= f.file_field :image, id:"item-image" %>
+    <div class="image-title">写真</div>
+    <div class='image'>
+      <%= f.file_field :image, class:"item-image" %>
     </div>
     
     <div class="register-btn">
