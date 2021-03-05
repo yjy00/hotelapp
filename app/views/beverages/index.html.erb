@@ -31,10 +31,13 @@
         <li>
           <%= link_to edit_beverage_path(beverage), class:'edit' do %>
           <div class="name">
-            <p>名前</p>
-            <%= beverage.name %>
+            <p class="name-title">名前</p>
+              <%= beverage.name %>
           </div>
+          <div class="count">
+            <p class="count-title">数量</p>
           <%= beverage.count.name %>
+          </div>
           <% end %>
         </li>
       </ul>

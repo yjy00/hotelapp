@@ -31,10 +31,13 @@
         <li>
           <%= link_to edit_equipment_path(equipment), class: 'edit' do %>
           <div class="name">
-            <p>名前</p>
-            <%= equipment.name %>
+            <p class="name-title">名前</p>
+              <%= equipment.name %>
           </div>
-          <%= equipment.count.name %>
+          <div class="count">
+            <p class="count-title">数量</p>
+            <%= equipment.count.name %>
+          </div>
           <% end %>
         </li>
       </ul>
