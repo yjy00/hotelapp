@@ -1,3 +1,20 @@
+@import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/mainmenus";
+@import "modules/foods";
+@import "modules/equipments";
+@import "modules/beverages";
+@import "modules/header";
+@import "modules/all";
+@import "modules/basic_index";
+@import "modules/basic_form";
+@import "config/variables";
+
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-
   describe Food do
     describe '#create' do
       before do
@@ -57,6 +56,6 @@ RSpec.describe Food, type: :model do
           expect(@food.errors[:place_id]).to include
         end
       end
+    end
   end
-end
 end

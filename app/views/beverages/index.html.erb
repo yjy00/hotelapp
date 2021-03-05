@@ -1,16 +1,49 @@
 <%= render "shared/header" %>
 
-<% @beverages.each do |beverage| %>
-  <ul>
-    <li>
-      <%= link_to edit_beverage_path(beverage), class: 'edit-beverage' do %>
-        <div class="beverage-name">
-          <p>名前</p>
-          <%= beverage.name %>
-        </div>
-        <%= beverage.count.name %>
-        
-      <% end %>
-    </li>
-  </ul>
-<% end %>
+  <div class="basic-menu-list">
+    <div>
+      <p class="basic-menu-btn menu-sentence" >基本メニュー</p>
+    </div>
+    <div>
+      <%= link_to 'フード一覧', foods_path, class: "basic-menu-btn" %>
+    </div>
+    <div>
+      <%= link_to 'ドリンク一覧', beverages_path, class: "basic-menu-btn" %>
+    </div>
+    <div>
+      <%= link_to '備品一覧', equipments_path, class: "basic-menu-btn" %>
+    </div>
+    <div>
+      <%= link_to 'フード登録', new_food_path, class: "basic-menu-btn" %>
+    </div>
+    <div>
+      <%= link_to 'ドリンク登録', new_beverage_path, class: "basic-menu-btn" %>
+    </div>
+    <div>
+      <%= link_to '備品登録', new_equipment_path, class: "basic-menu-btn" %>
+    </div>
+  </div>
+
+  <div>
+
+    <% @beverages.each do |beverage| %>
+      <ul class='item'>
+        <li>
+          <%= link_to edit_beverage_path(beverage), class:'edit' do %>
+          <div class="name">
+            <p class="name-title">名前</p>
+              <%= beverage.name %>
+          </div>
+          <div class="count">
+            <p class="count-title">数量</p>
+          <%= beverage.count.name %>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+
+
+   <div></div>
+  <div></div>
+  <div></div>

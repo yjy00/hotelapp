@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Equipment, type: :model do
-
   describe Equipment do
     describe '#create' do
       before do
@@ -57,6 +56,6 @@ RSpec.describe Equipment, type: :model do
           expect(@equipment.errors[:place_id]).to include
         end
       end
+    end
   end
-end
 end

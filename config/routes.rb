@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'mainmenus#index'
+  root to: 'foods#index'
 
   resources :mainmenus,         only: :index
   resources :foods
