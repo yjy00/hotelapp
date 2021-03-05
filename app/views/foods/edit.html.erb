@@ -10,8 +10,8 @@
     <div class="count">数量
       <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
     </div>
-    <div class="register-btn">
-      <%= f.submit "登録する", class:"register" %>
+    <div>
+      <%= f.submit "登録する", class:"register-btn" %>
     </div>
     <div class='detail'>詳細
       <%= f.text_area :detail, class:"item-detail", placeholder:"アイテムの詳細" %>
@@ -23,14 +23,15 @@
     <div class="place">場所
       <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
-
-    <%= link_to '詳細ページへ', food_path(@food), method: :get, class: "item-red-btn" %>
-    <%= link_to '削除', food_path(@food), method: :delete, class:'item-destroy' %>
-
+    <div>
+      <%= f.submit "登録する", class:"register-btn" %>
+    </div>
   <% end %>
-
-
 </div>
+    <div class="link-list">
+      <%= link_to '詳細ページへ', food_path(@food), method: :get, class: "to-show" %>
+      <%= link_to '削除', food_path(@food), method: :delete, class:'to-destroy' %>
+    </div>
 
 
       
