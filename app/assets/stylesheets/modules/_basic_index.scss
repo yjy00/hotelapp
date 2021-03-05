@@ -7,7 +7,7 @@
   }
   .basic-menu-btn{
     display: block;
-    background-color: rebeccapurple;
+    border: 1px solid #ddd;
     margin-right: 20px;
     margin-top: 20px;
   }
@@ -16,13 +16,22 @@
 .item{
   width: 800px;
   margin: 20px auto;
-  background-color: rosybrown;
+  border: 1px solid #ddd;
   .edit{
     display:block;
-    background-color: royalblue;
   }
   .name{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    .name-title{
+      margin-right: 20px;
+    }
+  }
+  .count{
+    display: flex;
+    justify-content: center;
+    .count-title{
+      margin-right: 20px;
+    }
   }
 }
