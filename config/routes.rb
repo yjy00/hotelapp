@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :foods
   resources :beverages
   resources :equipments
+  resources :other_functions,    only: :index
+  resources :chats
 end
