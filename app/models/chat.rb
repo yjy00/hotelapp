@@ -3,7 +3,6 @@ class Chat < ApplicationRecord
 
   belongs_to :from
 
-  validates :from_id, :by, :message, presence:true
-  validates :from_id, numericality: { other_than: 1 } 
-
+  validates :from_id, :by, :message, presence: true
+  validates :from_id, numericality: { other_than: 1 }
 end

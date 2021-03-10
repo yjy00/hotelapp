@@ -1,5 +1,4 @@
 class ChatsController < ApplicationController
-
   def index
     @chat = Chat.new
     @chats = Chat.order('created_at DESC')
@@ -19,5 +18,4 @@ class ChatsController < ApplicationController
   def chat_params
     params.require(:chat).permit(:from_id, :by, :message)
   end
-
 end
