@@ -1,0 +1,20 @@
+<%= render "shared/header" %>
+<%= form_with model: @regular_guest, class:"", local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="">ゲストの名前
+    <%= f.text_area :name, placeholder:'ゲストの名前' %>
+    </div>
+    <div class=''>ステータス
+      <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:""}) %>
+    </div>
+    <div class=''>メンバーナンバー
+      <%= f.text_area :member_number, class:"", placeholder:"メンバーナンバー" %>
+    </div>
+    <div class=''>その他の情報
+      <%= f.text_area :information, class:"", placeholder:"ゲストに関する情報" %>
+    </div>
+      <%= f.submit "登録", class:"" %>
+  </div>
+<% end %>
