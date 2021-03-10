@@ -4,11 +4,11 @@
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <div class=''>名前
-      <%= f.text_area :by, class:"", placeholder:"アイテム名", maxlength:"40" %>
-    </div>
     <div class="">どちらから
     <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:""}) %>
+    </div>
+    <div class=''>名前
+      <%= f.text_area :by, class:"", placeholder:"アイテム名", maxlength:"40" %>
     </div>
     <div class=''>メッセージ
       <%= f.text_area :message, class:"", placeholder:"アイテムの詳細" %>
@@ -20,8 +20,9 @@
 <% if @chats %>
   <div id="chats">
     <% @chats.each do |chat| %>
-      <p id="message"><%= chat.message %></p>
       <p id="message-name"><%=  chat.from.name %></p> 
+      <p id="message-name"><%=  chat.by %></p> 
+      <p id="message"><%= chat.message %></p>
     <% end %>
   </div>
 <% end %>
