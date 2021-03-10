@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+
+  <%= link_to '登録する', new_regular_guest_path, class: "basic-menu-btn" %>
+ 
+<% @regular_guests.each do |regular_guest| %>
+      <ul class=''>
+        <li>
+          <%= link_to edit_regular_guest_path(regular_guest), class:'' do %>
+              <%= regular_guest.name %>
+              <%= regular_guest.status.name %>
+              <%= regular_guest.member_number %>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
