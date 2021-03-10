@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @chat, class:"", local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class=''>名前
+      <%= f.text_area :by, class:"", placeholder:"アイテム名", maxlength:"40" %>
+    </div>
+    <div class="">どちらから
+    <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:""}) %>
+    </div>
+    <div class=''>メッセージ
+      <%= f.text_area :message, class:"", placeholder:"アイテムの詳細" %>
+    </div>
+      <%= f.submit "送信", class:"" %>
+  </div>
+<% end %>
+
+<% if @chats %>
+  <div id="chats">
+    <% @chats.each do |chat| %>
+      <p id="message"><%= chat.message %></p>
+      <p id="message-name"><%=  chat.from.name %></p> 
+    <% end %>
+  </div>
+<% end %>

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :equipments
   resources :other_functions,    only: :index
   resources :chats
+  
 end
