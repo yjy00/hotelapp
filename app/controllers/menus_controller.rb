@@ -1,5 +1,4 @@
 class MenusController < ApplicationController
-
   def index
     @menus = Menu.order('updated_at DESC')
   end

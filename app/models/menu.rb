@@ -6,5 +6,4 @@ class Menu < ApplicationRecord
 
   validates :name, :category_id, presence: true
   validates :category_id, numericality: { other_than: 1 }
-
 end
