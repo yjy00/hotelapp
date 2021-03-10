@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :beverages
   resources :equipments
   resources :other_functions,    only: :index
-  resources :chats
+  resources :chats,              only: [:index, :create]
   
 end
