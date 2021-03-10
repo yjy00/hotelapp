@@ -1,0 +1,2 @@
+class RegularGuestsController < ApplicationController
+end

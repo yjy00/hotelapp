@@ -1,0 +1,2 @@
+class RegularGuest < ApplicationRecord
+end
