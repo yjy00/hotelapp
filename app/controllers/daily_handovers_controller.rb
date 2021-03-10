@@ -1,0 +1,2 @@
+class DailyHandoversController < ApplicationController
+end

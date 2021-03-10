@@ -1,0 +1,2 @@
+class DailyHandover < ApplicationRecord
+end
