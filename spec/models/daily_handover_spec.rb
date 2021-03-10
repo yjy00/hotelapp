@@ -45,7 +45,6 @@ RSpec.describe DailyHandover, type: :model do
           @daily_handover.valid?
           expect(@daily_handover.errors[:date]).to include("can't be blank")
         end
-
       end
     end
   end

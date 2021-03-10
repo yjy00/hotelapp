@@ -37,7 +37,6 @@ RSpec.describe Chat, type: :model do
           @chat.valid?
           expect(@chat.errors[:from_id]).to include
         end
-
       end
     end
   end

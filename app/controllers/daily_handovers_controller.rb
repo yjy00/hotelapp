@@ -1,5 +1,4 @@
 class DailyHandoversController < ApplicationController
-
   def index
     @daily_handovers = DailyHandover.order('created_at DESC')
   end
