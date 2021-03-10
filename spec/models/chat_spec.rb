@@ -32,7 +32,6 @@ RSpec.describe Chat, type: :model do
           expect(@chat.errors[:message]).to include("can't be blank")
         end
       end
-      
     end
   end
 end
