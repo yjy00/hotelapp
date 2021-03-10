@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @daily_handover, class:"", local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%= f.number_field :month, class:"", placeholder:"月" %>
+    <%= f.number_field :date, class:"", placeholder:"日" %>
+    <div class='detail'>今日のリマーク
+      <%= f.text_area :daily_remark, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+    <div class='detail'>早番へ
+      <%= f.text_area :to_morning, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+    <div class='detail'>遅番へ
+      <%= f.text_area :to_evening, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+    <div class='detail'>明日へ
+      <%= f.text_area :for_tomorrow, class:"item-detail", placeholder:"アイテムの詳細" %>
+    </div>
+      <%= f.submit "登録する", class:"" %>
+ 
+<% end %>

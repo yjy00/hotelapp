@@ -1,0 +1,2 @@
+module DailyHandoversHelper
+end
