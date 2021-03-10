@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :equipments
   resources :other_functions,    only: :index
   resources :chats,              only: [:index, :create]
+  resources :daily_handovers
   
 end
