@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :other_functions,    only: :index
   resources :chats,              only: [:index, :create]
   resources :daily_handovers,    only: [:index, :new, :create, :edit, :update]
-  resources :regular_guests
-  
+  resources :regular_guests,     only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :menus
+
 end
