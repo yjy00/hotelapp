@@ -45,6 +45,6 @@ class BeveragesController < ApplicationController
   private
 
   def beverage_params
-    params.require(:beverage).permit(:image, :name, :category_id, :count_id, :place_id, :detail)
+    params.require(:beverage).permit(:image, :name, :category, :count, :place_id, :detail)
   end
 end
