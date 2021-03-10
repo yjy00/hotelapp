@@ -31,6 +31,12 @@ RSpec.describe Chat, type: :model do
           @chat.valid?
           expect(@chat.errors[:message]).to include("can't be blank")
         end
+
+        it 'fromが1のままでは登録できないこと' do
+          @chat.from_id = 1
+          @chat.valid?
+          expect(@chat.errors[:from_id]).to include
+        end
       end
     end
   end
