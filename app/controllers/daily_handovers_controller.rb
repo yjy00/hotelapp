@@ -33,6 +33,6 @@ class DailyHandoversController < ApplicationController
   private
 
   def daily_handover_params
-    params.require(:daily_handover).permit(:daily_remark, :to_morning, :to_evening, :for_tomorrow)
+    params.require(:daily_handover).permit(:month, :date, :daily_remark, :to_morning, :to_evening, :for_tomorrow)
   end
 end

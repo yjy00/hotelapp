@@ -1,12 +1,12 @@
 <%= render "shared/header" %>
       <%= link_to '登録する', new_daily_handover_path, class: "basic-menu-btn" %>
-      <%# <%= link_to '編集する', edit_daily_handover_path(daily_handover), class: "basic-menu-btn" %> %>
  
  <% @daily_handovers.each do |daily_handover| %>
       <ul class=''>
         <li>
+          <%= link_to edit_daily_handover_path(daily_handover), class: "" do %>
           <div class="">
-            <%= daily_handover.created_at %>
+            <%= daily_handover.month %>月<%= daily_handover.date %>日
             <p class="">今日のリマーク</p>
               <%= daily_handover.daily_remark %>
             <p class="">早番へ</p>
@@ -16,6 +16,10 @@
             <p class="">明日へ</p>
               <%= daily_handover.for_tomorrow %>
           </div>
+      <p>編集する</p>
+
+          <% end %>
         </li>
       </ul>
+
     <% end %>

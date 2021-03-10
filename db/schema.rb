@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 2021_03_10_045520) do
   end
 
   create_table "daily_handovers", charset: "utf8", force: :cascade do |t|
+    t.integer "month", null: false
+    t.integer "date", null: false
     t.text "daily_remark"
     t.text "to_morning"
     t.text "to_evening"
