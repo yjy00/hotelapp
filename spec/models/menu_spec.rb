@@ -43,7 +43,6 @@ RSpec.describe Menu, type: :model do
           @menu.valid?
           expect(@menu.errors[:category_id]).to include
         end
-
       end
     end
   end
