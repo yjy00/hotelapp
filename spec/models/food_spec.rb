@@ -33,21 +33,15 @@ RSpec.describe Food, type: :model do
         end
 
         it '数量ついての情報が必須であること' do
-          @food.count_id = nil
+          @food.count = nil
           @food.valid?
-          expect(@food.errors[:count_id]).to include("can't be blank")
+          expect(@food.errors[:count]).to include("can't be blank")
         end
 
         it '場所についての情報が必須であること' do
           @food.place_id = nil
           @food.valid?
           expect(@food.errors[:place_id]).to include("can't be blank")
-        end
-
-        it '数量idが1のままでは登録できないこと' do
-          @food.count_id = 1
-          @food.valid?
-          expect(@food.errors[:count_id]).to include
         end
 
         it '場所idが1のままでは登録できないこと' do
