@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_100453) do
   create_table "beverages", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "place_id", null: false
-    t.integer "count_id", null: false
+    t.integer "count", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_100453) do
   create_table "equipment", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "place_id", null: false
-    t.integer "count_id", null: false
+    t.integer "count", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_100453) do
   create_table "foods", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "place_id", null: false
-    t.integer "count_id", null: false
+    t.integer "count", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

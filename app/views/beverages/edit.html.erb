@@ -6,7 +6,7 @@
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="count">数量
-      <%= f.collection_select(:count_id, Count.all, :id, :name, {}, {class:"count-select"}) %>
+      <%= f.number_field :count, class:"", placeholder:"月" %>
     </div>
     <div>
       <%= f.submit "登録する", class:"regregister-btnister" %>

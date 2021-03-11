@@ -33,21 +33,15 @@ RSpec.describe Equipment, type: :model do
         end
 
         it '数量ついての情報が必須であること' do
-          @equipment.count_id = nil
+          @equipment.count = nil
           @equipment.valid?
-          expect(@equipment.errors[:count_id]).to include("can't be blank")
+          expect(@equipment.errors[:count]).to include("can't be blank")
         end
 
         it '場所についての情報が必須であること' do
           @equipment.place_id = nil
           @equipment.valid?
           expect(@equipment.errors[:place_id]).to include("can't be blank")
-        end
-
-        it '数量idが1のままでは登録できないこと' do
-          @equipment.count_id = 1
-          @equipment.valid?
-          expect(@equipment.errors[:count_id]).to include
         end
 
         it '場所idが1のままでは登録できないこと' do

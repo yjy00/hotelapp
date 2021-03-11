@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+
+発注リスト
+
+<% @instances.each do |instance| %>
+  <% if instance.class == "Food" %>
+    <%# Foodの表示 %> 
+    <%= instance.name %>
+    <%= instance.count %>
+  <% else %>
+    <%# Equipmentの表示 %> 
+    <%= instance.name %>
+    <%= instance.count %>
+  <% end %>
+<% end %>

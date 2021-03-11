@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+
+フード発注リスト
+
+<% @foods.each do |food| %>
+      <ul class='item'>
+        <li>
+          <%= link_to edit_food_path(food), class: 'edit' do %>
+          <div class="name">
+            <p class="name-title">名前</p>
+            <%= food.name %>
+          </div>
+          <div class="count">
+            <p class="count-title">数量</p>
+            <%= food.count %>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+

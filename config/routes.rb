@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :chats,              only: [:index, :create]
   resources :daily_handovers,    only: [:index, :new, :create, :edit, :update]
   resources :regular_guests,     only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :menus
+  resources :menus,              only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :orders,             only: :index
+  resources :kitchen_orders,     only: :index
 
 end
