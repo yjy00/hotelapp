@@ -1,35 +1,15 @@
 <%= render "shared/header" %>
 
- <% @beverages.each do |beverage| %>
-      <ul class='item'>
-        <li>
-          <%= link_to edit_beverage_path(beverage), class:'edit' do %>
-          <div class="name">
-            <p class="name-title">名前</p>
-              <%= beverage.name %>
-          </div>
-          <div class="count">
-            <p class="count-title">数量</p>
-          <%= beverage.count %>
-          </div>
-          <% end %>
-        </li>
-      </ul>
-    <% end %>
+発注リスト
 
- <% @equipments.each do |equipment| %>
-      <ul class='item'>
-        <li>
-          <%= link_to edit_equipment_path(equipment), class: 'edit' do %>
-          <div class="name">
-            <p class="name-title">名前</p>
-              <%= equipment.name %>
-          </div>
-          <div class="count">
-            <p class="count-title">数量</p>
-            <%= equipment.count %>
-          </div>
-          <% end %>
-        </li>
-      </ul>
-    <% end %>
+<% @instances.each do |instance| %>
+  <% if instance.class == "Food" %>
+    <%# Foodの表示 %> 
+    <%= instance.name %>
+    <%= instance.count %>
+  <% else %>
+    <%# Equipmentの表示 %> 
+    <%= instance.name %>
+    <%= instance.count %>
+  <% end %>
+<% end %>

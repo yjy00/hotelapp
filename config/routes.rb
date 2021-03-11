@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :daily_handovers,    only: [:index, :new, :create, :edit, :update]
   resources :regular_guests,     only: [:index, :new, :create, :edit, :update, :destroy]
   resources :menus,              only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :orders
+  resources :orders,             only: :index
+  resources :kitchen_orders,     only: :index
 
 end
