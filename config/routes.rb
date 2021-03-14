@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'foods#index'
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
+  
 
   resources :mainmenus,         only: :index
   resources :foods
