@@ -1,0 +1,2 @@
+class PeopleManagement < ApplicationRecord
+end
