@@ -17,4 +17,10 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
+
+  def self.guest
+    find_or_create_by!(name:'Sheroton', email: 'sheroton.fb@sheroton.com', managers_name: '中村 美智子') do |user|
+      user.password = SecureRandom.hex(5)
+    end
+  end
 end
