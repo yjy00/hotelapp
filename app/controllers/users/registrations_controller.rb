@@ -6,9 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :check_guest, only: [:destroy, :update]
 
   def check_guest
-    if resource.email == 'sheroton.fb@sheroton.com'
-      redirect_to root_path
-    end
+    redirect_to root_path if resource.email == 'sheroton.fb@sheroton.com'
   end
   # GET /resource/sign_up
   # def new

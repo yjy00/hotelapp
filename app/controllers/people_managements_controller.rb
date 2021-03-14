@@ -1,5 +1,4 @@
 class PeopleManagementsController < ApplicationController
-
   def edit
     @people_management = PeopleManagement.find(1)
   end
