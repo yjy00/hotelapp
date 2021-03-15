@@ -19,7 +19,7 @@ class User < ApplicationRecord
   end
 
   def self.guest
-    find_or_create_by!(name: 'Sheroton', email: 'sheroton.fb@sheroton.com', managers_name: '中村 美智子') do |user|
+    find_by!(email: 'sheroton.fb@sheroton.com') do |user|
       user.password = SecureRandom.hex(5)
     end
   end
