@@ -1,10 +1,10 @@
 class PeopleManagementsController < ApplicationController
   def edit
-    @people_management = PeopleManagement.find(1)
+    # ApplicationControllerでpeople_management(１)を取得しているため、ここでは取得していない
   end
 
   def update
-    @people_management = PeopleManagement.find(1)
+    # ApplicationControllerでpeople_management(１)を取得しているため、ここでは取得していない
     if @people_management.update(people_management_params)
       redirect_to root_path
     else
