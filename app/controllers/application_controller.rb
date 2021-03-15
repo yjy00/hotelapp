@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def get_people_management
-    # @people_management = PeopleManagement.find(1)
+    @people_management = PeopleManagement.find(1)
   end
 end
