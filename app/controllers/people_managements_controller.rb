@@ -1,5 +1,9 @@
 class PeopleManagementsController < ApplicationController
 
+  def index
+    @people_managements = PeopleManagement.order('updated_at DESC')
+  end
+
   def new
     @people_management = PeopleManagement.new
   end

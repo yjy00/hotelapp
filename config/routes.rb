@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   resources :menus,              only: [:index, :new, :create, :edit, :update, :destroy]
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
-  resources :people_managements, only: [:new, :create, :edit, :update]
+  resources :people_managements, only: [:index, :new, :create, :edit, :update]
 
 end
