@@ -1,4 +1,18 @@
 class PeopleManagementsController < ApplicationController
+
+  def new
+    @people_management = PeopleManagement.new
+  end
+
+  def create
+    @people_management = PeopleManagement.new(people_management_params)
+    if @people_management.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
   def edit
     # ApplicationControllerでpeople_management(１)を取得しているため、ここでは取得していない
   end

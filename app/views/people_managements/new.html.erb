@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+
+<div class="">
+  <%= form_with model: @people_management, class:"", local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class=''>朝食
+      <%= f.number_field :morning, class:"", placeholder:"朝食" %>
+    </div>
+    <div class="count">ホール
+      <%= f.number_field :waiter, class:"", placeholder:"ホール" %>
+    </div>
+    <div class="count">キッチン
+      <%= f.number_field :kitchen, class:"", placeholder:"キッチン" %>
+    </div>
+        <div class="count">洗い場
+      <%= f.number_field :dish_wash, class:"", placeholder:"洗い場" %>
+    </div>
+
+    <div>
+      <%= f.submit "登録する", class:"register-btn" %>
+    </div>
+  <% end %>
+
+</div>
