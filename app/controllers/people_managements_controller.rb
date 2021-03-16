@@ -1,5 +1,4 @@
 class PeopleManagementsController < ApplicationController
-
   def index
     @people_managements = PeopleManagement.order('updated_at DESC')
   end
