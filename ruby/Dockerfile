@@ -17,7 +17,7 @@ RUN curl -sL https://deb.nodesource.com/setup_13.x | bash - && \
 RUN mkdir /app
 RUN cd /app
 RUN gem install bundler
-COPY . /app
+COPY ./hotelapp/ /app
 WORKDIR /app
 
 EXPOSE 3000
