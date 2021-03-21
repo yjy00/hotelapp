@@ -7,7 +7,7 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
     if @chat.save
-      ActionCable.server.broadcast 'chat_channel', {content: @chat, name: @chat.by, from: @chat.from}
+      ActionCable.server.broadcast 'chat_channel', { content: @chat, name: @chat.by, from: @chat.from }
     else
       render :index
     end
