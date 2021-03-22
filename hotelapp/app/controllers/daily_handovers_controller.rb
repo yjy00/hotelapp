@@ -1,6 +1,6 @@
 class DailyHandoversController < ApplicationController
   def index
-    @daily_handovers = DailyHandover.order('created_at DESC')
+    @daily_handovers = DailyHandover.order('created_at DESC').page(params[:page]).per(1)
   end
 
   def new
