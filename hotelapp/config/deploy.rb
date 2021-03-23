@@ -12,11 +12,10 @@ set :repo_url,  'git@github.com:yjy00/hotelapp.git'
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
-set :rbenv_ruby
+set :rbenv_ruby, '3.0.0'
 
 # どの公開鍵を利用してデプロイするか
-set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/hotelapp05.pem'] 
+set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
