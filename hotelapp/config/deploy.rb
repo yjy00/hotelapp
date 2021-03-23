@@ -17,17 +17,28 @@ set :rbenv_ruby, '3.0.0'
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05.pem'] 
 
-# プロセス番号を記載したファイルの場所
-set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
-
-# Unicornの設定ファイルの場所
-set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
-# デプロイ処理が終わった後、Unicornを再起動するための記述
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'unicorn:restart'
+namespace :puma do
+  desc 'Create Directories for Puma Pids and Socket'
+  task :make_dirs do
+    on roles(:app) do
+      execute "mkdir #{shared_path}/tmp/sockets -p"
+      execute "mkdir #{shared_path}/tmp/pids -p"
+    end
   end
+  before :start, :make_dirs
+end
+
+namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      Rake::Task["puma:restart"].reenable
+      invoke 'puma:restart'
+    end
+  end
+
+  # after :publishing, :restart
 end
