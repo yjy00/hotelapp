@@ -53,6 +53,7 @@ test:
 #
 production:
   <<: *default
-  database: hotelapp_production
-  username: hotelapp
-  password: <%= ENV['HOTELAPP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
