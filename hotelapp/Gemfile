@@ -36,7 +36,9 @@ group :development, :test do
   gem 'faker'
   gem 'capistrano'
   gem 'capistrano-rbenv'
-   gem 'capistrano-bundler'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-puma'
 end
 
 group :development do
