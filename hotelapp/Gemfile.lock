@@ -68,6 +68,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.2)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
@@ -113,6 +114,7 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
@@ -318,6 +320,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash
+  bcrypt_pbkdf
   bootsnap (>= 1.4.4)
   byebug
   capistrano
@@ -328,6 +331,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   dotenv-rails
+  ed25519
   factory_bot_rails
   faker
   font-awesome-sass
