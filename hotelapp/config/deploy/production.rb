@@ -1,5 +1,6 @@
 server '3.115.181.127', user: 'hotelapp', roles: %w{app db web}
 
+set :ssh_options, keys: '~/.ssh/hotelapp05_key_rsa' 
 
 # server-based syntax
 # ======================
