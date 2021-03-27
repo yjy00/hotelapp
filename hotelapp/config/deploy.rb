@@ -28,6 +28,9 @@ set :default_env, { path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH" }
 # 保存しておく過去分のアプリ数
 set :keep_releases, 3
 
+set :rbenv_type, :user
+set :rbenv_ruby, '3.0.0'
+
 namespace :deploy do
   desc 'Create database'
   task :db_create do
@@ -47,6 +50,7 @@ namespace :deploy do
     end
   end
 end
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
