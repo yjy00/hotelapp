@@ -12,6 +12,7 @@ require 'capistrano/puma'
 require 'capistrano/console'
 
 install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Nginx
 
 # Load the SCM plugin appropriate to your project:
 #
