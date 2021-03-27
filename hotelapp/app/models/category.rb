@@ -14,7 +14,5 @@ class Category < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :foods
-  has_many :beverages
-  has_many :equipments
+  has_many :items
 end
