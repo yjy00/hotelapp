@@ -2,17 +2,17 @@
 
 フード発注リスト
 
-<% @foods.each do |food| %>
+<% @items.each do |item| %>
       <ul class='item'>
         <li>
-          <%= link_to edit_food_path(food), class: 'edit' do %>
+          <%= link_to edit_item_path(item), class: 'edit' do %>
           <div class="name">
             <p class="name-title">名前</p>
-            <%= food.name %>
+            <%= item.name %>
           </div>
           <div class="count">
             <p class="count-title">数量</p>
-            <%= food.count %>
+            <%= item.count %>
           </div>
           <% end %>
         </li>
