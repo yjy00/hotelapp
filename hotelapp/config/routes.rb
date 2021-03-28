@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
   resources :people_managements, only: [:index, :new, :create, :edit, :update]
+  resources :items
 
 end
