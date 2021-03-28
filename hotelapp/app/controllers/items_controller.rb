@@ -11,7 +11,13 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path
+      if (2..7).include?(@item.category_id)
+        redirect_to foods_path
+      elsif (8..9).include?(@item.category_id)
+        redirect_to beverages_path
+      else
+        redirect_to equipments_path
+      end
     else
       render :new
     end
@@ -28,7 +34,13 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update(item_params)
-      redirect_to root_path
+      if (2..7).include?(@item.category_id)
+        redirect_to foods_path
+      elsif (8..9).include?(@item.category_id)
+        redirect_to beverages_path
+      else
+        redirect_to equipments_path
+      end
     else
       render :edit
     end
