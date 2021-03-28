@@ -31,6 +31,7 @@ app_dir = File.expand_path("../../", __FILE__)
 # state_path "#{app_dir}/shared/tmp/pids/puma.state"
 # stdout_redirect "#{app_dir}/shared/log/puma.stdout.log", "#{app_dir}/shared/log/puma.stderr.log", true
 
+
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked web server processes. If using threads and workers together
 # the concurrency of the application would be max `threads` * `workers`.
