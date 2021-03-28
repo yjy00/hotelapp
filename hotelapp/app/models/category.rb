@@ -6,15 +6,12 @@ class Category < ActiveHash::Base
     { id: 4, name: 'Dessert' },
     { id: 5, name: 'Salad' },
     { id: 6, name: 'Fruit' },
-    { id: 7, name: 'Alcohol' },
-    { id: 8, name: 'Juice' },
-    { id: 9, name: 'Equipment' },
-    { id: 10, name: 'Bar Menu' },
-    { id: 11, name: 'Other' }
+    { id: 7, name: 'Bar Menu' },
+    { id: 8, name: 'Alcohol' },
+    { id: 9, name: 'Juice' },
+    { id: 10, name: 'Equipment' }
   ]
 
   include ActiveHash::Associations
-  has_many :foods
-  has_many :beverages
-  has_many :equipments
+  has_many :items
 end
