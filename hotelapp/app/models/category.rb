@@ -9,7 +9,7 @@ class Category < ActiveHash::Base
     { id: 7, name: 'Bar Menu' },
     { id: 8, name: 'Alcohol' },
     { id: 9, name: 'Juice' },
-    { id: 10, name: 'Equipment' },
+    { id: 10, name: 'Equipment' }
   ]
 
   include ActiveHash::Associations

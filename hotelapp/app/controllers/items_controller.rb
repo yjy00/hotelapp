@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     @items = Item.order('updated_at DESC')
   end
@@ -11,9 +10,10 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      if (2..7).include?(@item.category_id)
+      case @item.category_id
+      when 2..7
         redirect_to foods_path
-      elsif (8..9).include?(@item.category_id)
+      when 8..9
         redirect_to beverages_path
       else
         redirect_to equipments_path
@@ -34,9 +34,10 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     if @item.update(item_params)
-      if (2..7).include?(@item.category_id)
+      case @item.category_id
+      when 2..7
         redirect_to foods_path
-      elsif (8..9).include?(@item.category_id)
+      when 8..9
         redirect_to beverages_path
       else
         redirect_to equipments_path
