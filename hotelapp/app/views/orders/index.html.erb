@@ -2,18 +2,19 @@
 
 発注リスト
 
-  <% @instances.each do |instance| %>
-    <% if instance.instance_of? (Beverage) %>
-      <%# Beverageの表示 %> 
-        <%= link_to edit_beverage_path(instance), class: 'edit' do %>
-      <%= instance.name %>
-      <%= instance.count %>
-      <% end %>
-    <% else %>
-      <%# Equipmentの表示 %> 
-        <%= link_to edit_equipment_path(instance), class: 'edit' do %>
-      <%= instance.name %>
-      <%= instance.count %>
-      <% end %>
+  <% @items.each do |item| %>
+      <ul class='item'>
+        <li>
+          <%= link_to edit_item_path(item), class: 'edit' do %>
+          <div class="name">
+            <p class="name-title">名前</p>
+            <%= item.name %>
+          </div>
+          <div class="count">
+            <p class="count-title">数量</p>
+            <%= item.count %>
+          </div>
+          <% end %>
+        </li>
+      </ul>
     <% end %>
-  <% end %>
