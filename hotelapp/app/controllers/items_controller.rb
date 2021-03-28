@@ -49,5 +49,3 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:image, :name, :count, :category_id, :place_id, :detail)
   end
 end
-
-end
