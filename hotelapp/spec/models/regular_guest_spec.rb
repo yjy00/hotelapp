@@ -32,7 +32,7 @@ RSpec.describe RegularGuest, type: :model do
         it 'ゲストの名前が必須であること' do
           @regular_guest.name = nil
           @regular_guest.valid?
-          expect(@regular_guest.errors[:name]).to include("can't be blank")
+          expect(@regular_guest.errors[:name]).to include("を入力してください")
         end
 
         it '数量idが1のままでは登録できないこと' do

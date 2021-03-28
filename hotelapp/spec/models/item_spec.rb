@@ -29,25 +29,25 @@ RSpec.describe Item, type: :model do
         it 'アイテム名が必須であること' do
           @item.name = nil
           @item.valid?
-          expect(@item.errors[:name]).to include("can't be blank")
+          expect(@item.errors[:name]).to include("を入力してください")
         end
 
         it 'カテゴリーについての情報が必須であること' do
           @item.category_id = nil
           @item.valid?
-          expect(@item.errors[:category_id]).to include("can't be blank")
+          expect(@item.errors[:category_id]).to include("を入力してください")
         end
 
         it '場所についての情報が必須であること' do
           @item.place_id = nil
           @item.valid?
-          expect(@item.errors[:place_id]).to include("can't be blank")
+          expect(@item.errors[:place_id]).to include("を入力してください")
         end
 
         it '数量ついての情報が必須であること' do
           @item.count = nil
           @item.valid?
-          expect(@item.errors[:count]).to include("can't be blank")
+          expect(@item.errors[:count]).to include("を入力してください")
         end
 
         it 'カテゴリーidが1のままでは登録できないこと' do
