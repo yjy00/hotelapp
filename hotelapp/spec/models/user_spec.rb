@@ -17,13 +17,13 @@ RSpec.describe User, type: :model do
         it 'ホテル名がない場合は登録できないこと' do
           @user.name = nil
           @user.valid?
-          expect(@user.errors[:name]).to include("を入力してください")
+          expect(@user.errors[:name]).to include('を入力してください')
         end
 
         it 'メールアドレスがない場合は登録できないこと' do
           @user.email = nil
           @user.valid?
-          expect(@user.errors[:email]).to include("を入力してください")
+          expect(@user.errors[:email]).to include('を入力してください')
         end
 
         it 'メールアドレスが一意性であること' do
@@ -42,13 +42,13 @@ RSpec.describe User, type: :model do
         it 'パスワードがなければ登録されないこと' do
           @user.password = nil
           @user.valid?
-          expect(@user.errors[:password]).to include("を入力してください", "は不正な値です")
+          expect(@user.errors[:password]).to include('を入力してください', 'は不正な値です')
         end
 
         it 'パスワードは6文字未満で登録されないこと' do
           @user.password = '0000a'
           @user.valid?
-          expect(@user.errors[:password]).to include("は6文字以上で入力してください", "は不正な値です")
+          expect(@user.errors[:password]).to include('は6文字以上で入力してください', 'は不正な値です')
         end
 
         it 'パスワードは半角英字だけでは登録されないこと' do
@@ -73,13 +73,13 @@ RSpec.describe User, type: :model do
           @user.password = nil
           @user.password_confirmation = '00000a'
           @user.valid?
-          expect(@user.errors[:password]).to include("を入力してください", "は不正な値です")
+          expect(@user.errors[:password]).to include('を入力してください', 'は不正な値です')
         end
 
         it 'マネージャー名が空欄では登録されないこと' do
           @user.managers_name = nil
           @user.valid?
-          expect(@user.errors[:managers_name]).to include("を入力してください")
+          expect(@user.errors[:managers_name]).to include('を入力してください')
         end
       end
     end

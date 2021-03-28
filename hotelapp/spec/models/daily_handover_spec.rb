@@ -37,13 +37,13 @@ RSpec.describe DailyHandover, type: :model do
         it '月が必須であること' do
           @daily_handover.month = nil
           @daily_handover.valid?
-          expect(@daily_handover.errors[:month]).to include("を入力してください")
+          expect(@daily_handover.errors[:month]).to include('を入力してください')
         end
 
         it '日が必須であること' do
           @daily_handover.date = nil
           @daily_handover.valid?
-          expect(@daily_handover.errors[:date]).to include("を入力してください")
+          expect(@daily_handover.errors[:date]).to include('を入力してください')
         end
       end
     end
