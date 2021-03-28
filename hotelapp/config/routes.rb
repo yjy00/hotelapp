@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   end
   
 
-  resources :mainmenus,         only: :index
-  resources :foods
-  resources :beverages
-  resources :equipments
+  resources :mainmenus,          only: :index
+  resources :foods,              only: :index
+  resources :beverages,          only: :index
+  resources :equipments,         only: :index
   resources :other_functions,    only: :index
   resources :chats,              only: [:index, :create]
   resources :daily_handovers,    only: [:index, :new, :create, :edit, :update]

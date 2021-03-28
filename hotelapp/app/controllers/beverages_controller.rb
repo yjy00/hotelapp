@@ -1,50 +1,6 @@
 class BeveragesController < ApplicationController
   def index
-    @beverages = Beverage.order('updated_at DESC')
+    @items = Item.where(category_id: 8..9).order('updated_at DESC')
   end
 
-  def new
-    @beverage = Beverage.new
-  end
-
-  def create
-    @beverage = Beverage.new(beverage_params)
-    if @beverage.save
-      redirect_to root_path
-    else
-      render :new
-    end
-  end
-
-  def edit
-    @beverage = Beverage.find(params[:id])
-  end
-
-  def show
-    @beverage = Beverage.find(params[:id])
-  end
-
-  def update
-    @beverage = Beverage.find(params[:id])
-    if @beverage.update(beverage_params)
-      redirect_to root_path
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @beverage = Beverage.find(params[:id])
-    if @beverage.destroy
-      redirect_to root_path
-    else
-      redirect_to :edit
-    end
-  end
-
-  private
-
-  def beverage_params
-    params.require(:beverage).permit(:image, :name, :category, :count, :place_id, :detail)
-  end
 end
