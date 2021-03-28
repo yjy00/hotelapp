@@ -14,13 +14,7 @@
       <%= link_to '備品一覧', equipments_path, class: "basic-menu-btn" %>
     </div>
     <div>
-      <%= link_to 'フード登録', new_food_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to 'ドリンク登録', new_beverage_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to '備品登録', new_equipment_path, class: "basic-menu-btn" %>
+      <%= link_to '新規登録', new_item_path, class: "basic-menu-btn" %>
     </div>
     <div>
       <%= link_to 'キッチン発注リスト', kitchen_orders_path %>
@@ -29,17 +23,17 @@
 
   <div>
 
-    <% @foods.each do |food| %>
+    <% @items.each do |item| %>
       <ul class='item'>
         <li>
-          <%= link_to edit_food_path(food), class: 'edit' do %>
+          <%= link_to edit_item_path(item), class: 'edit' do %>
           <div class="name">
             <p class="name-title">名前</p>
-            <%= food.name %>
+            <%= item.name %>
           </div>
           <div class="count">
             <p class="count-title">数量</p>
-            <%= food.count %>
+            <%= item.count %>
           </div>
           <% end %>
         </li>
