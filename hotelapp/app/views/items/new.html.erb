@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
 
+
+
 <div class="item-registration">
-  <%= form_with url: equipments_path, model: @equipment, class:"item-form", local: true do |f| %>
+  <%= form_with model: @item, class:"item-form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
@@ -11,8 +13,11 @@
     <div class="count">数量
       <%= f.number_field :count, class:"", placeholder:"月" %>
     </div>
+    <div class="place">カテゴリー
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"place-select"}) %>
+    </div>
     <div class="place">場所
-    <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
     
 
@@ -30,6 +35,3 @@
   <% end %>
 
 </div>
-
-
-      

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'foods#index'
+  root to: 'items#index'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   end
   
 
-  resources :mainmenus,         only: :index
-  resources :foods
-  resources :beverages
-  resources :equipments
+  resources :mainmenus,          only: :index
+  resources :foods,              only: :index
+  resources :beverages,          only: :index
+  resources :equipments,         only: :index
   resources :other_functions,    only: :index
   resources :chats,              only: [:index, :create]
   resources :daily_handovers,    only: [:index, :new, :create, :edit, :update]
@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
   resources :people_managements, only: [:index, :new, :create, :edit, :update]
+  resources :items
 
 end

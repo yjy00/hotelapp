@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="item-registration">
-  <%= form_with model: @food, class:"item-form", local: true do |f| %>
+  <%= form_with model: @item, class:"item-form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
     <div class='name'>名前
@@ -21,6 +21,9 @@
       <%= f.file_field :image, class:"item-image" %>
     </div>
     <div class="place">場所
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"place-select"}) %>
+    </div>
+    <div class="place">場所
       <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"place-select"}) %>
     </div>
     <div>
@@ -29,8 +32,8 @@
   <% end %>
 </div>
     <div class="link-list">
-      <%= link_to '詳細ページへ', food_path(@food), method: :get, class: "to-show" %>
-      <%= link_to '削除', food_path(@food), method: :delete, class:'to-destroy' %>
+      <%= link_to '詳細ページへ', item_path(@item), method: :get, class: "to-show" %>
+      <%= link_to '削除', item_path(@item), method: :delete, class:'to-destroy' %>
     </div>
 
 
