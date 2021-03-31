@@ -1,9 +1,4 @@
-server "3.115.181.127", user: "hotelapp", roles: %w{app db web}
-
-set :ssh_options, {
-  keys: %w(~/.ssh/hotelapp05_key_rsa),
-  forward_agent: true
-}
+server '3.115.181.127', user: 'hotelapp', roles: %w{app db web}
 
 
 # server-based syntax
