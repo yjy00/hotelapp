@@ -6,10 +6,14 @@ class ChatsController < ApplicationController
 
   def create
     @chat = Chat.new(chat_params)
-    if @chat.save
-      ActionCable.server.broadcast 'chat_channel', { content: @chat, name: @chat.by, from: @chat.from }
-    else
-      render :index
+    respond_to do |format|
+      if @chat.save
+        format.html { redirect_to chats_path }
+        format.js
+      else
+        format.html { render :index }
+        format.js { render :errors }
+      end
     end
   end
 
