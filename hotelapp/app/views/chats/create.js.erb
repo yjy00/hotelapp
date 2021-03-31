@@ -1,1 +1,15 @@
-console.log("create.js.erbファイルが呼び出されました！");
+var html = 
+       `<p><%= @chat.from.name %></p>
+       <p><%= @chat.by %></p> 
+       <p><%= @chat.message %></p>`;
+
+var chats = document.getElementById('chats');
+chats.insertAdjacentHTML('afterbegin', html);
+
+var newChat = document.getElementById('chat_message');
+var newChatBy = document.getElementById('chat_by')
+var newChatId = document.getElementById('chat_from_id')
+
+newChat.value='';
+newChatBy.value='';
+newChatId.value='1';
