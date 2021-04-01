@@ -14,13 +14,6 @@ set :rbenv_ruby, '3.0.0'
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05_key_rsa']
 
-
-set :puma_pid, -> { "#{shared_path}/tmp/pids/puma.pid" }
-
-# Unicornの設定ファイルの場所
-set :puma_config_path, -> { "#{current_path}/config/puma.rb" }
-set :keep_releases, 5
-
 # # デプロイ処理が終わった後、Unicornを再起動するための記述
 # after 'deploy:publishing', 'deploy:restart'
 # namespace :deploy do
