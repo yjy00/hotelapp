@@ -12,7 +12,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '3.0.0'
 
 # どの公開鍵を利用してデプロイするか
-set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05_key_rsa']
+set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05.pem']
 
 # # デプロイ処理が終わった後、Unicornを再起動するための記述
 # after 'deploy:publishing', 'deploy:restart'
@@ -22,7 +22,6 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05_key_rsa
 #   end
 # end
 
-# Pumaに関する設定（後述）
 # ソケットの場所、Nginxとのやり取りに必要
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
 # サーバー状態を表すファイルの場所
@@ -37,8 +36,6 @@ set :puma_error_log, "#{shared_path}/log/puma.access.log"
 set :pty, true
 # シンボリックリンクのファイルを指定、具体的にはsharedに入るファイル
 append :linked_files, "config/master.key"
-# 環境変数の設定
-set :default_env, { path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH" }
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
