@@ -12,8 +12,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '3.0.0'
 
 # どの公開鍵を利用してデプロイするか
-set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/hotelapp05_key_rsa']
+set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05_key_rsa']
 
 
 set :puma_pid, -> { "#{shared_path}/tmp/pids/puma.pid" }
