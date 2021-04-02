@@ -34,11 +34,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'capistrano', '3.15.0'
+  gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'capistrano3-puma'
 end
 
 group :development do
@@ -76,3 +75,4 @@ gem 'kaminari'
 gem 'dotenv-rails'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
+gem 'capistrano3-puma', github: "seuros/capistrano-puma"
