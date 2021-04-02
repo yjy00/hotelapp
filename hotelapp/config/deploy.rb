@@ -14,12 +14,12 @@ set :rbenv_ruby, '3.0.0'
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp05.pem']
 
-after 'deploy:publishing', 'deploy:restart'
-namespace :deploy do
-  task :restart do
-    invoke 'puma:restart'
-  end
-end
+# after 'deploy:publishing', 'deploy:restart'
+# namespace :deploy do
+#   task :restart do
+#     invoke 'puma:restart'
+#   end
+# end
 
 # ソケットの場所、Nginxとのやり取りに必要
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
