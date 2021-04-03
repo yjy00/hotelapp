@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2021_03_27_233741) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "beverages", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "place_id", null: false
+    t.integer "count", null: false
+    t.text "detail"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "chats", charset: "utf8", force: :cascade do |t|
     t.integer "from_id", null: false
     t.string "by", null: false
@@ -59,11 +68,19 @@ ActiveRecord::Schema.define(version: 2021_03_27_233741) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "halls", charset: "utf8", force: :cascade do |t|
+  create_table "equipment", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "category_id", null: false
     t.integer "place_id", null: false
-    t.integer "count_id", null: false
+    t.integer "count", null: false
+    t.text "detail"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "foods", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "place_id", null: false
+    t.integer "count", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -74,16 +91,6 @@ ActiveRecord::Schema.define(version: 2021_03_27_233741) do
     t.integer "category_id", null: false
     t.integer "place_id", null: false
     t.integer "count", null: false
-    t.text "detail"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "kitchens", charset: "utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "category_id", null: false
-    t.integer "place_id", null: false
-    t.integer "count_id", null: false
     t.text "detail"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
