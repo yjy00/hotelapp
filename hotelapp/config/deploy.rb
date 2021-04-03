@@ -4,7 +4,7 @@ lock "3.16.0"
 set :application, "hotelapp"
 set :repo_url, "git@github.com:yjy00/hotelapp.git"
 
-set :deploy_to, "/var/www/rails/hotelapp/hotelapp"
+set :deploy_to, "/var/www/rails/hotelapp/hotelapp/current"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
