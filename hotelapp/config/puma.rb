@@ -24,7 +24,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 # pid "#{app_path}/tmp/pids/puma.pid"  # 「shared」の中を参照するよう変更
 
 # port ENV.fetch("PORT", 3000)
-bind "unix://#{app_path}/shared/tmp/sockets/puma.sock"
+bind "unix://#{app_path}/tmp/sockets/puma.sock"
 
 # Specifies the `environment` that Puma will run in.
 #
