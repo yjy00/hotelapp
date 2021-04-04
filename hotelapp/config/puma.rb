@@ -16,13 +16,13 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
 
-app_path = File.expand_path('../../../../', __FILE__)
-working_directory "#{app_path}/current"
+# app_path = File.expand_path('../../../../', __FILE__)
+# working_directory "#{app_path}/current"
 
-pid "#{app_path}/shared/tmp/pids/puma.pid"  # 「shared」の中を参照するよう変更
+# pid "#{app_path}/tmp/pids/puma.pid"  # 「shared」の中を参照するよう変更
 
 # port ENV.fetch("PORT", 3000)
-bind "unix://#{app_path}/shared/tmp/sockets/puma.sock"
+bind "unix://#{app_path}/tmp/sockets/puma.sock"
 
 # Specifies the `environment` that Puma will run in.
 #
