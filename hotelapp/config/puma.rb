@@ -17,7 +17,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 #
 
 # app_path = File.expand_path('../../../../', __FILE__)
- app_path = File.expand_path('../../', __FILE__)
+ app_path = File.expand_path('', __FILE__)
 
 # working_directory "#{app_path}/current"
 
