@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<div class="regularguest-function-backimage">
 <%= form_with model: @regular_guest, class:"", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -19,3 +20,5 @@
   </div>
       <%= link_to '削除', regular_guest_path(@regular_guest), method: :delete, class:'' %>
 <% end %>
+
+</div>
