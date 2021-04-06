@@ -1,6 +1,10 @@
 <%= render "shared/header" %>
+<div class="order-function-backimage">
 
 発注リスト
+
+<%= render "shared/basic-header" %>
+
 
   <% @items.each do |item| %>
       <ul class='item'>
@@ -18,3 +22,5 @@
         </li>
       </ul>
     <% end %>
+
+    </div>

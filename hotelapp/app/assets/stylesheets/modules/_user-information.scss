@@ -1,0 +1,6 @@
+@import "mixin/backimage";
+@import "config/variables";
+
+.user-information-backimage{
+  @include backimage($user-information-backimage);
+}

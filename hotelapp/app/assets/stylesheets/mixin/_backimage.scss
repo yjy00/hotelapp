@@ -1,0 +1,16 @@
+@mixin backimage($backimage){
+  height: 100%;
+  width: 100%;
+  background-image: $backimage;
+  background-size: cover;
+}
+
+
+// @mixin backimage($backimage){
+//   width: 100%;
+//   height: 0;
+//   background-image: $backimage;
+//   background-repeat: no-repeat;
+//   // background-position: center center;
+//   background-size: cover;
+// }

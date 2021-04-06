@@ -1,3 +1,10 @@
 // Place all the styles related to the people_managements controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "mixin/backimage";
+@import "config/variables";
+
+.people-management-function-backimage{
+  @include backimage($people-management-function-backimage);
+}

@@ -1,0 +1,6 @@
+@import "mixin/backimage";
+@import "config/variables";
+
+.main-page-backimage{
+  @include backimage($main-background-image);
+}

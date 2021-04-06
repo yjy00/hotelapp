@@ -1,0 +1,6 @@
+@import "mixin/backimage";
+@import "config/variables";
+
+.people-management-function-backimage{
+  @include backimage($people-management-function-backimage);
+}
