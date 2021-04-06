@@ -1,27 +1,9 @@
 <%= render "shared/header" %>
 
-  <div class="basic-menu-list">
-    <div>
-      <p class="basic-menu-btn menu-sentence" >基本メニュー</p>
-    </div>
-    <div>
-      <%= link_to 'フード一覧', foods_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to 'ドリンク一覧', beverages_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to '備品一覧', equipments_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to '新規登録', new_item_path, class: "basic-menu-btn" %>
-    </div>
-    <div>
-      <%= link_to 'キッチン発注リスト', kitchen_orders_path %>
-    </div>
-  </div>
 
-  <div>
+  
+<div class="main-page-backimage">
+  <%= render "shared/basic-header" %>
 
     <% @items.each do |item| %>
       <ul class='item'>
@@ -40,3 +22,4 @@
       </ul>
     <% end %>
 
+</div>
