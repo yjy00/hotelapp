@@ -1,5 +1,6 @@
 <%= render "shared/header" %>
 
+<div class="chat-function-back-image">
 <%= form_with model: @chat, local: false do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -26,3 +27,5 @@
     <% end %>
   </div>
 <% end %>
+
+</div>

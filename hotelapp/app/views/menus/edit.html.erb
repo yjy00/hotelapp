@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 
 
+<div class="menu-function-backimage">
 
 <div class="item-registration">
   <%= form_with model: @menu, class:"", local: true do |f| %>
@@ -29,5 +30,7 @@
       <%= link_to '削除', menu_path(@menu), method: :delete, class:'to-destroy' %>
     </div>
   <% end %>
+
+</div>
 
 </div>

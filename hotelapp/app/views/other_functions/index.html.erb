@@ -1,10 +1,14 @@
 <%= render "shared/header" %>
 
-<%= link_to 'チャット', chats_path %>
-<%= link_to '引継ぎ', daily_handovers_path %>
-<%= link_to '常連ゲスト情報', regular_guests_path %>
-<%= link_to 'メニュー管理', menus_path %>
-<%= link_to 'ホール発注リスト', orders_path %>
-<%= link_to "人数管理", edit_people_management_path(1) %>
-<%= link_to "登録情報編集", edit_user_registration_path %>
-<%= link_to "ログアウト", destroy_user_session_path %>
+<div class="other-function-backimage">
+
+  <%= link_to 'チャット', chats_path %>
+  <%= link_to '引継ぎ', daily_handovers_path %>
+  <%= link_to '常連ゲスト情報', regular_guests_path %>
+  <%= link_to 'メニュー管理', menus_path %>
+  <%= link_to 'ホール発注リスト', orders_path %>
+  <%= link_to "人数管理", edit_people_management_path(1) %>
+  <%= link_to "登録情報編集", edit_user_registration_path %>
+  <%= link_to "ログアウト", destroy_user_session_path %>
+
+</div>

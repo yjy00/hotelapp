@@ -1,4 +1,6 @@
 <%= render "shared/header" %>
+
+<div class="handover-function-backimage">
       <%= link_to '登録する', new_daily_handover_path, class: "basic-menu-btn" %>
  
  <% @daily_handovers.each do |daily_handover| %>
@@ -25,3 +27,5 @@
     <% end %>
 
 <%= paginate(@daily_handovers) %>
+
+</div>
