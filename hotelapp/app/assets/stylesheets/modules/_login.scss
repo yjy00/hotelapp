@@ -1,0 +1,6 @@
+@import "mixin/backimage";
+@import "config/variables";
+
+.login-background{
+  @include backimage($login-background-image);
+}
