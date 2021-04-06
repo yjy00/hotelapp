@@ -1,17 +1,23 @@
 @import "reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "modules/mainmenus";
-@import "modules/foods";
-@import "modules/equipments";
-@import "modules/beverages";
+@import "config/variables";
+@import "mixin/backimage";
 @import "modules/header";
 @import "modules/all";
-@import "modules/basic_index";
-@import "modules/basic_form";
-@import "config/variables";
-
-
+@import "modules/basic-function-common";
+@import "modules/login";
+@import "modules/user-information";
+@import "items";
+@import "kitchen_orders";
+@import "chats";
+@import "daily_handovers";
+@import "menus";
+@import "orders";
+@import "other_functions";
+@import "people_managements";
+@import "regular_guests";
+@import "people_managements";
 
 
 
