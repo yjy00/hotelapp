@@ -1,8 +1,11 @@
 @mixin backimage($backimage){
-  height: 100%;
-  width: 100%;
   background-image: $backimage;
+  height: 100%;
   background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+  background-color:rgba(78, 76, 76, 0.8);
+  background-blend-mode:lighten;
 }
 
 
