@@ -3,4 +3,126 @@
 
 .login-background{
   @include backimage($login-background-image);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-page{
+    // background-color: rebeccapurple;
+    height: 500px;
+    width: 450px;
+    min-height: 450px;
+    background-color:rgba(173, 169, 169, 0.6);
+    border-radius: 10px;
+
+    .lognin-logo{
+      // background-color: saddlebrown;
+      width: 100px;
+      height: 50px;
+      font-size: 1.8rem;
+      margin: 0 auto;
+    }
+    .login{
+      // background-color: royalblue;
+      font-size: 1.5rem;
+    }
+    .login-form{
+      // background-color: rosybrown;
+      height: 200px;
+      line-height: 30px;
+      .actions{
+        // background-color: aquamarine;
+      }
+    }
+    .guest-login{
+      // background-color: springgreen;
+      height: 100px;
+      line-height: 80px;
+      .login-btn{
+        height: 100px;
+        width: 300px;
+        background-color:rgba(32, 43, 158, 1);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 0 auto;
+        .login-link{
+          display: block;
+          color: black;
+        }
+
+
+      }
+    }
+    .sign-up-render{
+      margin-top: 10px;
+      .to-sign-up{
+        display: block;
+        color: rgb(65, 63, 63);
+      }
+    }
+    
+
+  }
 }
+
+@media (max-width: 600px){
+
+}
+//     background-color: gold;
+//     .login{
+//       background-color: royalblue;
+//       height: 11%;
+//       line-height: 230%;
+//       }
+//     .login-form{
+//       height: 50%;
+//       background-color: green;
+//       line-height: 200%;
+//       .new_user{
+//         height: 100%;
+//         // background-color: goldenrod;
+//     //     line-height: 250%;
+//     //     .field{
+//     //       height: 34%;
+//     //       // background-color: rebeccapurple;
+//     //       // line-height: 208%;
+//     //       .login-label{
+//     //       }
+//     //       .form{
+//     //         border-radius: 10px;
+//     //       }
+//     //       .login-check{
+//     //         border-radius: 10px;
+//           }
+//         }
+        
+//     //   }
+//       .actions{
+//         background-color: ghostwhite;
+//         height: 15%;
+//         line-height: 100%;
+//           .login-btn{
+//           height: 80%;
+//           width: 25%;
+//           border-radius: 10px;
+//         }
+//     //   }
+//     //   }
+//     // .guest-login{
+//     //   // line-height: 1000%;
+//     //   // background-color: palegoldenrod;
+//     //   height: 10%;
+//     // }
+//     // .sign-up-render{
+//     //   height: 25%;
+//     //   // line-height: 1000%;
+//     //   // background-color: greenyellow;
+//     //   .to-sign-up{
+
+//     //   }
+//     //   .to-forget-password{
+
+//     //   }
+//     }
+//   }
+// }
