@@ -1,36 +1,47 @@
 <div class="login-background">
 
-  <h2>Log in</h2>
+  <div class=login-page>
 
-  <%= render partial: 'layouts/flash' %>
+    <div class="lognin-logo">logo</div>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <h2 class="login">ログイン</h2>
+
+    <%= render partial: 'layouts/flash' %>
+
+    <div class="login-form">
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email, class: "login-label" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, class: "login-label" %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "form" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me, class: "login-check" %>
+            <%= f.label :remember_me, class: "login-label" %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "login-btn" %>
+        </div>
+      <% end %>
     </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+        <div class="guest-login">
+        <div class="login-btn">
+          <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "login-link" %>
+        </div>
+        </div>
+        <div class="sign-up-render">
+          <%= render "devise/shared/links" %>
+        </div>
+
     </div>
-
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-    <% end %>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-  <% end %>
-
-    <div>
-    <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
-    </div>
-
-  <%= render "devise/shared/links" %>
-
 </div>
