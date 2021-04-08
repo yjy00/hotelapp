@@ -1,12 +1,18 @@
 @import "mixin/backimage";
 @import "config/variables";
 
+// 高さをvhに変えたほうがいい？
+
 .login-background{
   @include backimage($login-background-image);
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-flow: column;
   align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  box-sizing: border-box;
   .login-page{
     // background-color: rebeccapurple;
     height: 500px;
@@ -30,15 +36,12 @@
       // background-color: rosybrown;
       height: 200px;
       line-height: 30px;
-      .actions{
-        // background-color: aquamarine;
-      }
     }
     .guest-login{
       // background-color: springgreen;
       height: 100px;
       line-height: 80px;
-      .login-btn{
+      .guest-login-btn{
         height: 100px;
         width: 300px;
         background-color:rgba(32, 43, 158, 0.7);
@@ -49,8 +52,6 @@
           display: block;
           color: black;
         }
-
-
       }
     }
     .sign-up-render{
@@ -60,69 +61,12 @@
         color: rgb(65, 63, 63);
       }
     }
-    
-
+  }
+  .footer{
+    position: absolute;
+    bottom: 0;
   }
 }
 
 @media (max-width: 600px){
-
 }
-//     background-color: gold;
-//     .login{
-//       background-color: royalblue;
-//       height: 11%;
-//       line-height: 230%;
-//       }
-//     .login-form{
-//       height: 50%;
-//       background-color: green;
-//       line-height: 200%;
-//       .new_user{
-//         height: 100%;
-//         // background-color: goldenrod;
-//     //     line-height: 250%;
-//     //     .field{
-//     //       height: 34%;
-//     //       // background-color: rebeccapurple;
-//     //       // line-height: 208%;
-//     //       .login-label{
-//     //       }
-//     //       .form{
-//     //         border-radius: 10px;
-//     //       }
-//     //       .login-check{
-//     //         border-radius: 10px;
-//           }
-//         }
-        
-//     //   }
-//       .actions{
-//         background-color: ghostwhite;
-//         height: 15%;
-//         line-height: 100%;
-//           .login-btn{
-//           height: 80%;
-//           width: 25%;
-//           border-radius: 10px;
-//         }
-//     //   }
-//     //   }
-//     // .guest-login{
-//     //   // line-height: 1000%;
-//     //   // background-color: palegoldenrod;
-//     //   height: 10%;
-//     // }
-//     // .sign-up-render{
-//     //   height: 25%;
-//     //   // line-height: 1000%;
-//     //   // background-color: greenyellow;
-//     //   .to-sign-up{
-
-//     //   }
-//     //   .to-forget-password{
-
-//     //   }
-//     }
-//   }
-// }
