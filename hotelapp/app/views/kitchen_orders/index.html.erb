@@ -1,28 +1,28 @@
 <%= render "shared/header" %>
 
 <div class="kitchenorder-function-backimage">
-
-  フード発注リスト
+  <div class="basic-content">
 
   <%= render "shared/basic-header" %>
 
+  <p class="kitchen-title">キッチン発注リスト</p>
 
-  <% @items.each do |item| %>
-        <ul class='item'>
-          <li>
-            <%= link_to edit_item_path(item), class: 'edit' do %>
-            <div class="name">
-              <p class="name-title">名前</p>
-              <%= item.name %>
-            </div>
-            <div class="count">
-              <p class="count-title">数量</p>
-              <%= item.count %>
-            </div>
-            <% end %>
-          </li>
-        </ul>
-      <% end %>
+  <ul class="kitchen-list">
+    <% @items.each do |item| %>
+        <li class="kitchen-item">
+          <%= link_to edit_item_path(item), class:'item-edit' do %>
+          <div class="name">
+            <%= item.name %>
+          </div>
+          <div class="count">
+            <%= item.count %>
+          </div>
+          <% end %>
+        </li>
+    <% end %>
+      </ul>
+    </div>
+
     <%= render "shared/footer" %>
 
 </div>
