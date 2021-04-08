@@ -10,14 +10,16 @@ header{
     .app-logo{
       height: 63px;
       width: 20%;
-      background-color: green;
+      // background-color: green;
+      
       .logo{
         display: block;
-        height: 63px;
+        height: 53px;
         width: 100%;
         line-height: 63px;
         text-align: center;
         background-color: green;
+        margin: 5px;
       }
     }
     .nav{
