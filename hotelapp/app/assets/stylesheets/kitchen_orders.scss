@@ -3,4 +3,21 @@
 
 .kitchenorder-function-backimage{
   @include backimage($kitchenorder-function-backimage);
+  .kitchen-title{
+    margin-bottom: 10px;
+  }
+  .kitchen-list{
+    display: flex;
+    flex-flow: column;
+    .kitchen-item{
+      background-color: black;
+      margin: 10px 40px;
+      border-radius: 10px;
+      text-align: center;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
 }
