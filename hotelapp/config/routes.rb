@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'items#index'
+  root to: 'foods#index'
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
   devise_scope :user do
