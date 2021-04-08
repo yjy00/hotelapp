@@ -1,6 +1,6 @@
 @mixin backimage($backimage){
   background-image: $backimage;
-  height: 100%;
+  height: calc(100% - 63px);
   background-size: cover;
   background-attachment: scroll;
   background-position: center center;
