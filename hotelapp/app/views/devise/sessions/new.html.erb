@@ -35,7 +35,7 @@
     </div>
 
         <div class="guest-login">
-        <div class="login-btn">
+        <div class="guest-login-btn">
           <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "login-link" %>
         </div>
         </div>
@@ -43,5 +43,9 @@
           <%= render "devise/shared/links" %>
         </div>
 
+
     </div>
+
+    <%= render "shared/footer" %>
+
 </div>

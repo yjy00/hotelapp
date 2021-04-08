@@ -11,8 +11,7 @@
   flex-flow: column;
   align-items: center;
   position: relative;
-  padding-bottom: 30px;
-  box-sizing: border-box;
+  @include footer;
   .login-page{
     // background-color: rebeccapurple;
     height: 500px;
@@ -62,10 +61,7 @@
       }
     }
   }
-  .footer{
-    position: absolute;
-    bottom: 0;
-  }
+  
 }
 
 @media (max-width: 600px){

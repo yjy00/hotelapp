@@ -4,3 +4,35 @@
 .main-page-backimage{
   @include backimage($main-background-image);
 }
+
+.basic-content{
+  @include footer;
+  .basic-menu-list{
+    display: flex;
+    justify-content: flex-start;
+    background-color: darkcyan;
+    .basic-menu{
+      margin: 10px;
+      margin-top: 20px;
+    }
+  }
+  .item-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+      .item{
+        flex-shrink: 0;
+        width: 150px;
+        height: 150px;
+        background-color: rgb(124, 124, 228);
+        margin: 10px;
+        margin-top: 20px;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
+}
