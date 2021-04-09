@@ -1,32 +1,49 @@
 <%= render "shared/header" %>
 
 <div class="chat-function-back-image">
-<%= form_with model: @chat, local: false do |f| %>
+  <div class="chat-form-wrapper">
+    <p class="chat-form-title">チャット</p>
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
 
-    <div class="">どちらから
-    <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:""}) %>
-    </div>
-    <div class=''>名前
-      <%= f.text_area :by, class:"", placeholder:"アイテム名", maxlength:"40" %>
-    </div>
-    <div class=''>メッセージ
-      <%= f.text_area :message, class:"", placeholder:"アイテムの詳細" %>
-    </div>
-      <%= f.submit "送信", class:"" %>
-  </div>
-<% end %>
+      <%= render 'shared/error_messages', model: f.object %>
 
-<% if @chats %>
-  <div id="chats">
-    <% @chats.each do |chat| %>
-      <p id="message-name"><%=  chat.from.name %></p> 
-      <p id="message-name"><%=  chat.by %></p> 
-      <p id="message"><%= chat.message %></p>
+
+      <div class="from-form">
+        <p>どちらから</p>
+        <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"message-from"}) %>
+      </div>
+
+      <div class='name-form'>
+        <p class="message-name-title">名前</p>
+        <%= f.text_area :by, class:"message-name", placeholder:"名前", maxlength:"40" %>
+      </div>
+
+      <div class='message-form'>
+        <p>メッセージ</p>
+        <%= f.text_area :message, class: "message-message", placeholder:"メッサージ" %>
+      </div>
+
+      <div class="message-send-form">
+        <%= f.submit "送信", class:"message-send-btn" %>
+      </div>
+
     <% end %>
-  </div>
-<% end %>
-    <%= render "shared/footer" %>
 
-</div>
+
+  <div class="chat-index-wrapper">
+
+    <% if @chats %>
+      <div id="chats">
+        <% @chats.each do |chat| %>
+        
+          <div class="from-name">
+            <p class="from-index"><%=  chat.from.name %></p> 
+            <p class="name-index"><%=  chat.by %></p> 
+          </div>
+
+          <p class="message-index"><%= chat.message %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <%= render "shared/footer" %>
