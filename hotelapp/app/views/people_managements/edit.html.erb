@@ -1,27 +1,32 @@
 <%= render "shared/header" %>
 
 <div class="people-management-function-backimage">
-  <%= form_with model: @people_management, class:"", local: true do |f| %>
+<div class="number-form-outer">
+
+  <%= form_with model: @people_management, class:"number-form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <div class=''>朝食
+    <p class="number-title">人数管理</p>
+
+    <div class='morning-title'>朝食
       <%= f.number_field :morning, class:"", placeholder:"朝食" %>
     </div>
-    <div class="count">ホール
+    <div class="hall-title">ホール
       <%= f.number_field :waiter, class:"", placeholder:"ホール" %>
     </div>
-    <div class="count">キッチン
+    <div class="kitchen-title">キッチン
       <%= f.number_field :kitchen, class:"", placeholder:"キッチン" %>
     </div>
-        <div class="count">洗い場
+        <div class="dishwash-title">洗い場
       <%= f.number_field :dish_wash, class:"", placeholder:"洗い場" %>
     </div>
 
-    <div>
-      <%= f.submit "登録する", class:"register-btn" %>
+    <div class="number-btn">
+      <%= f.submit "登録する", class:"number-register-btn" %>
     </div>
   <% end %>
     <%= render "shared/footer" %>
 
+</div>
 </div>
