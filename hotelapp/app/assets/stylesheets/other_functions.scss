@@ -1,9 +1,40 @@
-// Place all the styles related to the other_functions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
 @import "mixin/backimage";
 @import "config/variables";
+
+.other-menu-outer{
+  padding: $outer-padding;
+  .other-function-menu{
+    @include space-evenly;
+    background-color: blue;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    a{
+      display: block;
+      text-align: center;
+      line-height: 100px;
+    }
+    .other-menu-left{
+      @include space-evenly;
+      flex-flow: column;
+      // background-color: aquamarine;
+    }
+    .other-menu-right{
+      @include space-evenly;
+      flex-flow: column;
+      // background-color: bisque;
+    }
+    .other-menu{
+      margin: 10px;
+      background-color: aqua;
+      height: 100px;
+      width: 200px;
+
+    }
+  }
+}
+
+
 
 .other-function-backimage{
   @include backimage($other-function-backimage);
