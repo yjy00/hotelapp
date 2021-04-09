@@ -1,9 +1,51 @@
-// Place all the styles related to the people_managements controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
 @import "mixin/backimage";
 @import "config/variables";
+
+.number-form-outer{
+  padding-top: 40px;
+  .number-form{
+    text-align: center;
+    background-color: aqua;
+    height: $form-height;
+    margin-top: 1000px;
+    margin: 0 300px;
+    .number-title{
+      background-color: grey;
+      height: $form-title-height;
+      line-height: 70px;
+      font-size: $form-title-fontsize;
+    }
+    .morning-title{
+      background-color: khaki;
+      @include form-content;
+    }
+    .hall-title{
+      background-color: firebrick;
+      @include form-content;
+
+    }
+    .kitchen-title{
+      background-color: palegoldenrod;
+      @include form-content;
+
+    }
+    .dishwash-title{
+      background-color: darkviolet;
+      @include form-content;
+
+    }
+    .number-btn{
+      background-color: olivedrab;
+      @include form-content;
+
+    }
+  }
+}
+
+
+
+
+
 
 .people-management-function-backimage{
   @include backimage($people-management-function-backimage);
