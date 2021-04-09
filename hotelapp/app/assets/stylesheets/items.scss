@@ -1,117 +1,135 @@
 @import "mixin/backimage";
 @import "config/variables";
 
-// 一覧
+.item-form{
+  background-color: firebrick;
+  width: 500px;
+  height: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  .item-form-title{
+    background-color: navajowhite;
+    height: 10%;
+    line-height: 70px;
+    font-size: 1.5rem;
+  }
+  .name-form{
+    background-color: steelblue;
+    height: $basic-form-height;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    .name-title{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
+    }
+    .item-name{
+      height: $basic-form-form-height;
+      width: $basic-form-width;
+      // line-height: $basic-form-form-height;
+    }
+  }
+  .count-form{
+    background-color: aqua;
+    height: $basic-form-height;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    .count-title{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
 
+    }
+    .item-count{
+      width: $basic-form-width;
+      // height: $basic-form-form-height;
 
-// .basic-menu-list{
-//   display: flex;
-//   justify-content: flex-start;
-//   border-bottom: 1px solid #ddd;
-//   .menu-sentence{
-//     margin-left: 20px;
-//   }
-//   .basic-menu-btn{
-//     display: block;
-//     border: 1px solid #ddd;
-//     margin-right: 20px;
-//     margin-top: 20px;
-//   }
-// }
+    }
+  }
+  .category-form{
+    background-color: slategrey;
+    height: $basic-form-height;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    .category-title{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
 
-// .item{
-//   width: 800px;
-//   margin: 20px auto;
-//   border: 1px solid #ddd;
-//   .edit{
-//     display:block;
-//   }
-//   .name{
-//     display: flex;
-//     justify-content: center;
-//     .name-title{
-//       margin-right: 20px;
-//     }
-//   }
-//   .count{
-//     display: flex;
-//     justify-content: center;
-//     .count-title{
-//       margin-right: 20px;
-//     }
-//   }
-// }
+    }
+    .item-category{
+      width: $basic-form-width;
+      // height: $basic-form-form-height;
 
-// // フォーム
-// .item-registration{
-//   .item-form{
-//     display: block;
-//     text-align: center;
-//     height: 700px;
-//     .name{
-//       margin: 20px auto;
-//       height: 100px;
-//       width: 500px;
-//       .item-name{
-//         height: 50px;
-//         width: 500px;
-//       }
-//     }
-//     .count{
-//       margin: 0 auto;
-//       height: 100px;
-//       width: 500px;
-//       line-height: 100px;
-//       .count-select{
-//         width: 200px;
-//         height: 50px;
-//       }
-//     }
-//     .place{
-//       margin: 0 auto;
-//       height: 100px;
-//       line-height: 100px;
-//       width: 500px;
-//       .place-select{
-//         height: 50px;
-//         width: 200px;
-//       }
-//     }
-//     .detail{
-//       margin: 0 auto;
-//       height: 150px;
-//       width: 500px;
-//       .item-detail{
-//         height: 100px;
-//         width: 500px;
-//       }
-//     }
-//     .image-title{
-//     }
-//     .image{
-//       width: 400px;
-//       margin: 20px auto;
-//       height: 30px;
-//       .item-image{
-//       margin: 0 auto;
-//       line-height: 30px;
-//       }
-//     }
-//     .register-btn{
-//       margin: 0 auto;
-//       width: 100px;
-//       height: 70px;
-//     }
-//   }
-// }
+    }
+  }
+  .place-form{
+    background-color: cadetblue;
+    height: $basic-form-height;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    .place-title{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
 
-// .link-list{
-//   text-align: center;
-//   margin-top: 20px;
-//   .to-show{
-//     border: 1px solid #ddd;
-//   }
-// }
+    }
+    .item-place{
+      width: 200px;
+      // height: $basic-form-form-height;
+
+    }
+  }
+  .detail-form{
+    background-color: darkcyan;
+    height: 30%;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    .detail-title{
+      // height: 210px;
+      // line-height: 210px;
+    }
+    .item-detail{
+      height: 150px;
+      width: 400px;
+      margin-top: 25px;
+      // position: absolute;
+      // top: 10%;
+      // right: 10%;
+    
+
+    }
+  }
+  .image-form{
+    background-color: saddlebrown;
+    height: $basic-form-height;
+    margin-top: $basic-form-margin;
+    // line-height: $basic-form-line-height;
+    // display: flex;
+    .image-title{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
+
+    }
+    .item-image{
+      // height: $basic-form-line-height;
+      // line-height: $basic-form-line-height;
+
+    }
+  }
+  .basic-submit{
+    background-color: darkviolet;
+    height: $basic-form-height;
+    margin-top: 20px;
+    line-height: $basic-form-line-height;
+    position: relative;
+
+    .register-btn{
+      height: $basic-form-form-height;
+      position: absolute;
+      top: 25%;
+      left: 43%;
+    }
+  }
+}
+  
 
 .basic-registration-backimage{
   @include backimage($basic-registration-backimage);
