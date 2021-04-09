@@ -16,10 +16,11 @@ header{
         display: block;
         height: 53px;
         width: 100%;
-        line-height: 63px;
+        line-height: 53px;
         text-align: center;
         background-color: green;
         margin: 5px;
+        font-size: 2rem;
       }
     }
     .nav{
@@ -37,9 +38,14 @@ header{
           width: 30%;
           text-align: center;
           margin: 5px;
+          .menu{
+            display: block;
+            color: $font-color;
+          }
         }
       }
     }
     
   }
 }
+
