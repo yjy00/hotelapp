@@ -1,6 +1,99 @@
 @import "mixin/backimage";
 @import "config/variables";
 
+// フォーム
+
+.chat-form-wrapper{
+  padding-top: $outer-padding;
+  .chat-form-title{
+    // background-color: darkturquoise;
+    height: $form-title-height;
+    font-size: $form-title-fontsize;
+    width: $form-width;
+    margin: 0px auto 20px auto;
+    text-align: center;
+  }
+  .chat-form{
+    text-align: center;
+    // background-color: aqua;
+    width: $form-width;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+    
+    .from-form{
+      // background-color: aqua;
+      height: 40px;
+      line-height: 40px;
+      @include make-center;
+
+      .message-from{
+        width: 200px;
+        margin-left: 20px;
+      }
+    }
+    .name-form{
+      // background-color: beige;
+      height: 40px;
+      line-height: 40px;
+      @include make-center;
+      margin-top: 10px;
+      .message-name-title{
+        margin-left: 20px;
+      }
+      .message-name{
+        width: 200px;
+        height: 30px;
+        margin-left: 50px;
+        margin-top: 5px;
+      }
+    }
+    .message-form{
+      // background-color: firebrick;
+      height: 80px;
+      line-height: 40px;
+      @include make-center;
+      margin-top: 10px;
+      .message-message{
+        height: 80px;
+        width: 200px;
+        margin-left: 20px;
+      }
+    }
+    .message-send-form{
+      // background-color: darkviolet;
+      line-height: 40px;
+      height: 40px;
+      margin-top: 10px;
+      .message-send-btn{
+        width: 80px
+      }
+    }
+  }
+}
+
+
+// 一覧
+.chat-index-wrapper{
+  background-color: azure;
+  text-align: center;
+  width: $form-width;
+  margin: 0 auto;
+  margin-top: 20px;
+  .from-name{
+    display: flex;
+    justify-content: flex-start;
+    .from-index{
+      margin-right: 20px
+    }
+    // .from-name
+  }
+  .message-index{
+    text-align: left;
+    margin: 10px;
+    border: 1px solid #CCC;
+
+  }
+}
 .chat-function-back-image{
   @include backimage($chat-function-back-image);
 }
