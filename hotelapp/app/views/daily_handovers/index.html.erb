@@ -1,32 +1,40 @@
 <%= render "shared/header" %>
 
 <div class="handover-function-backimage">
-      <%= link_to '登録する', new_daily_handover_path, class: "basic-menu-btn" %>
- 
- <% @daily_handovers.each do |daily_handover| %>
-      <ul class=''>
-        <li>
-          <%= link_to edit_daily_handover_path(daily_handover), class: "" do %>
-          <div class="">
-            <%= daily_handover.month %>月<%= daily_handover.date %>日
-            <p class="">今日のリマーク</p>
-              <%= daily_handover.daily_remark %>
-            <p class="">早番へ</p>
-              <%= daily_handover.to_morning %>
-            <p class="">遅番へ</p>
-              <%= daily_handover.to_evening %>
-            <p class="">明日へ</p>
-              <%= daily_handover.for_tomorrow %>
-          </div>
-      <p>編集する</p>
+  <div class="handover-wrapper">
+          
+  <p class="handover-title">引き継ぎ帳</p>
 
-          <% end %>
-        </li>
-      </ul>
+      <% @daily_handovers.each do |daily_handover| %>
+        <ul>
+          <li>
+    <div class="handover">
 
-    <% end %>
+              <p class="handover-date"><%= daily_handover.month %>月<%= daily_handover.date %>日</p>
 
-<%= paginate(@daily_handovers) %>
+              <p class="handover-content-title">今日のリマーク</p>
+                <p class="handover-content"><%= daily_handover.daily_remark %></p>
+              <p class="handover-content-title">早番へ</p>
+                <p class="handover-content"><%= daily_handover.to_morning %></p>
+              <p class="handover-content-title">遅番へ</p>
+                <p class="handover-content"><%= daily_handover.to_evening %></p>
+              <p class="handover-content-title">明日へ</p>
+                <p class="handover-content"><%= daily_handover.for_tomorrow %></p>
+
+            <%= link_to "編集する", edit_daily_handover_path(daily_handover), class: "handover-to-edit" %>
+        
+          </li>
+        </ul>
+  </div>
+      <% end %>
+
+
+    <div class="handover-btn-pagenate-wrapper">
+      <%= link_to '明日の引き継ぎ', new_daily_handover_path, class: "handover-resister-btn" %>
+      <%= paginate(@daily_handovers) %>
+    </div>
+
+
     <%= render "shared/footer" %>
 
 </div>
