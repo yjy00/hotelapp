@@ -1,25 +1,41 @@
 <%= render "shared/header" %>
 <div class="regularguest-function-backimage">
-<%= form_with model: @regular_guest, class:"", local: true do |f| %>
+<div class="guest-form-wrapper">
 
-    <%= render 'shared/error_messages', model: f.object %>
+    <%= form_with model: @regular_guest, class:"guest-form", local: true do |f| %>
 
-    <div class="">ゲストの名前
-    <%= f.text_area :name, placeholder:'ゲストの名前' %>
-    </div>
-    <div class=''>ステータス
-      <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:""}) %>
-    </div>
-    <div class=''>メンバーナンバー
-      <%= f.text_area :member_number, class:"", placeholder:"メンバーナンバー" %>
-    </div>
-    <div class=''>その他の情報
-      <%= f.text_area :information, class:"", placeholder:"ゲストに関する情報" %>
-    </div>
-      <%= f.submit "登録", class:"" %>
-  </div>
-      <%= link_to '削除', regular_guest_path(@regular_guest), method: :delete, class:'' %>
-<% end %>
+    <p class="guest-form-title">新規ゲスト登録</p>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <div class="guest-form-content">
+        <p>ゲストの名前</p>
+        <%= f.text_area :name, class:"guest-form-name",placeholder:'ゲストの名前' %>
+      </div>
+      <div class='guest-form-content'>
+        <p class="guest-form-status-title">ステータス</p>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"guest-form-status"}) %>
+      </div>
+      <div class='guest-form-content'>
+        <p>メンバーナンバー</p>
+        <%= f.text_area :member_number, class:"guest-form-number", placeholder:"メンバーナンバー" %>
+      </div>
+      <div class='guest-form-content'>
+        <p>その他の情報</p>
+        <%= f.text_area :information, class:"guest-form-information", placeholder:"ゲストに関する情報" %>
+      </div>
+
+          <div class="guest-form-content">
+          <%= f.submit "登録", class:"guest-register-btn" %>
+        </div>
+
+          <div class="guest-form-content">
+            <%= link_to '削除', regular_guest_path(@regular_guest), method: :delete, class:'guest-delete-btn' %>
+          </div>
+      <% end %>
+
+          </div>
+
     <%= render "shared/footer" %>
 
 </div>

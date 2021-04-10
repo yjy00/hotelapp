@@ -1,5 +1,10 @@
 @mixin form-content {
   height: $basic-form-height;
   line-height: $basic-form-line-height;
+}
 
+@mixin form-sizing {
+  height: $form-height;
+  width: $form-width;
+  margin: 0 auto;
 }
