@@ -1,10 +1,95 @@
-// Place all the styles related to the daily_handovers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
 @import "mixin/backimage";
 @import "config/variables";
 
 .handover-function-backimage{
   @include backimage($handover-function-backimage);
+  height: calc(100% - 89px);
+  .handover-wrapper{
+    padding-top: $outer-padding;
+    .handover-title{
+      background-color: rgb(80, 80, 146);
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      height: $basic-form-line-height;
+      font-size: $form-title-fontsize;
+      margin-bottom: 10px;
+
+    }
+    .handover{
+      background-color: rgb(117, 117, 177);
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+      .handover-date{
+        background-color: rgb(53, 53, 128);
+        text-align: center;
+        height: $form-title-height;
+        line-height: $basic-form-line-height;
+      }
+      .handover-content-title{
+        background-color: rgb(84, 84, 120);
+        height: $form-title-height;
+        line-height: $basic-form-line-height;
+
+      }
+      .handover-content{
+        padding-left: $margin;
+        background-color: rgb(48, 48, 84);
+        height: $basic-form-line-height;
+        line-height: $basic-form-line-height;
+        
+      }
+      .handover-to-edit{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        background-color: rgb(21, 21, 67);
+        height: $basic-form-line-height;
+        line-height: $basic-form-line-height;
+
+      }
+    }
+  }
+  .handover-btn-pagenate-wrapper{
+    margin:  $margin auto;
+    background-color: rgb(38, 38, 62);
+    width: $form-width;
+    height: $basic-form-line-height;
+    text-align: center;
+    .handover-resister-btn{
+      background-color: rgb(73, 73, 85);
+      width: $basic-form-width;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
+
+
+  // .btn-handover-flexbox{
+  //   @include space-evenly;
+  //   align-items: flex-end;
+  //   // background-color: rgb(105, 105, 163);
+  //   
+    
+  //   
+  //   }
+  //   .handover-btn-wrapper{
+  //     // background-color: blue;
+  //     padding-top: $outer-padding;
+      
+  //     .handover-resister-btn{
+  //       background-color: azure;
+  //       display: block;
+  //       width: 120px;
+  //       height: 40px;
+  //       display: flex;
+  //       flex-direction: column;
+  //       justify-content: flex-end;
+  //     }
+  //   }
+  //   }
+  // }
