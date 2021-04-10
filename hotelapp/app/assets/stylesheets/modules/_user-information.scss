@@ -1,6 +1,16 @@
 @import "mixin/backimage";
 @import "config/variables";
 
+.user-information-wrapper{
+  padding-top: $outer-padding;
+  .user-information-form{
+    background-color: antiquewhite;
+    @include form-sizing;
+  }
+}
+
+
 .user-information-backimage{
   @include backimage($user-information-backimage);
+  height: 100%;
 }
