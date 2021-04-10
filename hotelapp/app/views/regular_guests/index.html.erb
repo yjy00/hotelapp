@@ -1,18 +1,28 @@
 <%= render "shared/header" %>
 <div class="regularguest-function-backimage">
 
-  <%= link_to '登録する', new_regular_guest_path, class: "basic-menu-btn" %>
- 
-<% @regular_guests.each do |regular_guest| %>
-      <ul class=''>
-        <li>
-          <%= link_to edit_regular_guest_path(regular_guest), class:'' do %>
-              <%= regular_guest.name %>
-              <%= regular_guest.status.name %>
-              <%= regular_guest.member_number %>
-          <% end %>
-        </li>
-      </ul>
-    <% end %>
+<div class="guest-index-wrapper">
+<div class="guest-wrapper">
+<p class="guest-title">常連ゲスト様一覧</p>
+  <% @regular_guests.each do |regular_guest| %>
+        <ul class="guest-list">
+          <li class='guest'>
 
-    <%= render "shared/footer" %>
+              <%= link_to edit_regular_guest_path(regular_guest), class:'guest-to-edit' do %>
+               
+                <div class="guest-content-wrapper">
+
+                  <div class="guest-content guest-name"><%= regular_guest.name %></div>
+                  <div class="guest-content guest-status"><%= regular_guest.status.name %></div>
+                  <div class="guest-content guest-number"><%= regular_guest.member_number %></div>
+
+                </div>
+            <% end %>
+          </li>
+        </ul>
+      <% end %>
+</div>
+</div>
+  <p class="guest-btn-pagenate-wrapper">ページネート</p>
+    <%= link_to '新規ゲスト登録', new_regular_guest_path, class: "guest-resister-btn" %>
+      <%= render "shared/footer" %>
