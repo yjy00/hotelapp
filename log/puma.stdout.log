@@ -1,0 +1,30 @@
+=== puma startup: 2021-03-26 20:34:29 +0900 ===
+Started GET "/" for ::1 at 2021-03-26 20:34:34 +0900
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by FoodsController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 2399)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-03-26 20:34:34 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mPeopleManagement Load (1.6ms)[0m  [1m[34mSELECT `people_managements`.* FROM `people_managements` WHERE `people_managements`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:14:in `get_people_management'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 166)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 583)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3536)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 34079)
+Completed 200 OK in 130ms (Views: 93.3ms | ActiveRecord: 18.6ms | Allocations: 47248)
+
+
+Started GET "/cable" for ::1 at 2021-03-26 20:34:34 +0900
+Started GET "/cable/" [WebSocket] for ::1 at 2021-03-26 20:34:34 +0900
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatChannel is transmitting the subscription confirmation
+ChatChannel is streaming from chat_channel
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2021-03-26 20:34:37 +0900 ===
+- Goodbye!
+Exiting
