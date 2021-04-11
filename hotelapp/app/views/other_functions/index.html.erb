@@ -2,28 +2,28 @@
 
 <div class="other-function-backimage">
 
-<div class="other-menu-outer">
-  <div class="other-function-menu">
+  <div class="other-menu-outer">
+    <div class="other-function-menu">
 
-    <div class="other-menu-left">
+      <div class="other-menu-left">
 
-      <%= link_to 'チャット', chats_path, class: "other-menu" %>
-      <%= link_to '引継ぎ', daily_handovers_path, class: "other-menu" %>
-      <%= link_to '常連ゲスト情報', regular_guests_path, class: "other-menu" %>
+        <%= link_to 'チャット', chats_path, class: "other-menu" %>
+        <%= link_to '引継ぎ', daily_handovers_path, class: "other-menu" %>
+        <%= link_to '常連ゲスト情報', regular_guests_path, class: "other-menu" %>
+        
+      </div>
+
+      <div class="other-menu-right">
+
+       <%# <%= link_to 'メニュー管理', menus_path, class: "other-menu" %>
+        <%= link_to 'ホール発注リスト', orders_path, class: "other-menu" %>
+        <%= link_to "人数管理", edit_people_management_path(1), class: "other-menu" %>
+        <%= link_to "登録情報編集", edit_user_registration_path, class: "other-menu" %>
+        <%= link_to "ログアウト", destroy_user_session_path, class: "other-menu" %>
       
-    </div>
-
-    <div class="other-menu-right">
-
-      <%= link_to 'メニュー管理', menus_path, class: "other-menu" %>
-      <%= link_to 'ホール発注リスト', orders_path, class: "other-menu" %>
-      <%= link_to "人数管理", edit_people_management_path(1), class: "other-menu" %>
-      <%= link_to "登録情報編集", edit_user_registration_path, class: "other-menu" %>
-      <%= link_to "ログアウト", destroy_user_session_path, class: "other-menu" %>
-      
+      </div>
     </div>
   </div>
-</div>
   <%= render "shared/footer" %>
 
 </div>

@@ -1,5 +1,3 @@
-@import "mixin/backimage";
-@import "config/variables";
 
 // index
 .guest-index-wrapper{
@@ -132,5 +130,6 @@
 
 .regularguest-function-backimage{
   @include backimage($regularguest-function-backimage);
-  height: 100%;
+    // height: calc(100% - 63px);
+
 }

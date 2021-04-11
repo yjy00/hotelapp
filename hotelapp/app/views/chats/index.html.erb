@@ -42,7 +42,9 @@
             <p class="name-index"><%=  chat.by %></p> 
           </div>
 
-          <p class="message-index"><%= chat.message %></p>
+          <p class="message-index"><%= simple_format(chat.message) %></p>
+
+
         <% end %>
       </div>
     <% end %>

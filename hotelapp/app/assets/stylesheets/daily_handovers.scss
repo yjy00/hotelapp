@@ -1,5 +1,3 @@
-@import "mixin/backimage";
-@import "config/variables";
 
 .handover-function-backimage{
   @include backimage($handover-function-backimage);
@@ -8,7 +6,7 @@
     padding-top: $outer-padding;
     .handover-title{
       background-color: rgb(80, 80, 146);
-      width: 600px;
+      width: $form-width;
       margin: 0 auto;
       text-align: center;
       height: $basic-form-line-height;
