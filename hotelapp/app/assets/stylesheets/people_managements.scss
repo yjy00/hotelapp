@@ -1,14 +1,13 @@
-@import "mixin/backimage";
-@import "config/variables";
 
 .number-form-outer{
-  padding-top: 40px;
+  padding-top: $outer-padding;
   .number-form{
     text-align: center;
     background-color: aqua;
     height: $form-height;
     margin-top: 1000px;
     margin: 0 300px;
+    width: $form-width;
     .number-title{
       background-color: grey;
       height: $form-title-height;
@@ -49,4 +48,6 @@
 
 .people-management-function-backimage{
   @include backimage($people-management-function-backimage);
+  // height: calc(100% - 63px);
+
 }
