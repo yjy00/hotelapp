@@ -3,12 +3,12 @@
     <div class='app-logo'>
       <%= link_to 'logo', root_path, class: "logo" %>
     </div>
-    <div class="nav">
+    <nav class="nav">
       <li class="menu-list">
         <ul class="menu-item morning-number"><%= link_to "朝食人数:" + @people_management.morning.to_s, edit_people_management_path(1), class: "menu" %></ul>
         <ul class="menu-item"><%= link_to '天気', root_path, class: "menu" %></ul>
         <ul class="menu-item"><%= link_to 'その他メニュー', other_functions_path, class: "menu" %></ul>
       </li>
-    </div>
+    </nav>
   </div>
 </header>

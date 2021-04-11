@@ -1,9 +1,4 @@
-@import "mixin/backimage";
-@import "config/variables";
 
-.main-page-backimage{
-  @include backimage($main-background-image);
-}
 
 .basic-content{
   @include footer;
@@ -18,7 +13,7 @@
   }
   .item-list{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
       .item{
         flex-shrink: 0;
@@ -29,10 +24,20 @@
         margin-top: 20px;
         border-radius: 10px;
         text-align: center;
-        display: flex;
-        justify-content: center;
+        @include make-center;
         align-items: center;
+        .item-edit{
+          color: $font-color;
+
+        }
     }
 
   }
+}
+
+
+.main-page-backimage{
+  @include backimage($main-background-image);
+  // min-height:100vh
+
 }
