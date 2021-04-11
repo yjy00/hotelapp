@@ -1,10 +1,15 @@
-@import "mixin/backimage";
-@import "config/variables";
 
 // 高さをvhに変えたほうがいい？
+// 背景画像の共通化
 
 .login-background{
-  @include backimage($login-background-image);
+  background-image: $login-background-image;
+  height: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+  background-color:rgba(78, 76, 76, 0.8);
+  background-blend-mode:lighten;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -49,7 +54,7 @@
         margin: 0 auto;
         .login-link{
           display: block;
-          color: black;
+          color: $font-color;
         }
       }
     }
