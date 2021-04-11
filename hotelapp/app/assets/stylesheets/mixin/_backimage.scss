@@ -1,7 +1,8 @@
 @mixin backimage($backimage){
   background-image: $backimage;
   // height: 100%;
-  background-size: cover;
+  // background-size: cover;
+  min-height:calc(100vh - 63px);
   background-attachment: fixed;
   background-position: center center;
   background-color:rgba(78, 76, 76, 0.8);
