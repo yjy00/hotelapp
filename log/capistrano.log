@@ -31084,3 +31084,312 @@ See system logs and 'systemctl status puma_hotelapp_production.service' for deta
   INFO [55918ce8] Running /usr/bin/env echo "Branch master (at 089f3e001574287538c41199ee1b0229bfdcf4a4) deployed as release 20210406065827 by yanoo" >> /var/www/rails/hotelapp/hotelapp/revisions.log as hotelapp@3.115.181.127
  DEBUG [55918ce8] Command: cd /var/www/rails/hotelapp/hotelapp/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env echo "Branch master (at 089f3e001574287538c41199ee1b0229bfdcf4a4) deployed as release 20210406065827 by yanoo" >> /var/www/rails/hotelapp/hotelapp/revisions.log )
   INFO [55918ce8] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 12:56:12 +0900 cap production puma:config
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 12:56:34 +0900 cap production puma:stop
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 12:56:49 +0900 cap production puma:start
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 12:57:04 +0900 cap production puma:status
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 12:57:15 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-04-12 13:07:38 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0d729ce8] Running [ -d $HOME/.rbenv/versions/3.0.0 ] as ec2-user@13.112.148.78
+ DEBUG [0d729ce8] Command: [ -d $HOME/.rbenv/versions/3.0.0 ]
+ DEBUG [0d729ce8] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [9ad5ca5e] Running /usr/bin/env mkdir -p /tmp as ec2-user@13.112.148.78
+ DEBUG [9ad5ca5e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9ad5ca5e] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-hotelapp-production-yanoo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-hotelapp-production-yanoo.sh 100.0%
+  INFO [3581a5bc] Running /usr/bin/env chmod 700 /tmp/git-ssh-hotelapp-production-yanoo.sh as ec2-user@13.112.148.78
+ DEBUG [3581a5bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-hotelapp-production-yanoo.sh )
+  INFO [3581a5bc] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [879fe164] Running /usr/bin/env git ls-remote git@github.com:yjy00/hotelapp.git HEAD as ec2-user@13.112.148.78
+ DEBUG [879fe164] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git ls-remote git@github.com:yjy00/hotelapp.git HEAD )
+ DEBUG [879fe164] 	76fed2b1373ef7211c3a1b0287ac30d588a8d65c	HEAD
+  INFO [879fe164] Finished in 2.253 seconds with exit status 0 (successful).
+  INFO [6917ef08] Running /usr/bin/env mkdir -p /var/www/hotelapp/shared /var/www/hotelapp/releases as ec2-user@13.112.148.78
+ DEBUG [6917ef08] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /var/www/hotelapp/shared /var/www/hotelapp/releases )
+  INFO [6917ef08] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [c72f9e44] Running /usr/bin/env mkdir -p /var/www/hotelapp/shared/log /var/www/hotelapp/shared/tmp/pids /var/www/hotelapp/shared/tmp/cache /var/www/hotelapp/shared/tmp/sockets /var/www/hotelapp/shared/vendor/bundle /var/www/hotelapp/shared/public/system /var/www/hotelapp/shared/public/uploads /var/www/hotelapp/shared/public/assets as ec2-user@13.112.148.78
+ DEBUG [c72f9e44] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /var/www/hotelapp/shared/log /var/www/hotelapp/shared/tmp/pids /var/www/hotelapp/shared/tmp/cache /var/www/hotelapp/shared/tmp/sockets /var/www/hotelapp/shared/vendor/bundle /var/www/hotelapp/shared/public/system /var/www/hotelapp/shared/public/uploads /var/www/hotelapp/shared/public/assets )
+  INFO [c72f9e44] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [cbabf17c] Running [ -f /var/www/hotelapp/shared/puma.rb ] as ec2-user@13.112.148.78
+ DEBUG [cbabf17c] Command: [ -f /var/www/hotelapp/shared/puma.rb ]
+ DEBUG [cbabf17c] Finished in 0.113 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /var/www/hotelapp/shared/puma.rb 0.0%
+  INFO Uploading /var/www/hotelapp/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [4d5ac8b2] Running [ -f /var/www/hotelapp/current/REVISION ] as ec2-user@13.112.148.78
+ DEBUG [4d5ac8b2] Command: [ -f /var/www/hotelapp/current/REVISION ]
+ DEBUG [4d5ac8b2] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [4f6479f0] Running [ -f /var/www/hotelapp/repo/HEAD ] as ec2-user@13.112.148.78
+ DEBUG [4f6479f0] Command: [ -f /var/www/hotelapp/repo/HEAD ]
+ DEBUG [4f6479f0] Finished in 0.106 seconds with exit status 1 (failed).
+ DEBUG [0088b7ac] Running if test ! -d /var/www/hotelapp; then echo "Directory does not exist '/var/www/hotelapp'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [0088b7ac] Command: if test ! -d /var/www/hotelapp; then echo "Directory does not exist '/var/www/hotelapp'" 1>&2; false; fi
+ DEBUG [0088b7ac] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [c55ea502] Running /usr/bin/env git clone --mirror git@github.com:yjy00/hotelapp.git /var/www/hotelapp/repo as ec2-user@13.112.148.78
+ DEBUG [c55ea502] Command: cd /var/www/hotelapp && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git clone --mirror git@github.com:yjy00/hotelapp.git /var/www/hotelapp/repo )
+ DEBUG [c55ea502] 	Cloning into bare repository '/var/www/hotelapp/repo'...
+  INFO [c55ea502] Finished in 4.984 seconds with exit status 0 (successful).
+ DEBUG [606f945a] Running if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [606f945a] Command: if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi
+ DEBUG [606f945a] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [dc37c433] Running /usr/bin/env git remote set-url origin git@github.com:yjy00/hotelapp.git as ec2-user@13.112.148.78
+ DEBUG [dc37c433] Command: cd /var/www/hotelapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git remote set-url origin git@github.com:yjy00/hotelapp.git )
+  INFO [dc37c433] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [581672d7] Running /usr/bin/env git remote update --prune as ec2-user@13.112.148.78
+ DEBUG [581672d7] Command: cd /var/www/hotelapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [581672d7] 	Fetching origin
+  INFO [581672d7] Finished in 2.334 seconds with exit status 0 (successful).
+ DEBUG [bb5dc454] Running if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [bb5dc454] Command: if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi
+ DEBUG [bb5dc454] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [8578c2c4] Running /usr/bin/env mkdir -p /var/www/hotelapp/releases/20210412040742 as ec2-user@13.112.148.78
+ DEBUG [8578c2c4] Command: cd /var/www/hotelapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env mkdir -p /var/www/hotelapp/releases/20210412040742 )
+  INFO [8578c2c4] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [cf58de96] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/hotelapp/releases/20210412040742 as ec2-user@13.112.148.78
+ DEBUG [cf58de96] Command: cd /var/www/hotelapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/hotelapp/releases/20210412040742 )
+  INFO [cf58de96] Finished in 1.052 seconds with exit status 0 (successful).
+ DEBUG [d0ce967c] Running if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [d0ce967c] Command: if test ! -d /var/www/hotelapp/repo; then echo "Directory does not exist '/var/www/hotelapp/repo'" 1>&2; false; fi
+ DEBUG [d0ce967c] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [ad30e53d] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@13.112.148.78
+ DEBUG [ad30e53d] Command: cd /var/www/hotelapp/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-hotelapp-production-yanoo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ad30e53d] 	76fed2b1373ef7211c3a1b0287ac30d588a8d65c
+ DEBUG [ad30e53d] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [1d41a9f5] Running if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [1d41a9f5] Command: if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi
+ DEBUG [1d41a9f5] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO [7752abb3] Running /usr/bin/env echo "76fed2b1373ef7211c3a1b0287ac30d588a8d65c" > REVISION as ec2-user@13.112.148.78
+ DEBUG [7752abb3] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env echo "76fed2b1373ef7211c3a1b0287ac30d588a8d65c" > REVISION )
+  INFO [7752abb3] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [505b823d] Running /usr/bin/env mkdir -p /var/www/hotelapp/releases/20210412040742 /var/www/hotelapp/releases/20210412040742/tmp /var/www/hotelapp/releases/20210412040742/vendor /var/www/hotelapp/releases/20210412040742/public as ec2-user@13.112.148.78
+ DEBUG [505b823d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env mkdir -p /var/www/hotelapp/releases/20210412040742 /var/www/hotelapp/releases/20210412040742/tmp /var/www/hotelapp/releases/20210412040742/vendor /var/www/hotelapp/releases/20210412040742/public )
+  INFO [505b823d] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [b9d171d9] Running [ -L /var/www/hotelapp/releases/20210412040742/log ] as ec2-user@13.112.148.78
+ DEBUG [b9d171d9] Command: [ -L /var/www/hotelapp/releases/20210412040742/log ]
+ DEBUG [b9d171d9] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [7574ad77] Running [ -d /var/www/hotelapp/releases/20210412040742/log ] as ec2-user@13.112.148.78
+ DEBUG [7574ad77] Command: [ -d /var/www/hotelapp/releases/20210412040742/log ]
+ DEBUG [7574ad77] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO [4ce9c028] Running /usr/bin/env rm -rf /var/www/hotelapp/releases/20210412040742/log as ec2-user@13.112.148.78
+ DEBUG [4ce9c028] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env rm -rf /var/www/hotelapp/releases/20210412040742/log )
+  INFO [4ce9c028] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [64da7430] Running /usr/bin/env ln -s /var/www/hotelapp/shared/log /var/www/hotelapp/releases/20210412040742/log as ec2-user@13.112.148.78
+ DEBUG [64da7430] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/log /var/www/hotelapp/releases/20210412040742/log )
+  INFO [64da7430] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [9b2cbfbc] Running [ -L /var/www/hotelapp/releases/20210412040742/tmp/pids ] as ec2-user@13.112.148.78
+ DEBUG [9b2cbfbc] Command: [ -L /var/www/hotelapp/releases/20210412040742/tmp/pids ]
+ DEBUG [9b2cbfbc] Finished in 0.108 seconds with exit status 1 (failed).
+ DEBUG [76d80f5d] Running [ -d /var/www/hotelapp/releases/20210412040742/tmp/pids ] as ec2-user@13.112.148.78
+ DEBUG [76d80f5d] Command: [ -d /var/www/hotelapp/releases/20210412040742/tmp/pids ]
+ DEBUG [76d80f5d] Finished in 0.106 seconds with exit status 1 (failed).
+  INFO [d7ec4cef] Running /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/pids /var/www/hotelapp/releases/20210412040742/tmp/pids as ec2-user@13.112.148.78
+ DEBUG [d7ec4cef] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/pids /var/www/hotelapp/releases/20210412040742/tmp/pids )
+  INFO [d7ec4cef] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [73641902] Running [ -L /var/www/hotelapp/releases/20210412040742/tmp/cache ] as ec2-user@13.112.148.78
+ DEBUG [73641902] Command: [ -L /var/www/hotelapp/releases/20210412040742/tmp/cache ]
+ DEBUG [73641902] Finished in 0.106 seconds with exit status 1 (failed).
+ DEBUG [674f4cc9] Running [ -d /var/www/hotelapp/releases/20210412040742/tmp/cache ] as ec2-user@13.112.148.78
+ DEBUG [674f4cc9] Command: [ -d /var/www/hotelapp/releases/20210412040742/tmp/cache ]
+ DEBUG [674f4cc9] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [d7f2ca97] Running /usr/bin/env rm -rf /var/www/hotelapp/releases/20210412040742/tmp/cache as ec2-user@13.112.148.78
+ DEBUG [d7f2ca97] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env rm -rf /var/www/hotelapp/releases/20210412040742/tmp/cache )
+  INFO [d7f2ca97] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [dd9e54b9] Running /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/cache /var/www/hotelapp/releases/20210412040742/tmp/cache as ec2-user@13.112.148.78
+ DEBUG [dd9e54b9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/cache /var/www/hotelapp/releases/20210412040742/tmp/cache )
+  INFO [dd9e54b9] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [4616d27b] Running [ -L /var/www/hotelapp/releases/20210412040742/tmp/sockets ] as ec2-user@13.112.148.78
+ DEBUG [4616d27b] Command: [ -L /var/www/hotelapp/releases/20210412040742/tmp/sockets ]
+ DEBUG [4616d27b] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [0f020d76] Running [ -d /var/www/hotelapp/releases/20210412040742/tmp/sockets ] as ec2-user@13.112.148.78
+ DEBUG [0f020d76] Command: [ -d /var/www/hotelapp/releases/20210412040742/tmp/sockets ]
+ DEBUG [0f020d76] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [9bfd37b5] Running /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/sockets /var/www/hotelapp/releases/20210412040742/tmp/sockets as ec2-user@13.112.148.78
+ DEBUG [9bfd37b5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/tmp/sockets /var/www/hotelapp/releases/20210412040742/tmp/sockets )
+  INFO [9bfd37b5] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [9b456c34] Running [ -L /var/www/hotelapp/releases/20210412040742/vendor/bundle ] as ec2-user@13.112.148.78
+ DEBUG [9b456c34] Command: [ -L /var/www/hotelapp/releases/20210412040742/vendor/bundle ]
+ DEBUG [9b456c34] Finished in 0.107 seconds with exit status 1 (failed).
+ DEBUG [5ed60525] Running [ -d /var/www/hotelapp/releases/20210412040742/vendor/bundle ] as ec2-user@13.112.148.78
+ DEBUG [5ed60525] Command: [ -d /var/www/hotelapp/releases/20210412040742/vendor/bundle ]
+ DEBUG [5ed60525] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [43eb8985] Running /usr/bin/env ln -s /var/www/hotelapp/shared/vendor/bundle /var/www/hotelapp/releases/20210412040742/vendor/bundle as ec2-user@13.112.148.78
+ DEBUG [43eb8985] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/vendor/bundle /var/www/hotelapp/releases/20210412040742/vendor/bundle )
+  INFO [43eb8985] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [ea4a519a] Running [ -L /var/www/hotelapp/releases/20210412040742/public/system ] as ec2-user@13.112.148.78
+ DEBUG [ea4a519a] Command: [ -L /var/www/hotelapp/releases/20210412040742/public/system ]
+ DEBUG [ea4a519a] Finished in 0.106 seconds with exit status 1 (failed).
+ DEBUG [33bdc758] Running [ -d /var/www/hotelapp/releases/20210412040742/public/system ] as ec2-user@13.112.148.78
+ DEBUG [33bdc758] Command: [ -d /var/www/hotelapp/releases/20210412040742/public/system ]
+ DEBUG [33bdc758] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [38903fb8] Running /usr/bin/env ln -s /var/www/hotelapp/shared/public/system /var/www/hotelapp/releases/20210412040742/public/system as ec2-user@13.112.148.78
+ DEBUG [38903fb8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/public/system /var/www/hotelapp/releases/20210412040742/public/system )
+  INFO [38903fb8] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [a1963061] Running [ -L /var/www/hotelapp/releases/20210412040742/public/uploads ] as ec2-user@13.112.148.78
+ DEBUG [a1963061] Command: [ -L /var/www/hotelapp/releases/20210412040742/public/uploads ]
+ DEBUG [a1963061] Finished in 0.108 seconds with exit status 1 (failed).
+ DEBUG [4342f9b8] Running [ -d /var/www/hotelapp/releases/20210412040742/public/uploads ] as ec2-user@13.112.148.78
+ DEBUG [4342f9b8] Command: [ -d /var/www/hotelapp/releases/20210412040742/public/uploads ]
+ DEBUG [4342f9b8] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [f3aeac4d] Running /usr/bin/env ln -s /var/www/hotelapp/shared/public/uploads /var/www/hotelapp/releases/20210412040742/public/uploads as ec2-user@13.112.148.78
+ DEBUG [f3aeac4d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/public/uploads /var/www/hotelapp/releases/20210412040742/public/uploads )
+  INFO [f3aeac4d] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [0693bffc] Running [ -L /var/www/hotelapp/releases/20210412040742/public/assets ] as ec2-user@13.112.148.78
+ DEBUG [0693bffc] Command: [ -L /var/www/hotelapp/releases/20210412040742/public/assets ]
+ DEBUG [0693bffc] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [04034f17] Running [ -d /var/www/hotelapp/releases/20210412040742/public/assets ] as ec2-user@13.112.148.78
+ DEBUG [04034f17] Command: [ -d /var/www/hotelapp/releases/20210412040742/public/assets ]
+ DEBUG [04034f17] Finished in 0.107 seconds with exit status 1 (failed).
+  INFO [2e218b35] Running /usr/bin/env ln -s /var/www/hotelapp/shared/public/assets /var/www/hotelapp/releases/20210412040742/public/assets as ec2-user@13.112.148.78
+ DEBUG [2e218b35] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; /usr/bin/env ln -s /var/www/hotelapp/shared/public/assets /var/www/hotelapp/releases/20210412040742/public/assets )
+  INFO [2e218b35] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [1ac40c1d] Running if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [1ac40c1d] Command: if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi
+ DEBUG [1ac40c1d] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [3073a478] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as ec2-user@13.112.148.78
+ DEBUG [3073a478] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [3073a478] Finished in 0.354 seconds with exit status 0 (successful).
+  INFO [2db9d061] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /var/www/hotelapp/shared/bundle as ec2-user@13.112.148.78
+ DEBUG [2db9d061] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /var/www/hotelapp/shared/bundle )
+  INFO [2db9d061] Finished in 0.305 seconds with exit status 0 (successful).
+  INFO [b179e04b] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as ec2-user@13.112.148.78
+ DEBUG [b179e04b] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [b179e04b] Finished in 0.307 seconds with exit status 0 (successful).
+ DEBUG [fbf9fdc6] Running if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi as ec2-user@13.112.148.78
+ DEBUG [fbf9fdc6] Command: if test ! -d /var/www/hotelapp/releases/20210412040742; then echo "Directory does not exist '/var/www/hotelapp/releases/20210412040742'" 1>&2; false; fi
+ DEBUG [fbf9fdc6] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [a9d4767c] Running $HOME/.rbenv/bin/rbenv exec bundle check as ec2-user@13.112.148.78
+ DEBUG [a9d4767c] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [a9d4767c] 	The following gems are missing
+ DEBUG [a9d4767c] 	 * rake (13.0.3)
+ DEBUG [a9d4767c] 	 * concurrent-ruby (1.1.8)
+ DEBUG [a9d4767c] 	 * i18n (1.8.10)
+ DEBUG [a9d4767c] 	 * minitest (5.14.4)
+ DEBUG [a9d4767c] 	 * tzinfo (2.0.4)
+ DEBUG [a9d4767c] 	 * zeitwerk (2.4.2)
+ DEBUG [a9d4767c] 	 * activesupport (6.1.3.1)
+ DEBUG [a9d4767c] 	 * builder (3.2.4)
+ DEBUG [a9d4767c] 	 * erubi (1.10.0)
+ DEBUG [a9d4767c] 	 * racc (1.5.2)
+ DEBUG [a9d4767c] 	 * nokogiri (1.11.3)
+ DEBUG [a9d4767c] 	 * rails-dom-testing (2.0.3)
+ DEBUG [a9d4767c] 	 * crass (1.0.6)
+ DEBUG [a9d4767c] 	 * loofah (2.9.1)
+ DEBUG [a9d4767c] 	 * rails-html-sanitizer (1.3.0)
+ DEBUG [a9d4767c] 	 * actionview (6.1.3.1)
+ DEBUG [a9d4767c] 	 * rack (2.2.3)
+ DEBUG [a9d4767c] 	 * rack-test (1.1.0)
+ DEBUG [a9d4767c] 	 * actionpack (6.1.3.1)
+ DEBUG [a9d4767c] 	 * nio4r (2.5.7)
+ DEBUG [a9d4767c] 	 * websocket-extensions (0.1.5)
+ DEBUG [a9d4767c] 	 * websocket-driver (0.7.3)
+ DEBUG [a9d4767c] 	 * actioncable (6.1.3.1)
+ DEBUG [a9d4767c] 	 * globalid (0.4.2)
+ DEBUG [a9d4767c] 	 * activejob (6.1.3.1)
+ DEBUG [a9d4767c] 	 * activemodel (6.1.3.1)
+ DEBUG [a9d4767c] 	 * activerecord (6.1.3.1)
+ DEBUG [a9d4767c] 	 * marcel (1.0.1)
+ DEBUG [a9d4767c] 	 * mini_mime (1.0.3)
+ DEBUG [a9d4767c] 	 * activestorage (6.1.3.1)
+ DEBUG [a9d4767c] 	 * mail (2.7.1)
+ DEBUG [a9d4767c] 	 * actionmailbox (6.1.3.1)
+ DEBUG [a9d4767c] 	 * actionmailer (6.1.3.1)
+ DEBUG [a9d4767c] 	 * actiontext (6.1.3.1)
+ DEBUG [a9d4767c] 	 * active_hash (3.1.0)
+ DEBUG [a9d4767c] 	 * bcrypt (3.1.16)
+ DEBUG [a9d4767c] 	 * bcrypt_pbkdf (1.1.0)
+ DEBUG [a9d4767c] 	 * msgpack (1.4.2)
+ DEBUG [a9d4767c] 	 * bootsnap (1.7.3)
+ DEBUG [a9d4767c] 	 * coderay (1.1.3)
+ DEBUG [a9d4767c] 	 * orm_adapter (0.5.0)
+ DEBUG [a9d4767c] 	 * method_source (1.0.0)
+ DEBUG [a9d4767c] 	 * thor (1.1.0)
+ DEBUG [a9d4767c] 	 * railties (6.1.3.1)
+ DEBUG [a9d4767c] 	 * responders (3.0.1)
+ DEBUG [a9d4767c] 	 * warden (1.2.9)
+ DEBUG [a9d4767c] 	 * devise (4.7.3)
+ DEBUG [a9d4767c] 	 * dotenv (2.7.6)
+ DEBUG [a9d4767c] 	 * dotenv-rails (2.7.6)
+ DEBUG [a9d4767c] 	 * ed25519 (1.2.4)
+ DEBUG [a9d4767c] 	 * ffi (1.15.0)
+ DEBUG [a9d4767c] 	 * sassc (2.4.0)
+ DEBUG [a9d4767c] 	 * font-awesome-sass (5.15.1)
+ DEBUG [a9d4767c] 	 * hirb (0.7.3)
+ DEBUG [a9d4767c] 	 * unicode-display_width (0.1.1)
+ DEBUG [a9d4767c] 	 * hirb-unicode (0.0.5)
+ DEBUG [a9d4767c] 	 * jbuilder (2.11.2)
+ DEBUG [a9d4767c] 	 * jquery-rails (4.4.0)
+ DEBUG [a9d4767c] 	 * kaminari-core (1.2.1)
+ DEBUG [a9d4767c] 	 * kaminari-actionview (1.2.1)
+ DEBUG [a9d4767c] 	 * kaminari-activerecord (1.2.1)
+ DEBUG [a9d4767c] 	 * kaminari (1.2.1)
+ DEBUG [a9d4767c] 	 * mini_magick (4.11.0)
+ DEBUG [a9d4767c] 	 * mysql2 (0.5.3)
+ DEBUG [a9d4767c] 	 * pry (0.14.0)
+ DEBUG [a9d4767c] 	 * pry-rails (0.3.9)
+ DEBUG [a9d4767c] 	 * puma (3.12.6)
+ DEBUG [a9d4767c] 	 * rack-proxy (0.6.5)
+ DEBUG [a9d4767c] 	 * sprockets (4.0.2)
+ DEBUG [a9d4767c] 	 * sprockets-rails (3.2.2)
+ DEBUG [a9d4767c] 	 * rails (6.1.3.1)
+ DEBUG [a9d4767c] 	 * rails_serve_static_assets (0.0.5)
+ DEBUG [a9d4767c] 	 * rails_stdout_logging (0.0.5)
+ DEBUG [a9d4767c] 	 * rails_12factor (0.0.3)
+ DEBUG [a9d4767c] 	 * tilt (2.0.10)
+ DEBUG [a9d4767c] 	 * sassc-rails (2.1.2)
+ DEBUG [a9d4767c] 	 * sass-rails (6.0.0)
+ DEBUG [a9d4767c] 	 * semantic_range (3.0.0)
+ DEBUG [a9d4767c] 	 * turbolinks-source (5.2.0)
+ DEBUG [a9d4767c] 	 * turbolinks (5.2.1)
+ DEBUG [a9d4767c] 	 * webpacker (5.2.1)
+ DEBUG [a9d4767c] 	Install missing gems with `bundle install`
+ DEBUG [a9d4767c] Finished in 0.446 seconds with exit status 1 (failed).
+  INFO [88e2907e] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet as ec2-user@13.112.148.78
+ DEBUG [88e2907e] Command: cd /var/www/hotelapp/releases/20210412040742 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.0.0" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [88e2907e] 	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/var/www/hotelapp/shared/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+/home/ec2-user/.rbenv/versions/3.0.0/bin/ruby -I
+/home/ec2-user/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r
+./siteconf20210412-19987-sr3gan.rb extconf.rb
+creating Makefile
+
+current directory:
+/var/www/hotelapp/shared/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+make "DESTDIR=" clean
+
+current directory:
+/var/www/hotelapp/shared/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
+make "DESTDIR="
+compiling ./libsass/src/ast.cpp
+virtual memory exhausted: Cannot allocate memory
+make: *** [ast.o] エラー 1
+
+make failed, exit code 2
+
+Gem files will remain installed in
+/var/www/hotelapp/shared/bundle/ruby/3.0.0/gems/sassc-2.4.0 for inspection.
+Results logged to
+/var/www/hotelapp/shared/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/sassc-2.4.0/gem_make.out
+
+An error occurred while installing sassc (2.4.0), and Bundler cannot continue.
+Make sure that `gem install sassc -v '2.4.0' --source 'https://rubygems.org/'`
+succeeds before bundling.
+
+In Gemfile:
+  font-awesome-sass was resolved to 5.15.1, which depends on
+    sassc

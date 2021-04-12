@@ -70,7 +70,7 @@ end
 gem 'active_hash'
 gem 'mini_magick'
 gem 'pry-rails'
-gem "font-awesome-sass"
+# gem "font-awesome-sass"
 gem 'devise'
 gem 'kaminari'
 gem 'dotenv-rails'
