@@ -13,6 +13,14 @@ set :rbenv_ruby, '3.0.0'
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem'] 
 
 
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+  task :restart do
+    invoke 'puma:restart'
+  end
+end
+
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
