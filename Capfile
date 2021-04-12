@@ -11,6 +11,8 @@ require 'capistrano/rails/migrations'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
 
+set :branch, "master"
+
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
