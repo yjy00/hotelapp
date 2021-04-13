@@ -1,3 +1,6 @@
+@import "config/variables";
+@import "mixin/backimage";
+
 
 .handover-function-backimage{
   @include backimage($handover-function-backimage);

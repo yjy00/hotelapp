@@ -1,3 +1,6 @@
+@import "config/variables";
+@import "mixin/flexbox";
+@import "mixin/backimage";
 
 // フォーム
 
@@ -92,6 +95,7 @@
 
   }
 }
+
 .chat-function-back-image{
   @include backimage($chat-function-back-image);
 }

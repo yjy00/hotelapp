@@ -1,3 +1,8 @@
+@import "config/variables";
+@import "mixin/flexbox";
+@import "mixin/backimage";
+@import "mixin/form";
+
 
 .number-form-outer{
   padding-top: $outer-padding;

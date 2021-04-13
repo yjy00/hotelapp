@@ -1,3 +1,6 @@
+@import "config/variables";
+@import "mixin/flexbox";
+@import "mixin/backimage";
 
 .other-menu-outer{
   padding: $outer-padding;
