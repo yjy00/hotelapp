@@ -14,7 +14,8 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: <%= ENV['DB_NAME'] %>
-  username: root
+  # username: root
+  username: ec2-user
   password: <%= ENV['DB_PASSWORD'] %>
   # username: <%= ENV['MYSQL_USER'] %>
   # password: <%= ENV['MYSQL_PASSWORD'] %>
@@ -25,8 +26,9 @@ default: &default
 development:
   <<: *default
   database: <%= ENV['DB_NAME'] %>
+  username: ec2-user
   password: <%= ENV['DB_PASSWORD'] %>
-  
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
@@ -60,5 +62,6 @@ production:
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOSTNAME'] %>
+  username: ec2-user
   socket: /var/lib/mysql/mysql.sock
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
