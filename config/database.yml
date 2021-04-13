@@ -18,13 +18,13 @@ default: &default
   password: <%= ENV['DB_PASSWORD'] %>
   # username: <%= ENV['MYSQL_USER'] %>
   # password: <%= ENV['MYSQL_PASSWORD'] %>
-  host: <%= ENV['MYSQL_HOST'] %>
+  # host: <%= ENV['MYSQL_HOST'] %>
+  host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
 
 development:
   <<: *default
-  # database: hotelapp_development
-  database: <%= ENV['DB_NAME'] %>
+  database: hotelapp_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
