@@ -13,22 +13,20 @@ set :rbenv_ruby, '3.0.0'
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem'] 
 
 
-# after 'deploy:publishing', 'deploy:restart'
-# namespace :deploy do
-#   task :restart do
-#     invoke!("puma:restart")
-#   end
-# end
-
+after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
+  invoke!("puma:restart")
+end
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      Rake::Task["puma:restart"].reenable <-コレを追記
-      invoke!("puma:restart")
-    end
-  end
+# namespace :deploy do
+
+#   desc 'Restart application'
+#   task :restart do
+#     on roles(:app), in: :sequence, wait: 5 do
+#       Rake::Task["puma:restart"].reenable <-コレを追記
+#       invoke!("puma:restart")
+#     end
+#   end
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
