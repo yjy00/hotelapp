@@ -34,6 +34,7 @@ development:
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOSTNAME'] %>
+  socket: /var/lib/mysql/mysql.sock
   # username: ec2-user
 
 # Warning: The database defined as "test" will be erased and
