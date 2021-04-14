@@ -12,6 +12,7 @@ set :rbenv_ruby, '3.0.0'
 
 set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem'] 
 
+set :deploy_to, '/var/www/rails/hotelapp'
 
 # after 'deploy:publishing', 'deploy:restart'
 # namespace :deploy do
