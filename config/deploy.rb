@@ -16,7 +16,7 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'puma:restart'
+    invoke! 'puma:restart'
   end
 end
 
