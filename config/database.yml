@@ -13,15 +13,21 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: <%= ENV['DB_NAME'] %>
-  username: root
+  # database: <%= ENV['DB_NAME'] %>
+  # username: root
   # username: ec2-user
-  username: <%= ENV['MYSQL_USER'] %>
+  # username: <%= ENV['MYSQL_USER'] %>
   # password: <%= ENV['MYSQL_PASSWORD'] %>
-  host: <%= ENV['MYSQL_HOST'] %>
+  # host: <%= ENV['MYSQL_HOST'] %>
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   # socket: /var/lib/mysql/mysql.sock
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
+  # username: ec2-user
+  socket: /var/lib/mysql/mysql.sock
+  password: <%= ENV['DB_PASSWORD'] %>
 
 development:
   <<: *default
