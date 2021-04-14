@@ -24,7 +24,7 @@ default: &default
   # username: ec2-user
   database: hotelapp_production
   username: root
-  password: Konokinannoki1
+  password: "Konokinannoki1"
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
   
@@ -32,7 +32,7 @@ development:
   <<: *default
   database: hotelapp_production
   username: root
-  password: Konokinannoki1
+  password: "Konokinannoki1"
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
   # database: <%= ENV['DB_NAME'] %>
@@ -73,7 +73,7 @@ production:
   <<: *default
   database: hotelapp_production
   username: root
-  password: Konokinannoki1
+  password: "Konokinannoki1"
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
   # database: <%= ENV['DB_NAME'] %>
