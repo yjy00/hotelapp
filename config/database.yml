@@ -64,7 +64,7 @@ production:
   username: <%= ENV['DB_USERNAME'] %>
   # host: <%= ENV['DB_HOSTNAME'] %>
   # username: ec2-user
-  # socket: /var/lib/mysql/mysql.sock
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
+  # socket: /tmp/mysql.sock
 
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
