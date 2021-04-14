@@ -62,7 +62,7 @@ production:
   <<: *default
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USERNAME'] %>
-  # host: <%= ENV['DB_HOSTNAME'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
   # username: ec2-user
   socket: /var/lib/mysql/mysql.sock
   # socket: /tmp/mysql.sock
