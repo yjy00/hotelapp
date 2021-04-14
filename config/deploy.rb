@@ -26,7 +26,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       Rake::Task["puma:restart"].reenable <-コレを追記
-      invoke 'puma:restart'
+      invoke!("puma:restart")
     end
   end
 
