@@ -22,7 +22,7 @@ default: &default
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   # socket: /var/lib/mysql/mysql.sock
   # socket: /tmp/mysql.sock
-  database: <%= ENV['DB_NAME'] %>
+  database: hotelapp_production
   username: <%= ENV['DB_USERNAME'] %>
   host: <%= ENV['DB_HOSTNAME'] %>
   # username: ec2-user
