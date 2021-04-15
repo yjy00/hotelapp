@@ -20,21 +20,18 @@ default: &default
   # password: <%= ENV['MYSQL_PASSWORD'] %>
   # host: <%= ENV['MYSQL_HOST'] %>
   # socket: /var/lib/mysql/mysql.sock
-  # socket: /tmp/mysql.sock
-  # username: ec2-user
-  database: hotelapp_production
-  username: root
-  password: "Konokinannoki1"
-  host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
-  socket: /var/lib/mysql/mysql.sock
+  # password: "Konokinannoki1"
+  # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
+  # socket: /var/lib/mysql/mysql.sock
   
 development:
   <<: *default
-  database: hotelapp_production
+  database: hotelapp_development
   username: root
-  password: "Konokinannoki1"
-  host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
-  socket: /var/lib/mysql/mysql.sock
+  socket: /tmp/mysql.sock
+  # password: "Konokinannoki1"
+  # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
+  # socket: /var/lib/mysql/mysql.sock
   # database: <%= ENV['DB_NAME'] %>
   # username: <%= ENV['DB_USERNAME'] %>
   # password: <%= ENV['DB_PASSWORD'] %>
@@ -80,5 +77,3 @@ production:
   # username: <%= ENV['DB_USERNAME'] %>
   # password: <%= ENV['DB_PASSWORD'] %>
   # host: <%= ENV['DB_HOSTNAME'] %>
-  # socket: /var/lib/mysql/mysql.sock
-  # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
