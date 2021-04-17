@@ -1,17 +1,24 @@
 @import "reset";
+
 // @import "font-awesome-sprockets";
 // @import "font-awesome";
+
 @import "config/variables";
+
 @import "mixin/backimage";
 @import "mixin/footer";
 @import "mixin/flexbox";
 @import "mixin/form";
+@import "mixin/background-color";
+
 @import "modules/header";
 @import "modules/all";
 @import "modules/basic-function-common";
 @import "modules/login";
 @import "modules/user-information";
 @import "modules/footer";
+@import "modules/signup";
+
 @import "items";
 @import "kitchen_orders";
 @import "chats";
@@ -23,6 +30,7 @@
 @import "regular_guests";
 @import "people_managements";
 
+@charset "utf-8";
 
 
 /*
