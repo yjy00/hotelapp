@@ -4,7 +4,7 @@ lock "~> 3.14.1"
 set :application, "hotelapp"
 set :repo_url, "git@github.com:yjy00/hotelapp.git"
 
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads', 'config/master.key')
 
 set :rbenv_type, :user
 
