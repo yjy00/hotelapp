@@ -3,16 +3,26 @@ $basic-form-form-height:               30px;
 $basic-form-margin:                    10px;
 $basic-form-line-height:               60px;
 $basic-form-width:                     200px;
-
 $form-height:                          600px;
 $form-width:                           600px;
-
 $form-title-height:                    10%;
+
 $form-title-fontsize:                  1.5rem;
 $outer-padding:                        40px;
 $margin:                               20px;
 
-$font-color:                           black;
+$font-color:                           #333333;
+$background-color:                     rgba(173, 169, 169, 0.6);
+$dark-blue:                            #28527a;
+$hover-dark-blue:                      #28527ada;
+$light-blue:                           #8ac4d0;
+$hover-light-blue:                     #8ac4d0da;
+$dark-yellow:                          #f4d160;
+$hover-dark-yellow:                    #f4d160da;
+$light-yellow:                         #fbeeac;
+$hover-light-yellow:                   #fbeeacda;
+$white:                                #ffffff;
+$hover-white:                          #ffffffda;
 
 $login-background-image:               image-url("login-backimage.jpeg");
 $main-background-image:                image-url("main-page-backimage.jpeg");
