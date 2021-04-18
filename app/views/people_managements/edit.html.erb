@@ -9,25 +9,23 @@
 
     <p class="number-title">人数管理</p>
 
-    <div class='morning-title'>朝食
-      <%= f.number_field :morning, class:"", placeholder:"朝食" %>
+    <div class='title morning-title'><p>朝食お客様</p>
+      <%= f.number_field :morning, class:"form", placeholder:"朝食" %>
     </div>
-    <div class="hall-title">ホール
-      <%= f.number_field :waiter, class:"", placeholder:"ホール" %>
+    <div class="title hall-title"><p>ホールスタッフ</p>
+      <%= f.number_field :waiter, class:"form", placeholder:"ホール" %>
     </div>
-    <div class="kitchen-title">キッチン
-      <%= f.number_field :kitchen, class:"", placeholder:"キッチン" %>
+    <div class="title kitchen-title"><p>キッチンスタッフ</p>
+      <%= f.number_field :kitchen, class:"form", placeholder:"キッチン" %>
     </div>
-        <div class="dishwash-title">洗い場
-      <%= f.number_field :dish_wash, class:"", placeholder:"洗い場" %>
+        <div class="title dishwash-title"><p>洗い場スタッフ</p>
+      <%= f.number_field :dish_wash, class:"form", placeholder:"洗い場" %>
     </div>
 
     <div class="number-btn">
       <%= f.submit "登録する", class:"number-register-btn" %>
     </div>
   <% end %>
-
-  トップへ戻る
 
     <%= render "shared/footer" %>
 
