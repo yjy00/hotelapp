@@ -3,99 +3,117 @@
 @import "mixin/backimage";
 
 // フォーム
+.chat-form-title{
+  height: $form-title-height;
+  font-size: $form-title-fontsize;
+  width: $form-width;
+  margin: 0px auto;
+  text-align: center;
+  padding-top: 10px;
+}
+.chat-form{
+  text-align: center;
+  width: $form-width;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  border: 6px solid grey;
+  position: relative;
+  
+  .from-form{
+    height: 40px;
+    line-height: 40px;
+    @include make-center;
+    margin-top: 15px;
 
-.chat-form-wrapper{
-  padding-top: $outer-padding;
-  .chat-form-title{
-    // background-color: darkturquoise;
-    height: $form-title-height;
-    font-size: $form-title-fontsize;
-    width: $form-width;
-    margin: 0px auto 20px auto;
-    text-align: center;
+    .message-from{
+      width: 200px;
+      margin-left: 20px;
+      height: 25px;
+    }
   }
-  .chat-form{
-    text-align: center;
-    // background-color: aqua;
-    width: $form-width;
-    margin: 0 auto;
-    border: 1px solid #CCC;
-    
-    .from-form{
-      // background-color: aqua;
-      height: 40px;
-      line-height: 40px;
-      @include make-center;
-
-      .message-from{
-        width: 200px;
-        margin-left: 20px;
-      }
+  .name-form{
+    height: 40px;
+    line-height: 40px;
+    @include make-center;
+    .message-name-title{
+      margin-left: 20px;
     }
-    .name-form{
-      // background-color: beige;
-      height: 40px;
-      line-height: 40px;
-      @include make-center;
-      margin-top: 10px;
-      .message-name-title{
-        margin-left: 20px;
-      }
-      .message-name{
-        width: 200px;
-        height: 30px;
-        margin-left: 50px;
-        margin-top: 5px;
-      }
+    .message-name{
+      width: 200px;
+      height: 25px;
+      margin-left: 50px;
+      margin-top: 5px;
     }
-    .message-form{
-      // background-color: firebrick;
-      height: 80px;
-      line-height: 40px;
-      @include make-center;
-      margin-top: 10px;
-      .message-message{
-        height: 80px;
-        width: 200px;
-        margin-left: 20px;
-      }
+  }
+  .message-form{
+    height: 80px;
+    line-height: 40px;
+    @include make-center;
+    margin-top: 10px;
+    .message-message{
+      height: 60px;
+      width: 250px;
+      margin-left: 20px;
+      border-style: none;
     }
-    .message-send-form{
-      // background-color: darkviolet;
-      line-height: 40px;
+  }
+  .message-send-form{
+    line-height: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    .message-send-btn{
+      width: 100px;
+      border-style: none;
       height: 40px;
-      margin-top: 10px;
-      .message-send-btn{
-        width: 80px
-      }
+      background-color: $dark-blue;
+      color: white;
     }
   }
 }
 
-
 // 一覧
 .chat-index-wrapper{
-  background-color: azure;
   text-align: center;
   width: $form-width;
   margin: 0 auto;
-  margin-top: 20px;
-  .from-name{
-    display: flex;
-    justify-content: flex-start;
-    .from-index{
-      margin-right: 20px
+  height: 100px;
+  .chats{
+    overflow: scroll;
+    overflow-wrap: break-word;
+    height: 350px;
+    width: 580px;
+    margin-top: 10px;
+    .from-name{
+      display: flex;
+      justify-content: flex-start;
+      .from-index{
+        margin-left: 10px;
+      }
     }
-    // .from-name
+    .message-index-wrapper{
+      p{
+        text-align: left;
+        margin: 0px 40px 10px 0px;
+        padding-left: 20px;
+        height: auto;
+        width: 100%;
+      }
+    }
   }
-  .message-index{
-    text-align: left;
-    margin: 10px;
-    border: 1px solid #CCC;
-
-  }
+  
 }
 
 .chat-function-back-image{
   @include backimage($chat-function-back-image);
+}
+
+.chat-wrapper{
+  padding-top: 25px;
+  .chat-form-index-wrapper{
+    background-color: $background-color;
+    @include form-sizing;
+    height: 645px;
+  }
 }
