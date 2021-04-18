@@ -6,7 +6,7 @@
   padding: $outer-padding;
   .other-function-menu{
     @include space-evenly;
-    background-color: blue;
+    @include background-color;
     width: 800px;
     height: 600px;
     margin: 0 auto;
@@ -18,18 +18,20 @@
     .other-menu-left{
       @include space-evenly;
       flex-flow: column;
-      // background-color: aquamarine;
     }
     .other-menu-right{
       @include space-evenly;
       flex-flow: column;
-      // background-color: bisque;
     }
     .other-menu{
       margin: 10px;
-      background-color: aqua;
       height: 100px;
       width: 200px;
+      background-color: $light-blue;
+      border-radius: 10px;
+      color: $gray-font;
+      font-weight: bold;
+      // font-size: 1.3rem;
 
     }
   }

@@ -8,40 +8,43 @@
   padding-top: $outer-padding;
   .number-form{
     text-align: center;
-    background-color: aqua;
+    background-color: $background-color;
     height: $form-height;
-    margin-top: 1000px;
-    margin: 0 300px;
+    margin: 0 auto;
     width: $form-width;
     .number-title{
-      background-color: grey;
       height: $form-title-height;
       line-height: 70px;
       font-size: $form-title-fontsize;
+      padding-top: 20px
     }
-    .morning-title{
-      background-color: khaki;
+    .title{
       @include form-content;
-    }
-    .hall-title{
-      background-color: firebrick;
-      @include form-content;
-
-    }
-    .kitchen-title{
-      background-color: palegoldenrod;
-      @include form-content;
-
-    }
-    .dishwash-title{
-      background-color: darkviolet;
-      @include form-content;
-
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      height: 60px;
+      p{
+        width: 150px;
+        margin-right: 60px;
+      }
+      .form{
+        text-align: right;
+        width: 80px;
+        height: 60px;
+        margin-right: 20px;
+      }
     }
     .number-btn{
-      background-color: olivedrab;
       @include form-content;
-
+      margin-top: 50px;
+      .number-register-btn{
+        width: 150px;
+        height: 50px;
+        border-style: none;
+        background-color: $white;
+        border-radius: $border-radius;
+      }
     }
   }
 }
@@ -50,9 +53,6 @@
 
 
 
-
 .people-management-function-backimage{
   @include backimage($people-management-function-backimage);
-  // height: calc(100% - 63px);
-
 }
