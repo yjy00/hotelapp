@@ -1,16 +1,16 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock '~> 3.14.1'
 
-set :application, "hotelapp"
-set :repo_url, "git@github.com:yjy00/hotelapp.git"
+set :application, 'hotelapp'
+set :repo_url, 'git@github.com:yjy00/hotelapp.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
-set :linked_files, fetch(:linked_files, []).push("config/master.key")
+set :linked_files, fetch(:linked_files, []).push('config/master.key')
 set :rbenv_type, :user
 
 set :rbenv_ruby, '3.0.0'
 
-set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem'] 
+set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 
 set :deploy_to, '/var/www/rails/hotelapp'
 
@@ -20,7 +20,6 @@ set :deploy_to, '/var/www/rails/hotelapp'
 #     invoke 'puma:restart'
 #   end
 # end
-
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

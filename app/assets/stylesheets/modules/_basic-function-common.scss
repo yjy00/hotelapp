@@ -1,43 +1,53 @@
+.basic-menu-list{
+  display: flex;
+  justify-content: flex-start;
+  background-color: $light-blue;
+  height: 60px;
+  .basic-menu{
+    margin: 10px;
+    margin-top: 20px;
+  }
+}
 
+.main-page-backimage{
+  @include backimage($main-background-image);
+  p{
+    background-color: $background-color;
+    width: 680px;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    font-size: $form-title-fontsize;
+    padding-top: 10px;
 
-.basic-content{
-  @include footer;
-  .basic-menu-list{
-    display: flex;
-    justify-content: flex-start;
-    background-color: darkcyan;
-    .basic-menu{
-      margin: 10px;
-      margin-top: 20px;
-    }
   }
   .item-list{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-      .item{
-        flex-shrink: 0;
-        width: 150px;
-        height: 150px;
-        background-color: rgb(124, 124, 228);
-        margin: 10px;
-        margin-top: 20px;
-        border-radius: 10px;
-        text-align: center;
-        @include make-center;
-        align-items: center;
-        .item-edit{
-          color: $font-color;
+    background-color: $background-color;
+    @include form-content;
+    height: 550px;
+    margin: 0 auto;
+    width: 680px;
+    overflow: scroll;
+    .item{
+      flex-shrink: 0;
+      width: 150px;
+      height: 150px;
+      background-color: $dark-blue;
+      margin: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center;
+      @include make-center;
+      align-items: center;
+      div{
+        color: $white;
 
-        }
+      }
     }
-
   }
-}
 
 
-.main-page-backimage{
-  @include backimage($main-background-image);
-  // min-height:100vh
 
 }

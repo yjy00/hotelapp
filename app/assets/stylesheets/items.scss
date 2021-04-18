@@ -1,138 +1,103 @@
 @import "config/variables";
 @import "mixin/backimage";
 
-.item-form{
-  background-color: firebrick;
-  width: $form-width;
-  height: $form-height;
-  margin: 0 auto;
+
+// 新規登録フォーム
+.item-registration{
+  background-color: $background-color;
+  @include form-sizing;
+  margin-top: 15px;
+  height: 600px;
   text-align: center;
-  margin-top: 20px;
-  .item-form-title{
-    background-color: navajowhite;
-    height: $form-title-height;
-    line-height: 70px;
-    font-size: $form-title-fontsize;
-  }
-  .name-form{
-    background-color: steelblue;
-    height: $basic-form-height;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    .name-title{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
+  .item-form{
+    @include form-sizing;
+    .item-form-title{
+      height: $form-title-height;
+      line-height: 70px;
+      font-size: $form-title-fontsize;
     }
-    .item-name{
-      height: $basic-form-form-height;
-      width: $basic-form-width;
-      // line-height: $basic-form-form-height;
-    }
-  }
-  .count-form{
-    background-color: aqua;
-    height: $basic-form-height;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    .count-title{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
+    .form{
+      @include space-evenly;
+      margin: 20px auto 20px auto;
+      display: flex;
+      .title{
+        width: 100px;
+        height: 50px;
+      }
+      .form-inner{
+        height: 50px;
+        width: 300px;
+        .item{
+          border-style: none;
+          border-radius: $border-radius;
+        }
 
-    }
-    .item-count{
-      width: $basic-form-width;
-      // height: $basic-form-form-height;
+        .item-name{
+          width: 150px;
+          height: 30px;
+          text-align: right;
 
+        }
+        .item-count{
+          width: 50px;
+          text-align: right;
+          height: 30px;
+        }
+        .item-category{
+          width: 50px;
+          height: 30px;
+        }
+        .item-place{
+          width: 50px;
+          height: 30px;
+        }
+        .item-detail{
+          width: 300px;
+          height: 100px;
+        }
+      }
     }
-  }
-  .category-form{
-    background-color: slategrey;
-    height: $basic-form-height;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    .category-title{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
-
-    }
-    .item-category{
-      width: $basic-form-width;
-      // height: $basic-form-form-height;
-
-    }
-  }
-  .place-form{
-    background-color: cadetblue;
-    height: $basic-form-height;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    .place-title{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
-
-    }
-    .item-place{
-      width: 200px;
-      // height: $basic-form-form-height;
-
-    }
-  }
-  .detail-form{
-    background-color: darkcyan;
-    height: 30%;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    .detail-title{
-      // height: 210px;
-      // line-height: 210px;
-    }
-    .item-detail{
-      height: 150px;
-      width: 400px;
-      margin-top: 25px;
-      // position: absolute;
-      // top: 10%;
-      // right: 10%;
-    
-
-    }
-  }
-  .image-form{
-    background-color: saddlebrown;
-    height: $basic-form-height;
-    margin-top: $basic-form-margin;
-    // line-height: $basic-form-line-height;
-    // display: flex;
-    .image-title{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
-
-    }
-    .item-image{
-      // height: $basic-form-line-height;
-      // line-height: $basic-form-line-height;
-
-    }
-  }
-  .basic-submit{
-    background-color: darkviolet;
-    height: $basic-form-height;
-    margin-top: 20px;
-    line-height: $basic-form-line-height;
-    position: relative;
-
     .register-btn{
-      height: $basic-form-form-height;
-      position: absolute;
-      top: 25%;
-      left: 43%;
+      background-color: $dark-blue;
+      border-style: none;
+      border-radius: $border-radius;
+      width: 150px;
+      height: 50px;
+    }
+    .edit-btn{
+      background-color: $dark-blue;
+      border-style: none;
+      border-radius: $border-radius;
+      width: 150px;
+      height: 50px;
+      margin: -20px;
     }
   }
 }
-  
+
+.link-list{
+  @include space-evenly;
+  margin-top: 40px;
+  .to-show{
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: $light-blue;
+    border-radius: $border-radius;
+  }
+  .to-destroy{
+    display: block;
+    width: 200px;
+    height: 30px;
+    border-radius: $border-radius;
+    background-color: $light-blue;
+  }
+}
+
+
 
 .basic-registration-backimage{
   @include backimage($basic-registration-backimage);
-  height: calc(100% - 63px);
+  height: calc(100% - 123px);
 
 }
