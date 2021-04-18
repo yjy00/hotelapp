@@ -1,51 +1,60 @@
 <%= render "shared/header" %>
 
 <div class="chat-function-back-image">
-  <div class="chat-form-wrapper">
-    <p class="chat-form-title">チャット</p>
+  <div class="chat-wrapper">
+    <div class="chat-form-index-wrapper">
 
-    <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
+      <div class="chat-form-wrapper">
 
-      <%= render 'shared/error_messages', model: f.object %>
+        <p class="chat-form-title">チャット</p>
 
+        <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
 
-      <div class="from-form">
-        <p>どちらから</p>
-        <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"message-from"}) %>
-      </div>
+          <%= render 'shared/error_messages', model: f.object %>
 
-      <div class='name-form'>
-        <p class="message-name-title">名前</p>
-        <%= f.text_area :by, class:"message-name", placeholder:"名前", maxlength:"40" %>
-      </div>
-
-      <div class='message-form'>
-        <p>メッセージ</p>
-        <%= f.text_area :message, class: "message-message", placeholder:"メッサージ" %>
-      </div>
-
-      <div class="message-send-form">
-        <%= f.submit "送信", class:"message-send-btn" %>
-      </div>
-
-    <% end %>
-
-
-  <div class="chat-index-wrapper">
-
-    <% if @chats %>
-      <div id="chats">
-        <% @chats.each do |chat| %>
         
-          <div class="from-name">
-            <p class="from-index"><%=  chat.from.name %></p> 
-            <p class="name-index"><%=  chat.by %></p> 
+          <div class="from-form">
+            <p>どちらから</p>
+            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"message-from"}) %>
           </div>
 
-          <p class="message-index"><%= simple_format(chat.message) %></p>
+          <div class='name-form'>
+            <p class="message-name-title">名前</p>
+            <%= f.text_area :by, class:"message-name", placeholder:"名前", maxlength:"40" %>
+          </div>
 
+          <div class='message-form'>
+            <p>メッセージ</p>
+            <%= f.text_area :message, class: "message-message", placeholder:"メッセージ" %>
+          </div>
+
+          <div class="message-send-form">
+            <%= f.submit "送信", class:"message-send-btn" %>
+          </div>
+
+        <% end %>
+
+
+      <div class="chat-index-wrapper">
+
+        <% if @chats %>
+          <div class="chats">
+            <% @chats.each do |chat| %>
+            
+              <div class="from-name">
+                <p class="from-index"><%=  chat.from.name %></p> 
+                <p class="name-index"><%=  chat.by %></p> 
+              </div>
+
+            <div class="message-index-wrapper">
+              <%= simple_format(chat.message) %>
+            </div>
 
         <% end %>
       </div>
     <% end %>
+      </div>
+      </div>
+</div>
+</div>
   <%= render "shared/footer" %>
