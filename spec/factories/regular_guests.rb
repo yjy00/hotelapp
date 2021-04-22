@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :regular_guest do
     name                  { '吉田敦' }

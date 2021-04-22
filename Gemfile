@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -31,14 +33,14 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
   gem 'capistrano', '3.14.1'
-  gem 'capistrano-rbenv'
+  gem 'capistrano3-puma'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
-  gem 'capistrano3-puma'
+  gem 'capistrano-rbenv'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -71,12 +73,13 @@ gem 'active_hash'
 gem 'mini_magick'
 gem 'pry-rails'
 # gem "font-awesome-sass"
+gem 'bcrypt_pbkdf'
+gem 'bootstrap', '~> 4.1.1'
 gem 'devise'
-gem 'kaminari'
 gem 'dotenv-rails'
 gem 'ed25519'
-gem 'bcrypt_pbkdf'
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'sassc', '~> 2.1.0'

@@ -1,4 +1,6 @@
-server '13.112.148.78', user: 'ec2-user', roles: %w(app db web)
+# frozen_string_literal: true
+
+server '13.112.148.78', user: 'ec2-user', roles: %w[app db web]
 
 # server-based syntax
 # ======================

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PeopleManagementsController < ApplicationController
   def index
     @people_managements = PeopleManagement.order('updated_at DESC')

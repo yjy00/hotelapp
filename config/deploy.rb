@@ -1,10 +1,14 @@
+# frozen_string_literal: true
+
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.14.1'
 
 set :application, 'hotelapp'
 set :repo_url, 'git@github.com:yjy00/hotelapp.git'
 
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :linked_dirs,
+    fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system',
+                                 'public/uploads')
 set :linked_files, fetch(:linked_files, []).push('config/master.key')
 set :rbenv_type, :user
 

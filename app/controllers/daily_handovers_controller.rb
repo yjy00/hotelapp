@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DailyHandoversController < ApplicationController
   def index
     @daily_handovers = DailyHandover.order('created_at ASC').page(params[:page]).per(1)

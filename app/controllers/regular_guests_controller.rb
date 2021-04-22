@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RegularGuestsController < ApplicationController
   def index
     @regular_guests = RegularGuest.order('updated_at DESC')

@@ -1,4 +1,5 @@
+# frozen_string_literal: true
+
 class OtherFunctionsController < ApplicationController
-  def index
-  end
+  def index; end
 end

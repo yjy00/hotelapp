@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MenusController < ApplicationController
   def index
     @menus = Menu.order('updated_at DESC')
