@@ -1,23 +1,21 @@
 @import "reset";
+@import "bootstrap";
 
 // @import "font-awesome-sprockets";
 // @import "font-awesome";
 
 @import "config/variables";
 
-@import "mixin/backimage";
-@import "mixin/footer";
 @import "mixin/flexbox";
-@import "mixin/form";
-@import "mixin/background-color";
+@import "mixin/make-form";
 
 @import "modules/header";
 @import "modules/all";
-@import "modules/basic-function-common";
 @import "modules/login";
 @import "modules/user-information";
 @import "modules/footer";
 @import "modules/signup";
+@import "modules/basic-function-common";
 
 @import "items";
 @import "kitchen_orders";
@@ -45,6 +43,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+//  *= require_tree .
+//  *= require_self
  */
