@@ -4,18 +4,16 @@
   color: $font-color;
 }
 
-html {
-  height:100%;
-  width: 100%;
-  body{
-    height: 100%;
-    width: 100%;
-    a{
-      width: 100%;
-      width: 100%;
-      text-decoration: none;
-    }
-  }
+a{
+  text-decoration: none;
 }
 
+.btn{
+  background-color: $dark-blue;
+}
 
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 95px);
+}
