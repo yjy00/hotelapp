@@ -1,33 +1,36 @@
 <%= render "shared/header" %>
-
-<div class="people-management-function-backimage">
-<div class="number-form-outer">
+<div class="container">
 
   <%= form_with model: @people_management, class:"number-form", local: true do |f| %>
 
+<div class="people-management-form-wrapper">
     <%= render 'shared/error_messages', model: f.object %>
 
-    <p class="number-title">人数管理</p>
+    <h2 class="number-title">人数管理</h2>
 
-    <div class='title morning-title'><p>朝食お客様</p>
-      <%= f.number_field :morning, class:"form", placeholder:"朝食" %>
-    </div>
-    <div class="title hall-title"><p>ホールスタッフ</p>
-      <%= f.number_field :waiter, class:"form", placeholder:"ホール" %>
-    </div>
-    <div class="title kitchen-title"><p>キッチンスタッフ</p>
-      <%= f.number_field :kitchen, class:"form", placeholder:"キッチン" %>
-    </div>
-        <div class="title dishwash-title"><p>洗い場スタッフ</p>
-      <%= f.number_field :dish_wash, class:"form", placeholder:"洗い場" %>
+    <div class='form-group'>
+      <label>朝食お客様</label>
+      <%= f.number_field :morning, class:"form-control", placeholder:"朝食" %>
     </div>
 
-    <div class="number-btn">
-      <%= f.submit "登録する", class:"number-register-btn" %>
+    <div class="form-group">
+      <label>ホールスタッフ</label>
+      <%= f.number_field :waiter, class:"form-control", placeholder:"ホール" %>
+    </div>
+    <div class="form-group">
+      <label>キッチンスタッフ</label>
+      <%= f.number_field :kitchen, class:"form-control", placeholder:"キッチン" %>
+    </div>
+    <div class="form-group">
+      <label>洗い場スタッフ</label>
+      <%= f.number_field :dish_wash, class:"form-control", placeholder:"洗い場" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "登録する", class:"btn btn-block" %>
     </div>
   <% end %>
+</div>
+  </div>
 
     <%= render "shared/footer" %>
-
-</div>
-</div>

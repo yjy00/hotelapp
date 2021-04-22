@@ -4,7 +4,7 @@ var html =
        <p><%= @chat.message %></p>`;
 
 var chats = document.getElementById('chats');
-chats.insertAdjacentHTML('afterbegin', html);
+chats.insertAdjacentHTML('beforeend', html);
 
 var newChat = document.getElementById('chat_message');
 var newChatBy = document.getElementById('chat_by')

@@ -1,105 +1,38 @@
 @import "config/variables";
-@import "mixin/backimage";
-@import "mixin/form";
-@import "mixin/flexbox";
+@import "mixin/make-form";
 
+// フォーム
+.item-container-inner{
+  @include make-form;
+}
 
-// 新規登録フォーム
-.item-registration{
-  background-color: $background-color;
-  @include form-sizing;
-  margin-top: 15px;
-  height: 600px;
+// 一覧
+.basic-title{
   text-align: center;
-  .item-form{
-    @include form-sizing;
-    .item-form-title{
-      height: $form-title-height;
-      line-height: 70px;
-      font-size: $form-title-fontsize;
-    }
-    .form{
-      @include space-evenly;
-      margin: 20px auto 20px auto;
-      display: flex;
-      .title{
-        width: 100px;
-        height: 50px;
-      }
-      .form-inner{
-        height: 50px;
-        width: 300px;
-        .item{
-          border-style: none;
-          border-radius: $border-radius;
-        }
-
-        .item-name{
-          width: 150px;
-          height: 30px;
-          text-align: right;
-
-        }
-        .item-count{
-          width: 50px;
-          text-align: right;
-          height: 30px;
-        }
-        .item-category{
-          width: 50px;
-          height: 30px;
-        }
-        .item-place{
-          width: 50px;
-          height: 30px;
-        }
-        .item-detail{
-          width: 300px;
-          height: 100px;
-        }
-      }
-    }
-    .register-btn{
-      background-color: $dark-blue;
-      border-style: none;
-      border-radius: $border-radius;
-      width: 150px;
-      height: 50px;
-    }
-    .edit-btn{
-      background-color: $dark-blue;
-      border-style: none;
-      border-radius: $border-radius;
-      width: 150px;
-      height: 50px;
-      margin: -20px;
-    }
+  margin: $outer;
+}
+.card-columns{
+  max-width: 700px;
+  margin: 0 auto;
+  .card{
+    max-width: 180px;
+    min-width: 150px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+  }
+  li{
+    display: inline;
   }
 }
 
-.link-list{
-  @include space-evenly;
-  margin-top: 40px;
-  .to-show{
-    display: block;
-    width: 200px;
-    height: 30px;
-    background-color: $light-blue;
-    border-radius: $border-radius;
+// 詳細ページ
+.item-show-container-inner{
+  @include make-form;
+  text-align: center;
+  .table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: transparent;
   }
-  .to-destroy{
-    display: block;
-    width: 200px;
-    height: 30px;
-    border-radius: $border-radius;
-    background-color: $light-blue;
+  .table-striped tbody tr:nth-of-type(2n) {
+    background-color: rgba(0,0,0,.05);
   }
-}
-
-
-
-.basic-registration-backimage{
-  @include backimage($basic-registration-backimage);
-  height: calc(100% - 123px);
-
 }

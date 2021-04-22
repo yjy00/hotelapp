@@ -1,58 +1,15 @@
 @import "config/variables";
-@import "mixin/flexbox";
-@import "mixin/backimage";
-@import "mixin/form";
 
-
-.number-form-outer{
-  padding-top: $outer-padding;
-  .number-form{
-    text-align: center;
-    background-color: $background-color;
-    height: $form-height;
-    margin: 0 auto;
-    width: $form-width;
-    .number-title{
-      height: $form-title-height;
-      line-height: 70px;
-      font-size: $form-title-fontsize;
-      padding-top: 20px
-    }
-    .title{
-      @include form-content;
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-      height: 60px;
-      p{
-        width: 150px;
-        margin-right: 60px;
-      }
-      .form{
-        text-align: right;
-        width: 80px;
-        height: 60px;
-        margin-right: 20px;
-      }
-    }
-    .number-btn{
-      @include form-content;
-      margin-top: 50px;
-      .number-register-btn{
-        width: 150px;
-        height: 50px;
-        border-style: none;
-        background-color: $white;
-        border-radius: $border-radius;
-      }
-    }
+.people-management-form-wrapper{
+  width: 30vw;
+  margin: $outer-big auto;
+  h2{
+    padding-bottom: $outer;
   }
-}
-
-
-
-
-
-.people-management-function-backimage{
-  @include backimage($people-management-function-backimage);
+  .form-control{
+    text-align: right;
+  }
+  .btn{
+    background-color: $dark-blue;
+  }
 }

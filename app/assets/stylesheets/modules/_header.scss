@@ -1,47 +1,31 @@
-header{
-  height: 63px;
-  width: 100%;
-  .header-container{
-    display: flex;
-    justify-content: space-between;
-    height: 63px;
-    width: 100%;
-    .app-logo{
-      height: 63px;
-      width: 20%;
-      
-      .logo{
-        display: block;
-        height: 53px;
-        width: 100%;
-        line-height: 53px;
-        text-align: center;
-        background-color: $dark-blue;
-        margin: 5px;
-        font-size: 2rem;
-        border-radius: 10px;
-  }
-    }
-    .nav{
-      width: 400px;
-      .menu-list{
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-        height: 63px;
-        .menu-item{
-          line-height: 53px;
-          width: 200px;
-          text-align: center;
-          margin: 5px;
-          .menu{
-            display: block;
-            color: $light-blue;
-          }
-        }
-      }
-    }
+.navbar{
+  height: 70px;
+  .navbar-brand{
+    background-color: $dark-blue;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
     
+  }
+  .nav-link{
+    height: 70px;
+    font-size: 0.84rem;
+    min-width: 50px;
+    span{
+      display: block;
+      text-align: center;
+      font-size: 0.84rem;
+    }
+  }
+  .weather{
+    line-height: 40px;
   }
 }
 
+@media (max-width: 768px){
+  .navbar{
+    li{
+      background-color: salmon;
+    }
+  }
+}

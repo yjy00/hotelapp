@@ -1,61 +1,57 @@
 <%= render "shared/header" %>
 
-<div class="user-information-backimage">
-  <div class="user-information-wrapper">
-    <div class="user-information-form">
-
+<div class="container">
+<div class="user-information-container-inner">
 
     <h2>ユーザー情報編集</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field">
-        <%= f.label :ホテルのお名前 %><br />
-        <%= f.text_area :name, autofocus: true, autocomplete: "name" %>
+      <div class="form-group">
+        <p><%= f.label :ホテルのお名前 %></p><br />
+        <%= f.text_area :name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm"  %>
       </div>
 
-      <div class="field">
-        <%= f.label :メールアドレス %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="form-group">
+        <p><%= f.label :メールアドレス %><br /></p>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"  %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-      <div class="field">
-        <%= f.label :password %> <i>(変更されない場合は、空欄にして進んでください。)</i><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
+      <div class="form-group">
+        <p><%= f.label :password %> <i>(変更されない場合は、空欄にして進んでください。)</i></p><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control"  %>
         <% if @minimum_password_length %>
           <br />
-          <em><%= @minimum_password_length %> 文字以上で設定してください。</em>
+          <em><p><%= @minimum_password_length %> 文字以上で設定してください。</em></p>
         <% end %>
       </div>
 
-      <div class="field">
+      <div class="form-group">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
       </div>
 
-      <div class="field">
-      <%= f.label :マネージャー様のお名前 %><br />
-      <%= f.text_area :managers_name, autofocus: true, autocomplete: "name" %>
+      <div class="form-group">
+      <p><%= f.label :マネージャー様のお名前 %><br /></p>
+      <%= f.text_area :managers_name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm" %>
     </div>
 
-      <div class="actions">
-        <%= f.submit "更新する" %>
-      </div>
+        <%= f.submit "更新する", class:"btn" %>
+
     <% end %>
 
     <h3>アカウントを削除する</h3>
 
-    <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会されますか?" }, method: :delete, class:"btn" %>
 
-    <%= link_to "戻る", :back %>
+    <%= link_to "戻る", :back, class:"btn" %>
 
-</div>
-</div>
+    </div>
+        </div>
+
         <%= render "shared/footer" %>
-
-  </div>

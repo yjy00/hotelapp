@@ -1,63 +1,47 @@
 <%= render "shared/header" %>
 
-<div class="basic-registration-backimage">
-  <div class="basic-content">
+<div class="container">
   <%= render "shared/basic-header" %>
+  <div class="item-container-inner">
 
-    <div class="item-registration">
       <%= form_with model: @item, class:"item-form", local: true do |f| %>
         
         <p class="item-form-title">新規アイテム登録</p>
 
         <%= render 'shared/error_messages', model: f.object %>
 
-        <div class='form name-form'>
-          <p class="title name-title">アイテム名</p>
-          <div class="form-inner">
-            <%= f.text_area :name, class:"item item-name", placeholder:"", maxlength:"40" %>
-          </div>
+        <div class='form-group'>
+          <label class="title name-title">アイテム名</label>
+          <%= f.text_area :name, class:"form-control form-control-sm", placeholder:"", maxlength:"40" %>
         </div>
-        <div class="form count-form">
-          <p class="title count-title">数量</p>
-          <div class="form-inner">
-          <%= f.number_field :count, class:"item item-count", placeholder:"" %>
-        </div>
+        <div class="form-group">
+          <label class="title count-title">数量</label>
+          <%= f.number_field :count, class:"form-control form-control-sm", placeholder:"" %>
         </div>
 
-        <div class="form category-form">
-          <p class="title category-title">カテゴリー</p>
-          <div class="form-inner">
-          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"item item-category"}) %>
-        </div>
+        <div class="form-group">
+          <label class="title category-title">カテゴリー</label>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form-control"}) %>
         </div>
 
-        <div class="form place-form">
-          <p class="title place-title">場所</p>
-          <div class="form-inner">
-          <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"item item-place"}) %>
-        </div>
+        <div class="form-group">
+          <label class="title place-title">場所</label>
+          <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"form-control"}) %>
         </div>
 
-        <div class='form detail-form'>
-          <p class="title detail-title">詳細</p>
-          <div class="form-inner">
-          <%= f.text_area :detail, class:"item item-detail", placeholder:"アイテムの詳細" %>
-        </div>
+        <div class='form-group'>
+          <label class="title detail-title">詳細</label>
+          <%= f.text_area :detail, class:"form-control form-control-lg", placeholder:"アイテムの詳細" %>
         </div>
 
-        <div class='form image-form'>
-          <p class="title image-title">写真</p>
-          <div class="form-inner">
-          <%= f.file_field :image, class:"item item-image" %>
-        </div>
+        <div class='form-group'>
+          <label class="title image-title">写真</label>
+          <%= f.file_field :image, class:"form-control" %>
         </div>
         
-        <div class="basic-submit">
-          <%= f.submit "登録する", class:"register-btn" %>
-        </div>
+          <%= f.submit "登録する", class:"btn" %>
         
       <% end %>
       </div>
-      <%= render "shared/footer" %>
-
   </div>
+      <%= render "shared/footer" %>

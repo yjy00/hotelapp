@@ -1,42 +1,12 @@
-$basic-form-height:                    600px;
-$basic-form-form-height:               30px;
-$basic-form-margin:                    10px;
-$basic-form-line-height:               60px;
-$basic-form-width:                     200px;
-$form-height:                          630px;
-$form-width:                           600px;
-$form-title-height:                    10%;
+$font-color:                         #333333;
 
-$border-radius:                        5px;
+$dark-blue:                          #28527a;
+$light-blue:                         #8ac4d0;
+$dark-yellow:                        #f4d160;
+$light-yellow:                       #fbeeac;
 
-$form-title-fontsize:                  1.5rem;
-$outer-padding:                        40px;
-$margin:                               20px;
+$form-height:                          550px;
+$form-width:                           50%;
 
-$font-color:                           #000000;
-$gray-font:                            #333333;
-$background-color:                     rgba(224, 220, 220, 0.801);
-$dark-blue:                            #28527a;
-$hover-dark-blue:                      #28527ada;
-$light-blue:                           #8ac4d0;
-$hover-light-blue:                     #8ac4d0da;
-$dark-yellow:                          #f4d160;
-$hover-dark-yellow:                    #f4d160da;
-$light-yellow:                         #fbeeac;
-$hover-light-yellow:                   #fbeeacda;
-$white:                                #ffffff;
-$hover-white:                          #ffffffda;
-
-$login-background-image:               image-url("login-backimage.jpeg");
-$main-background-image:                image-url("main-page-backimage.jpeg");
-$basic-registration-backimage:         image-url("basic-registration-backimage.jpeg");
-$kitchenorder-function-backimage:      image-url("kitchenorder-function-backimage.jpeg");
-$chat-function-back-image:             image-url("chat-function-back-image.jpeg");
-$handover-function-backimage:          image-url("handover-function-backimage.jpeg");
-$menu-function-backimage:              image-url("menu-function-backimage.jpeg");
-$people-management-function-backimage: image-url("people-management-function-backimage.jpeg");
-$other-function-backimage:             image-url("other-function-backimage.jpeg");
-$regularguest-function-backimage:      image-url("regularguest-function-backimage.jpeg");
-$user-information-backimage:           image-url("user-information-backimage.jpeg");
-$order-function-backimage:             image-url("order-function-backimage.jpeg");
-$people-management-function-backimage: image-url("people-management-function-backimage.jpeg");
+$outer-big:                            40px;
+$outer:                                15px;

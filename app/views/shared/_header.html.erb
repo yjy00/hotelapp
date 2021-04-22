@@ -1,14 +1,36 @@
-<header class='header'>
-  <div class="header-container">
-    <div class='app-logo'>
-      <%= link_to "#", root_path, class: "logo" %>
+<nav class="navbar bg-light navbar-light navbar-expand-md">
+    <%= link_to "#", root_path, class:"navbar-brand" %>
+    
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarContent" class="collapse navbar-collapse" >
+    
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><%= link_to foods_path, data: {"turbolinks" => false}, class: "nav-link" do %>フード<br><span>一覧</span><% end %></li>
+        <li class="nav-item"><%= link_to beverages_path, data: {"turbolinks" => false}, class: "nav-link" do %>ドリンク<br><span>一覧</span><% end %></li>
+        <li class="nav-item"><%= link_to equipments_path, data: {"turbolinks" => false}, class: "nav-link" do %>備品<br><span>一覧</span><% end %></li>
+        <li class="nav-item"><%= link_to kitchen_orders_path, data: {"turbolinks" => false}, class: "nav-link" do %>キッチン<br><span>発注リスト</span><% end %></li>
+        <li class="nav-item"><%= link_to edit_people_management_path(1), data: {"turbolinks" => false}, class: "nav-link" do %>朝食人数<br><span><%= @people_management.morning.to_s%></span><% end %></li>
+        <li class="nav-item"><%= link_to '天気', root_path, data: {"turbolinks" => false}, class: "nav-link weather" %></li>
+        <li class="nav-item"><%= link_to root_path, data: {"turbolinks" => false}, class: "nav-link" do %>このアプリの<br><span>使い方</span><% end %></li>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle", data-toggle="dropdown">その他<br><span>メニュー</span></a>
+         
+          <div class="dropdown-menu dropdown-menu-right">
+            <%= link_to 'チャット', chats_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to '引継ぎ', daily_handovers_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to '新規アイテム登録', new_item_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to 'ホール発注リスト', orders_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to '常連ゲスト情報', regular_guests_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to "人数管理", edit_people_management_path(1), data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to "登録情報編集", edit_user_registration_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%= link_to "ログアウト", destroy_user_session_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
+            <%#<%= link_to '全一覧', items_path, class: "dropdown-item" %>
+            <%# <%= link_to 'メニュー管理', menus_path, class: "dropdown-item" %> 
+          </div>
+
+        </li>
+
+      </ul>
     </div>
-    <nav class="nav">
-      <li class="menu-list">
-        <ul class="menu-item morning-number"><%= link_to "朝食人数:" + @people_management.morning.to_s, edit_people_management_path(1), class: "menu" %></ul>
-        <ul class="menu-item"><%= link_to '天気', root_path, class: "menu" %></ul>
-        <ul class="menu-item"><%= link_to 'その他メニュー', other_functions_path, class: "menu" %></ul>
-      </li>
-    </nav>
-  </div>
-</header>
+</nav>

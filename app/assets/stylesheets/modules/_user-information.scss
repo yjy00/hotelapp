@@ -1,15 +1,6 @@
+@import "config/variables";
 
-.user-information-wrapper{
-  padding-top: $outer-padding;
-  .user-information-form{
-    background-color: antiquewhite;
-    @include form-sizing;
-  }
-}
-
-
-.user-information-backimage{
-  @include backimage($user-information-backimage);
-  // height: calc(100% - 63px);
+.user-information-container-inner{
+  @include make-form;
 
 }
