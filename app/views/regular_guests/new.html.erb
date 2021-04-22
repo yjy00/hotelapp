@@ -1,38 +1,33 @@
 <%= render "shared/header" %>
-
-<div class="regularguest-function-backimage">
-  <div class="guest-form-wrapper">
-
+<div class="container">
+<div class="regular-guest-container-inner">
     <%= form_with model: @regular_guest, class:"guest-form", local: true do |f| %>
 
     <p class="guest-form-title">新規ゲスト登録</p>
 
       <%= render 'shared/error_messages', model: f.object %>
 
-      <div class="guest-form-content">
-        <p>ゲストの名前</p>
-        <%= f.text_area :name, class:"guest-form-name",placeholder:'ゲストの名前' %>
+      <div class="form-group">
+        <label>ゲストの名前</label>
+        <%= f.text_area :name, class:"form-control form-control-sm",placeholder:'ゲストの名前' %>
       </div>
-      <div class='guest-form-content'>
-        <p class="guest-form-status-title">ステータス</p>
-        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"guest-form-status"}) %>
+      <div class='form-group'>
+        <label class="guest-form-status-title">ステータス</label>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"form-control"}) %>
       </div>
-      <div class='guest-form-content'>
-        <p>メンバーナンバー</p>
-        <%= f.text_area :member_number, class:"guest-form-number", placeholder:"メンバーナンバー" %>
+      <div class='form-group'>
+        <label>メンバーナンバー</label>
+        <%= f.text_area :member_number, class:"form-control form-control", placeholder:"メンバーナンバー" %>
       </div>
-      <div class='guest-form-content'>
-        <p>その他の情報</p>
-        <%= f.text_area :information, class:"guest-form-information", placeholder:"ゲストに関する情報" %>
+      <div class='form-group'>
+        <label>その他の情報</label>
+        <%= f.text_area :information, class:"form-control form-control-lg", placeholder:"ゲストに関する情報" %>
       </div>
 
-        <div class="guest-form-content">
-          <%= f.submit "登録", class:"guest-register-btn" %>
-        </div>
+          <%= f.submit "登録", class:"btn btn-block" %>
 
     <% end %>
+    </div>
+    </div>
 
-  </div>
     <%= render "shared/footer" %>
-
-</div>
