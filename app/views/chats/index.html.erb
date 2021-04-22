@@ -1,44 +1,13 @@
 <%= render "shared/header" %>
 
-<div class="chat-function-back-image">
-  <div class="chat-wrapper">
-    <div class="chat-form-index-wrapper">
+<div class="container">
+  <div class="chat-container-inner">
 
-      <div class="chat-form-wrapper">
+        <h4 class="chat-form-title">チャット</h4>
 
-        <p class="chat-form-title">チャット</p>
-
-        <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
-
-          <%= render 'shared/error_messages', model: f.object %>
-
-        
-          <div class="from-form">
-            <p>どちらから</p>
-            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"message-from"}) %>
-          </div>
-
-          <div class='name-form'>
-            <p class="message-name-title">名前</p>
-            <%= f.text_area :by, class:"message-name", placeholder:"名前", maxlength:"40" %>
-          </div>
-
-          <div class='message-form'>
-            <p>メッセージ</p>
-            <%= f.text_area :message, class: "message-message", placeholder:"メッセージ" %>
-          </div>
-
-          <div class="message-send-form">
-            <%= f.submit "送信", class:"message-send-btn" %>
-          </div>
-
-        <% end %>
-
-
-      <div class="chat-index-wrapper">
 
         <% if @chats %>
-          <div class="chats">
+          <div id="chats">
             <% @chats.each do |chat| %>
             
               <div class="from-name">
@@ -53,8 +22,33 @@
         <% end %>
       </div>
     <% end %>
-      </div>
-      </div>
+
+        <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
+
+          <%= render 'shared/error_messages', model: f.object %>
+
+        <div class="from-name">
+          <div class="form-group">
+            <label>どちらから</label>
+            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"form-control"}) %>
+          </div>
+
+          <div class='form-group'>
+            <label>名前</label>
+            <%= f.text_area :by, class:"form-control", placeholder:"名前", maxlength:"40" %>
+          </div>
+        </div>
+
+          <div class='form-group'>
+            <label>メッセージ</label>
+            <%= f.text_area :message, class: "form-control", placeholder:"メッセージ" %>
+          </div>
+
+            <%= f.submit "送信", class:"btn" %>
+
+        <% end %>
+
 </div>
-</div>
+      </div>
+    
   <%= render "shared/footer" %>
