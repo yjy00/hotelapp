@@ -1,6 +1,6 @@
-<div class="login-background">
+<div class="container">
 
-  <div class=login-page>
+<div class="login-container-wrapper">
 
     <div class="lognin-logo">logo</div>
 
@@ -8,44 +8,27 @@
 
     <%= render partial: 'layouts/flash' %>
 
-    <div class="login-form">
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        
+        <div class="form-group">
           <%= f.label :email, class: "login-label" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
         </div>
 
-        <div class="field">
+        <div class="form-group">
           <%= f.label :password, class: "login-label" %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class: "form" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
         </div>
 
-        <% if devise_mapping.rememberable? %>
-          <div class="field">
-            <%= f.check_box :remember_me, class: "login-check" %>
-            <%= f.label :remember_me, class: "login-label" %>
-          </div>
-        <% end %>
+          <%= f.submit "Log in", class: "btn" %>
 
-        <div class="actions">
-          <%= f.submit "Log in", class: "login-btn" %>
-        </div>
       <% end %>
-    </div>
 
-        <div class="guest-login">
-        <div class="guest-login-btn">
-          <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "login-link" %>
-        </div>
-        </div>
-        <div class="sign-up-render">
+          <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn" %>
           <%= render "devise/shared/links" %>
-        </div>
 
-
+</div>
     </div>
 
     <%= render "shared/footer" %>
-
-</div>
