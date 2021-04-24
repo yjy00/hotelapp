@@ -1,10 +1,16 @@
-<div class="container">
+<div class="container login-container">
 
-<div class="login-container-wrapper">
+<div class="login-container-inner">
 
-    <div class="lognin-logo">logo</div>
+<p class="app-title">キッチンとホールの<br>コミュニケーションを変える</p>
 
-  <h2 class="login">ログイン</h2>
+    <div class="lognin-logo">Hotelapp</div>
+
+  <h5 class="">へようこそ</h5>
+
+  <div class="card">
+
+  <p class="login">ログイン</p>
 
     <%= render partial: 'layouts/flash' %>
 
@@ -12,23 +18,28 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         
         <div class="form-group">
-          <%= f.label :email, class: "login-label" %><br />
+          <%= f.label :email, class: "login-label" %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password, class: "login-label" %><br />
+          <%= f.label :password, class: "login-label" %>
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
         </div>
 
-          <%= f.submit "Log in", class: "btn" %>
+          <%= f.submit "Log in", class: "btn btn-block" %>
 
       <% end %>
 
-          <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn" %>
+<div class="login-register-btn">
+
+          <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn guest-login" %>
           <%= render "devise/shared/links" %>
 
+          </div>
+
 </div>
+    </div>
     </div>
 
     <%= render "shared/footer" %>

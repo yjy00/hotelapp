@@ -4,12 +4,22 @@
   color: $font-color;
 }
 
+html{
+  height: 100vh;
+}
+
+body{
+  // background-color: $background-color;
+  // background-attachment: scroll;
+  height: 100%;
+}
+
 a{
   text-decoration: none;
 }
 
 .btn{
-  background-color: $dark-blue;
+  background-color: $light-blue;
 }
 
 .container{

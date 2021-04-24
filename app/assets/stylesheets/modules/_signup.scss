@@ -2,4 +2,28 @@
 
 .signup-container-wrapper{
   @include make-form;
+
+  .signup-logo{
+
+  }
+
+  .card{
+    .new_user{
+      background-color: yellow;
+      .signup-label{
+        display: block;
+        text-align: center;
+        // color: $white;
+      }
+    
+      .form-control{
+        margin: 0 auto;
+        width: 50%;
+        height: 4vh;
+    
+      }
+    }
+    
+  }
+  
 }

@@ -1,19 +1,20 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://hotelapp01.herokuapp.com/cable" 
+  config.action_cable.url = 'wss://hotelapp01.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = ['https://hotelapp01.herokuapp.com', 'http://hotelapp01.herokuapp.com']
 
   # Code is not reloaded between requests.
   config.cache_classes = true
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "ws://3.115.181.127/cable" 
+  config.action_cable.url = 'ws://3.115.181.127/cable'
   config.action_cable.allowed_request_origins = ['http://3.115.181.127']
-
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -98,7 +99,7 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

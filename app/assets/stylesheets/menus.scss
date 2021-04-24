@@ -1,10 +1,1 @@
-// Place all the styles related to the menus controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
 @import "config/variables";
-@import "mixin/backimage";
-
-.menu-function-backimage{
-  @include backimage($menu-function-backimage);
-}

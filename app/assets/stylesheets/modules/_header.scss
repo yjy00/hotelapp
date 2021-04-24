@@ -1,31 +1,86 @@
 .navbar{
   height: 70px;
+  background-color: $dark-blue;
+  border-radius: 1px;
   .navbar-brand{
-    background-color: $dark-blue;
+    background-color: $white;
     width: 150px;
     height: 50px;
     border-radius: 10px;
-    
+    color: $white;
   }
   .nav-link{
-    height: 70px;
-    font-size: 0.84rem;
+    height: 40px;
+    font-size: 0.82rem;
     min-width: 50px;
+    color: $white;
+    padding: 0;
     span{
-      display: block;
       text-align: center;
-      font-size: 0.84rem;
+      font-size: 0.74rem;
+      color: $white;
+    }
+    .other-menu{
+      color: $white;
     }
   }
-  .weather{
-    line-height: 40px;
+  .card{
+    background-color: transparent;
+    border: none;
   }
+  .one-line{
+    line-height: 38px;
+  }
+  .dropdown-menu{
+    background-color: $light-blue;
+    height: 295px;
+    .dropdown-item{
+      // border: 0.3px solid $gray;
+    }
+  }
+    
 }
 
-@media (max-width: 768px){
+.dropdown-toggle::after{
+  content: none;
+}
+
+@media (max-width: 767px){
   .navbar{
-    li{
-      background-color: salmon;
+    .navbar-toggler{
+      border-color: $white;
+      .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+    }
+    
+    
+    div{
+      background-color: $light-blue;
+      border-radius: 5px;
+      height: 42vh;
+      position: relative;
+      z-index: 1;
+      .nav-link{
+        @include make-center;
+        font-size: $menu-font-size;
+        border: 1px solid $gray;
+        display: block;
+        height: 12.5%;
+        padding: 9px;
+        
+        span{
+          display: inline-block;
+          font-size: $menu-font-size;
+        }
+      
+      }
+    }
+
+    .one-line{
+      line-height: 20px;
+      display: block;
     }
   }
+    
 }

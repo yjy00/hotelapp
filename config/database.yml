@@ -1,18 +1,12 @@
-# MySQL. Versions 5.5.8 and up are supported.
-#
-# Install the MySQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
-#
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+  # username: <%= ENV['MYSQL_USER'] %>
+  # password: <%= ENV['MYSQL_PASSWORD'] %>
+  # host: <%= ENV['MYSQL_HOST'] %>
+
   # database: <%= ENV['DB_NAME'] %>
   # username: root
   # username: ec2-user
@@ -28,7 +22,8 @@ development:
   <<: *default
   database: hotelapp_development
   username: root
-  socket: /tmp/mysql.sock
+
+  # socket: /tmp/mysql.sock
   # password: "Konokinannoki1"
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   # socket: /var/lib/mysql/mysql.sock
@@ -73,6 +68,7 @@ production:
   password: "Konokinannoki1"
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
+  
   # database: <%= ENV['DB_NAME'] %>
   # username: <%= ENV['DB_USERNAME'] %>
   # password: <%= ENV['DB_PASSWORD'] %>
