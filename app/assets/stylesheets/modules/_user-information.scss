@@ -27,7 +27,8 @@
 
 @media (max-width: 767px){
   .user-information-container-inner{
-    width: 80vw;
+    @include make-sm-form;
+
   }
 
 }
