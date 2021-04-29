@@ -2,40 +2,135 @@
 @import "mixin/flexbox";
 @import "mixin/make-form";
 
-.chat-container-inner{
-  @include make-form;
-}
 
-.chat-form-title{
-  text-align: center;
-}
 
 // 一覧
-  #chats{
-    overflow: scroll;
-    overflow-wrap: break-word;
-    height: 380px;
-    width: 580px;
-    .from-name{
-      display: flex;
-      justify-content: flex-start;
-    }
-    .message-index-wrapper{
-      p{
-        text-align: left;
-        padding-left: 20px;
-        height: auto;
+.chat-container-inner{
+  @include make-form;
+  margin-top: 0;
+  margin-bottom: $outer-big;
+  .title{
+    margin-bottom: 35px;
+  }
+  .chat-wrapper{
+    padding: 25px;
+  }
+    #chats{
+      overflow: scroll;
+      overflow-wrap: break-word;
+      height: 350px;
+      .from-name{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid $gray;
+        height: 32px;
+        width: 99%;
+        padding-top: 5px;
+        position: relative;
+        .from-index{
+          margin-right: $outer;
+        }
+        .name-index{
+          margin-right: $outer;
+        }
+        .time-index{
+          position: absolute;
+          right: 5px;
+        }
+      }
+      .message-index-wrapper{
+        p{
+          text-align: left;
+          padding-left: 20px;
+          height: auto;
+          margin-top: 10px;
+          margin-bottom: 3px;
+        }
       }
     }
-  }
-  
 
-// フォーム
-.chat-form{
-  border: 10px solid sandybrown;
-  margin-top: $outer;
-  height: 210px;
-  .from-name{
-    @include space-evenly;
+
+    
+
+  // フォーム
+  .chat-form{
+    margin: $outer auto 0 auto;
+    margin-top: $outer;
+    height: 210px;
+    padding-bottom: 270px;
+    padding-top: 0px;
+    width: 55vw;
+    position: relative;
+    .from-name{
+      // @include space-evenly;
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+      height: 70px;
+      margin: 0 auto;
+      .form-group{
+        margin-right: 10px;
+      }
+      
+      .form{
+        height: 35px;
+        font-size: 0.8rem;
+        width: 150%;
+      }
+      .from-form{
+        min-width: 50px;
+        width: 100px;
+      }
+
+    }
+    label{
+      margin-bottom: 3px;
+      margin-top: 10px;
+    }
+    .form-control{
+      border-radius: 20px;
+    }
+    .btn{
+      margin-left: 33vw;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
+
+
+
+@media (max-width: 767px){
+
+  .chat-container-inner{
+    width: 90%;
+    // 一覧
+    .chat-wrapper{
+      margin: 0 auto $outer auto !important;
+      width: 90% !important;
+    }
+    // フォーム
+    .chat-form{
+      width: 90% !important;
+      // background-color: royalblue;
+    }
+    .from-name{
+      width: 100% !important;
+    }
+    .form-group{
+      margin-right: 10px !important;
+      margin-top: $outer;
+    }
+    .form{
+      width: 100% !important;
+    }
+    .message-title{
+      margin-top: $outer !important;
+    }
+    .message-form{
+      margin: 0 auto;
+    }
   }
 }

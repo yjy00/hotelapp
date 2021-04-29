@@ -1,0 +1,33 @@
+// Place all the styles related to the usage-of-apps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.usage-of-app-container-inner{
+  @include make-form;
+  .card{
+    margin: 0 auto;
+  }
+  .card-body{
+    padding: $outer-big;
+  }
+  h5{
+    padding-left: $outer;
+    border-bottom: $dark-yellow solid 3px;
+  }
+  ul{
+    padding-left: $outer-big;
+    list-style-type: disc;
+  }
+  .function-list{
+    padding-left: $outer;
+  }
+  ol{
+    padding-left: $outer-big;
+    list-style-type: decimal;
+  }
+}
+
+@media (max-width: 767px){
+  .usage-of-app-container-inner{
+    width: 100%;
+}}

@@ -1,29 +1,42 @@
 * {
   box-sizing: border-box;
-  font-size: 17px;
+  font-size: 15px;
   color: $font-color;
 }
 
-html{
-  height: 100vh;
-}
-
-body{
-  // background-color: $background-color;
-  // background-attachment: scroll;
-  height: 100%;
+.container{
+  display: flex;
+  flex-direction: column;
 }
 
 a{
   text-decoration: none;
 }
 
+a:hover{
+  opacity: 0.6;
+}
+
 .btn{
   background-color: $light-blue;
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 95px);
+.btn:hover{
+  opacity: 0.8;
+}
+
+
+.title{
+  text-align: center;
+  padding-top: $outer;
+  padding-bottom: 5px;
+  width: 100%;
+  color: $font-color;
+  font-size: 1.3rem;
+  margin-bottom: $outer-big;
+  position:  relative;    /* 位置調整 */
+  font-weight:  normal;   /* 文字の太さ調整 */
+  margin-top: $outer;    /* 周りの余白指定 */
+  border-bottom: solid 4px $dark-blue;        /* 線指定 */
+  border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
 }

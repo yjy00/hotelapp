@@ -3,4 +3,31 @@
 .user-information-container-inner{
   @include make-form;
 
+  p{
+    margin: 0 auto;
+    width: 70%;
+    font-size: $small-font;
+  }
+  .form-control{
+    height: 30px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .btns-wrapper{
+    @include space-evenly;
+    margin-top: 30px;
+    .update-btn{
+      background-color: $dark-yellow;
+      width: 200px;
+    }
+  }
+
+}
+
+@media (max-width: 767px){
+  .user-information-container-inner{
+    width: 80vw;
+  }
+
 }

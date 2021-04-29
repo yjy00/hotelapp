@@ -3,40 +3,91 @@
 
 .daily-handover-container-inner{
   @include make-form;
-  margin-bottom: 10px;
+  margin-bottom: $outer-big;
+  margin-top: 0;
 }
 
 
-
-.handover-title{
-  text-align: center;
-}
+// 一覧画面
 .handover-form-wrapper{
   overflow: scroll;
   overflow-wrap: break-word;
   height: 500px;
+  position: relative;
+  margin-top: $outer-big;
+  .handover-form-inner{
+    margin: $outer;
+  }
 
   .date-edit{
     display: flex;
     justify-content: flex-end;
     .handover-date{
-      height: 50px;
-      width: 150px;
+      width: 100%;
       text-align: center;
     }
-  }
-  p{
-      height: auto;
+    .btn{
+      position: absolute;
+      top: 50px;
+      right: 15px;
     }
+  }
+  label{
+    margin-bottom: 5px;
+    margin-top: $outer;
+  }
+  
 }
 .handover-btn-pagenate-wrapper{
   margin:  0 auto;
   text-align: center;
-  .handover-resister-btn{
-    display: block;
+  .btn{
+    margin-top: $outer-big;
+    justify-content: center;
   }
   .pagination{
-    display: block;
+    display: flex;
+    margin-top: $outer;
+    justify-content: center;
+    .btn{
+      background-color: $dark-yellow;
+    }
+    .current{
+      display: block;
+      height: 75px;
+      width: 30px;
+      line-height: 117px
+    }
   }
 }
-// フッターかぶる
+
+@media (max-width: 767px){
+  .daily-handover-container-inner{
+    width: 100%;
+    .handover-form-inner{
+      .card{
+        width: 100% !important;
+      }
+      }
+    }
+  }
+
+// フォーム画面
+.dailyhandover-form-container-inner{
+  @include make-form;
+  margin-bottom: $outer-big;
+  margin-top: 0;
+  .form-group{
+    height: 120px;
+  }
+  label{
+    margin-top: $outer-big;
+  }
+  .btn{
+    margin-left: 35%;
+    margin-top: $outer-big;
+    width: 30%;
+    height: 50px;
+  }
+}
+

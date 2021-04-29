@@ -3,51 +3,53 @@
 <div class="container">
   <div class="chat-container-inner">
 
-        <h4 class="chat-form-title">チャット</h4>
+        <h4 class="title">チャット</h4>
 
-
+      <div class="chat-wrapper card">
         <% if @chats %>
-          <div id="chats">
+          <div id="chats" >
             <% @chats.each do |chat| %>
             
-              <div class="from-name">
+              <div class="from-name card-body">
                 <p class="from-index"><%=  chat.from.name %></p> 
                 <p class="name-index"><%=  chat.by %></p> 
+                <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
               </div>
 
             <div class="message-index-wrapper">
               <%= simple_format(chat.message) %>
             </div>
-
         <% end %>
+</div>
       </div>
     <% end %>
 
-        <%= form_with model: @chat, class:"chat-form", local: false do |f| %>
+        <%= form_with model: @chat, class:"chat-form card", local: false do |f| %>
 
           <%= render 'shared/error_messages', model: f.object %>
 
+<div class="card-body">
         <div class="from-name">
           <div class="form-group">
-            <label>どちらから</label>
-            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"form-control"}) %>
+            <label>部署</label>
+            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"form-control form from-form"}) %>
           </div>
 
           <div class='form-group'>
             <label>名前</label>
-            <%= f.text_area :by, class:"form-control", placeholder:"名前", maxlength:"40" %>
+            <%= f.text_area :by, class:"form-control form", placeholder:"名前", maxlength:"40" %>
           </div>
         </div>
 
           <div class='form-group'>
-            <label>メッセージ</label>
-            <%= f.text_area :message, class: "form-control", placeholder:"メッセージ" %>
+            <label class="message-title">メッセージ</label>
+            <%= f.text_area :message, class: "form-control message-form", placeholder:"メッセージ" %>
           </div>
 
             <%= f.submit "送信", class:"btn" %>
 
         <% end %>
-
+</div>
 </div>
       </div>
     

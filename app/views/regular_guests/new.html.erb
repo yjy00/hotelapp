@@ -1,9 +1,11 @@
 <%= render "shared/header" %>
 <div class="container">
-<div class="regular-guest-container-inner">
+<div class="regular-guest-form-container-inner">
+
+    <h4 class="title">新規ゲスト登録</h4>
+
     <%= form_with model: @regular_guest, class:"guest-form", local: true do |f| %>
 
-    <p class="guest-form-title">新規ゲスト登録</p>
 
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -13,20 +15,23 @@
       </div>
       <div class='form-group'>
         <label class="guest-form-status-title">ステータス</label>
-        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"form-control"}) %>
+        <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"form-control small"}) %>
       </div>
       <div class='form-group'>
         <label>メンバーナンバー</label>
-        <%= f.text_area :member_number, class:"form-control form-control", placeholder:"メンバーナンバー" %>
+        <%= f.text_area :member_number, class:"form-control small", placeholder:"メンバーナンバー" %>
       </div>
       <div class='form-group'>
         <label>その他の情報</label>
-        <%= f.text_area :information, class:"form-control form-control-lg", placeholder:"ゲストに関する情報" %>
+        <%= f.text_area :information, class:"form-control small", placeholder:"ゲストに関する情報" %>
       </div>
 
+        <div class="btn-wrapper">
           <%= f.submit "登録", class:"btn btn-block" %>
+        </div>
 
     <% end %>
+    </div>
     </div>
     </div>
 

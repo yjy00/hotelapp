@@ -1,6 +1,70 @@
 @import "config/variables";
 @import "mixin/make-form";
 
+
+
+// 一覧画面
 .regular-guest-container-inner{
   @include make-form;
+  .table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: transparent;
+  }
+  .table-striped tbody tr:nth-of-type(2n) {
+    background-color: rgba(0,0,0,.05);
+  }
+  .guest-link:hover{
+    opacity: 0.2;
+  }
+  .guest-name{
+    width: 20vw;
+  }
+  .status{
+    width: 13vw;
+  }
+  .member-number{
+    width: 20vw;
+
+  }
+  .guest-register-btn{
+    margin: $outer 0 $outer 70%;
+  }
 }
+
+@media (max-width: 767px){
+  .regular-guest-container-inner{
+    th{
+      font-size: 0.8rem;
+    }
+    .status{
+      width: 10vw;
+    }
+  }
+}
+
+// フォーム画面
+.regular-guest-form-container-inner{
+  @include make-form;
+  width: 50%;
+  .title{
+    margin-bottom: $outer-big;
+  }
+  .small{
+    height: 30px;
+  }
+  .btn-wrapper{
+    width: 20vw;
+    margin: $outer-big auto;
+  }
+  .btns-wrapper{
+    @include space-evenly;
+    margin-top: $outer-big;
+
+  }
+}
+
+@media (max-width: 767px){
+  .regular-guest-form-container-inner{
+    width: 60%;
+  }
+}
+
