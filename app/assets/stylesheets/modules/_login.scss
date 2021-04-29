@@ -82,6 +82,7 @@
 @media (max-width: 767px){
   .login-container-inner{
     @include make-sm-form;
+    height: 600px;
   }
   
 }
