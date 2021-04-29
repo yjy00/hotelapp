@@ -1,6 +1,5 @@
-// Place all the styles related to the usage-of-apps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "config/variables";
+@import "mixin/make-form";
 
 .usage-of-app-container-inner{
   @include make-form;
