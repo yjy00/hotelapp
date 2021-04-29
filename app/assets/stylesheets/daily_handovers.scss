@@ -77,6 +77,16 @@
   @include make-form;
   margin-bottom: $outer-big;
   margin-top: 0;
+  .card{
+    padding: $outer;
+  }
+  .error-message{
+    text-align: center;
+  }
+  .input-group{
+    margin-top: $outer-big;
+
+  }
   .form-group{
     height: 120px;
   }
