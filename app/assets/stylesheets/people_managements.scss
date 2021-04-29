@@ -6,7 +6,7 @@
 .number-container-inner{
   margin-bottom: $outer-big;
   .title{
-    margin-bottom: 50px;
+    margin-bottom: $outer-big;
   }
   .number-form{
     margin: 0 auto;
@@ -16,7 +16,6 @@
       justify-content: space-around;
       width: 300px;
       margin: 0 auto;
-      margin-top: 10px;
       p{
         width: 70px;
         height: 60px;
@@ -28,7 +27,7 @@
         margin-right: 10px;
       }
       .form{
-        text-align: right;
+        text-align: center;
         width: 80px;
         height: 60px;
         border: $font-color 1px solid;
@@ -49,18 +48,12 @@
 }
 
 
+@media (max-width: 767px){
+  .number-container-inner{
+    @include make-sm-form;
+    .number-btn{
+      margin-top: 10PX !important;
+    }
 
-
-// .people-management-form-wrapper{
-//   width: 30vw;
-//   margin: $outer-big auto;
-//   h2{
-//     padding-bottom: $outer;
-//   }
-//   .form-control{
-//     text-align: right;
-//   }
-//   .btn{
-//     background-color: $dark-blue;
-//   }
-// }
+  }
+}
