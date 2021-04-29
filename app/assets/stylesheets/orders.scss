@@ -3,4 +3,8 @@
 
 .order-container-inner{
   @include make-form;
+
+  .title{
+    margin-bottom: $outer-big;
+  }
 }
