@@ -2,30 +2,32 @@
 <div class="container">
   <div class="daily-handover-container-inner">
 
-    <h4 class="handover-title">引き継ぎ帳</h4>
+    <h4 class="title">引き継ぎ帳</h4>
     
-      <div class="handover-form-wrapper">
+      <div class="handover-form-wrapper card">
 
         <% @daily_handovers.each do |daily_handover| %>
         
           <ul>
-            <li>
+            <li class="card-body">
+
+      <div class="handover-form-inner">
 
               <div class="date-edit">
-                <p class="handover-date"><%= daily_handover.month %>月<%= daily_handover.date %>日</p>
-                <%= link_to "編集する", edit_daily_handover_path(daily_handover), class: "" %>
+                <h5 class="handover-date"><%= daily_handover.month %>月<%= daily_handover.date %>日</h5>
+                <%= link_to "編集する", edit_daily_handover_path(daily_handover), class: "btn" %>
               </div>
 
-                <p class="">今日のリマーク</p>
-                  <div class=""><%= simple_format(daily_handover.daily_remark) %></div>
-                <p class="">早番へ</p>
-                  <div class=""><%= simple_format(daily_handover.to_morning) %></div>
-                <p class="">遅番へ</p>
-                  <div class=""><%= simple_format(daily_handover.to_evening) %></div>
-                <p class="">明日へ</p>
-                  <div class=""><%= simple_format(daily_handover.for_tomorrow) %></div>
+                <label>今日のリマーク</label>
+                  <div class="card"><%= simple_format(daily_handover.daily_remark, class: 'card-body') %></div>
+                <label>早番へ</label>
+                  <div class="card"><%= simple_format(daily_handover.to_morning, class: 'card-body') %></div>
+                <label>遅番へ</label>
+                  <div class="card"><%= simple_format(daily_handover.to_evening, class: 'card-body') %></div>
+                <label>明日へ</label>
+                  <div class="card"><%= simple_format(daily_handover.for_tomorrow, class: 'card-body') %></div>
 
-          
+          </div>
             </li>
           </ul>
         <% end %>
@@ -34,7 +36,7 @@
 
       <div class="handover-btn-pagenate-wrapper">
         <%= link_to '明日の引き継ぎを登録', new_daily_handover_path, class: "btn" %>
-        <div class="handover-pagenate"><%= paginate(@daily_handovers) %></div>
+        <div class="pagenation-wrapper"><%= paginate(@daily_handovers) %></div>
       </div>
 
     </div>
