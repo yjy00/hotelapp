@@ -2,6 +2,21 @@
 ja:
   activerecord:
     attributes:
+      people_management:
+        morning: 朝食人数
+        waiter: ホール人数
+        kitchen: キッチン人数
+        dish_wash: 洗い場人数
+      regular_guest:
+        name: ゲストの名前
+      item:
+        name: アイテム名
+        count: 数量
+        place_id: 場所
+        category_id: カテゴリー
+      daily_handover:
+        month: 月
+        date: 日
       user:
         name: ホテルのお名前
         managers_name: マネージャー様のお名前
@@ -130,7 +145,7 @@ ja:
       not_a_number: は数値で入力してください
       not_an_integer: は整数で入力してください
       odd: は奇数にしてください
-      other_than: は%{count}以外の値にしてください
+      other_than: を指定してください
       present: は入力しないでください
       required: を入力してください
       taken: はすでに存在します
