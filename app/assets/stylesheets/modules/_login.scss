@@ -2,39 +2,47 @@
 
 .login-container-inner{
   @include make-form;
-  width: 60vw;
+  background-color: $dark-blue;
+  height: 680px;
+  border-radius: 15px;
+  
   .app-title{
     text-align: center;
-    // color: $white;
+    color: $white;
     font-size: 1.1rem;
-    margin-top: 8vh;
+    margin-top: 5.5vh;
+    margin-bottom: 0;
   }
   .lognin-logo{
     text-align: center;
-    // color: $white;
+    color: $white;
     font-size: 3rem;
-    margin-top: 2vh;
   }
   h5{
     text-align: center;
-    // color: $white;
+    color: $white;
   }
   .card{
-    margin-top: 5vh;
+    margin-bottom: 5vh;
     background-color: $dark-blue;
+    border-radius: 15px;
+    border: none;
     .login{
       text-align: center;
       font-size: 1.5rem;
-      // color: $white;
+      color: $white;
+      margin-top: $outer-big;
+
     }
     .alert{
-      // color: $white;
+      color: $light-yellow;
       text-align: center;
     }
     .login-label{
       display: block;
       text-align: center;
-      // color: $white;
+      color: $white;
+      font-size: 0.8rem;
   }
     .form-control{
       margin: 0 auto;
@@ -46,16 +54,18 @@
       text-align: center;
       width: 30%;
       background-color: $light-blue;
+      font-size: 1rem;
     }
     .to-signup{
       background-color: $light-blue;
+      font-size: 0.8rem;
     }
   }
 }
 
 .login-register-btn{
   display: flex;
-  margin: 3vh auto;
+  margin: 4vh auto;
   .guest-login{
     background-color: $dark-yellow;
     margin-right: 3vw;
@@ -63,9 +73,12 @@
 }
 
 .login-body{
-  // background-color: $dark-blue;
-  // min-height:100vh;
   .login-container{
     height: calc(100% - 25px);
   }
+}
+
+
+@media (max-width: 767px){
+  
 }
