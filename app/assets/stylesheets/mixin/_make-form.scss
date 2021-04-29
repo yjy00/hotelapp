@@ -1,5 +1,11 @@
 @mixin make-form {
   width: $form-width;
-  margin: $outer-big auto;
+  margin: $outer auto;
   margin-bottom: $outer-big;
+}
+
+@mixin make-sm-form{
+  width: $sm-form-width;
+  margin: $outer auto;
+  margin-bottom: $outer;
 }

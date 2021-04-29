@@ -3,7 +3,6 @@
 
 .daily-handover-container-inner{
   @include make-form;
-  margin-bottom: $outer-big;
   margin-top: 0;
 }
 
@@ -63,14 +62,21 @@
 
 @media (max-width: 767px){
   .daily-handover-container-inner{
-    width: 100%;
-    .handover-form-inner{
-      .card{
-        width: 100% !important;
+    @include make-sm-form;
+
+      .btn{
+          margin-top: $outer;
+        }
+      .pagination{
+        margin-top: 0;
       }
+      .current{
+        line-height: 70px !important; 
       }
     }
   }
+
+  
 
 // フォーム画面
 .dailyhandover-form-container-inner{
@@ -93,11 +99,22 @@
   label{
     margin-top: $outer-big;
   }
+  .btn-wrapper{
+    text-align: center;
+  }
   .btn{
-    margin-left: 35%;
     margin-top: $outer-big;
     width: 30%;
     height: 50px;
   }
 }
 
+@media (max-width: 767px){
+  .dailyhandover-form-container-inner{
+    @include make-sm-form;
+    width: 90%;
+    .col{
+      margin-top: $outer;
+    }
+  }
+}

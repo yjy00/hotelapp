@@ -132,45 +132,46 @@
 
 @media (max-width: 767px){
   .item-container-inner{
-    height: auto !important;
-  }
-  .top-wrapper{
-    display: block !important;
-  }
-  .card{
-    width: 65vw !important;
-    margin: 0 auto !important;
-    .card-body{
-      // margin: 0 auto;
+    @include make-sm-form;
+
+    .top-wrapper{
+      display: block !important;
     }
-  }
-  img{
-    width: 58vw !important;
-    height: 35vh !important;
-  }
-  .name-number{
-    // margin-right: 0;
-  }
-  .bottom-wrapper{
-    display: block !important;
-    width: 60vw;
-    .detail{
-      margin: 0 !important;
-      height: 150px !important;
-      label{
-        margin-left: 5px !important;
+    .card{
+      width: 65vw !important;
+      margin: 0 auto !important;
+      .card-body{
+        // margin: 0 auto;
       }
-      .detail-form{
+    }
+    img{
+      width: 58vw !important;
+      height: 35vh !important;
+    }
+    .name-number{
+      // margin-right: 0;
+    }
+    .bottom-wrapper{
+      display: block !important;
+      width: 60vw;
+      .detail{
         margin: 0 !important;
+        height: 150px !important;
+        label{
+          margin-left: 5px !important;
+        }
+        .detail-form{
+          margin: 0 !important;
+        }
+      }
+      .form-control{
+        width: 100% !important;
+        // margin: 0 auto;
       }
     }
-    .form-control{
-      width: 100% !important;
-      // margin: 0 auto;
+    .link-list{
+      margin-top: 150px !important;
     }
-  }
-  .link-list{
-    margin-top: 150px !important;
   }
 }
 
@@ -222,7 +223,8 @@
 
 @media (max-width: 767px){
   .item-show-container-inner{
-    width: 100%;
+    @include make-sm-form;
+
   tr{
     display: flex;
   }

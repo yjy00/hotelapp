@@ -24,9 +24,16 @@
     padding-left: $outer-big;
     list-style-type: decimal;
   }
+  .btn-wrapper{
+    text-align: center;
+    margin-top: $outer-big;
+  }
 }
 
 @media (max-width: 767px){
   .usage-of-app-container-inner{
-    width: 100%;
+    @include make-sm-form;
+    .card-body{
+      padding: $outer;
+    }
 }}

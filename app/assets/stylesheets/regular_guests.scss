@@ -7,6 +7,10 @@
 // 一覧画面
 .regular-guest-container-inner{
   @include make-form;
+
+  .btn-wrapper{
+    text-align: right;
+  }
   .table-striped tbody tr:nth-of-type(2n+1) {
     background-color: transparent;
   }
@@ -26,13 +30,13 @@
     width: 20vw;
 
   }
-  .guest-register-btn{
-    margin: $outer 0 $outer 70%;
-  }
+  
 }
 
 @media (max-width: 767px){
   .regular-guest-container-inner{
+    @include make-sm-form;
+
     th{
       font-size: 0.8rem;
     }
@@ -71,7 +75,7 @@
 
 @media (max-width: 767px){
   .regular-guest-form-container-inner{
-    width: 60%;
+    @include make-sm-form;
+
   }
 }
-
