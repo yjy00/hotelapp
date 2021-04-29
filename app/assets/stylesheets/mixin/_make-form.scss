@@ -1,5 +1,5 @@
 @mixin make-form {
   width: $form-width;
-  height: $form-height;
   margin: $outer-big auto;
+  margin-bottom: $outer-big;
 }
