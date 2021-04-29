@@ -1,7 +1,7 @@
 .navbar{
   height: 70px;
   background-color: $dark-blue;
-  border-radius: 1px;
+  border-radius: 0 0 5px 5px;
   .navbar-brand{
     background-color: $white;
     width: 150px;
@@ -11,18 +11,21 @@
   }
   .nav-link{
     height: 40px;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     min-width: 50px;
     color: $white;
     padding: 0;
     span{
       text-align: center;
-      font-size: 0.74rem;
+      font-size: 0.85rem;
       color: $white;
     }
     .other-menu{
       color: $white;
     }
+  }
+  .weather{
+    pointer-events: none;
   }
   .card{
     background-color: transparent;
@@ -33,10 +36,15 @@
   }
   .dropdown-menu{
     background-color: $light-blue;
-    height: 295px;
+    padding-top: 20px;
+    height: 280px;
     .dropdown-item{
-      // border: 0.3px solid $gray;
+      font-size: 0.8rem;
     }
+  }
+  .dropdown-item:hover{
+    background-color: $light-blue;
+    opacity: 0.5;
   }
     
 }
