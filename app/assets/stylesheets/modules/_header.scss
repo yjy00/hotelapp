@@ -61,34 +61,24 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
       }
     }
-    
-    
-    div{
+    #navbarContent{
       background-color: $light-blue;
-      border-radius: 5px;
-      height: 42vh;
       position: relative;
       z-index: 1;
       .nav-link{
-        @include make-center;
-        font-size: $menu-font-size;
-        border: 1px solid $gray;
         display: block;
-        height: 12.5%;
+        margin: 0 !important;
         padding: 9px;
-        
+        color: #212529;
         span{
-          display: inline-block;
-          font-size: $menu-font-size;
+          color: #212529;
         }
-      
       }
-    }
-
-    .one-line{
-      line-height: 20px;
-      display: block;
+      .weather{
+        padding-bottom: $outer-big !important;
+      }
     }
   }
     
 }
+
