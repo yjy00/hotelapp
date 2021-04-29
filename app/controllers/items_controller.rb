@@ -52,7 +52,14 @@ class ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     if @item.destroy
-      redirect_to root_path
+      case @item.category_id
+      when 2..7
+        redirect_to foods_path
+      when 8..9
+        redirect_to beverages_path
+      else
+        redirect_to equipments_path
+      end
     else
       render :edit
     end

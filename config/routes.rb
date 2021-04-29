@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root to: 'foods#index'
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions'}
 
   devise_scope :user do
     get 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :menus,              only: %i[index new create edit update destroy]
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
-  resources :people_managements, only: %i[index new create edit update]
+  resources :people_managements, only: [:edit, :update]
   resources :items
+  resources :usage_of_apps,      only: :index
 end

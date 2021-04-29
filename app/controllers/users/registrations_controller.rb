@@ -9,6 +9,11 @@ module Users
     def check_guest
       redirect_to edit_user_registration_path if resource.email == 'sheroton.fb@sheroton.com'
     end
+
+    def after_sign_up_path_for(resource)
+      usage_of_apps_path
+    end
+
     # GET /resource/sign_up
     # def new
     #   super
