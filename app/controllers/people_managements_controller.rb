@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class PeopleManagementsController < ApplicationController
-  def index
-    @people_managements = PeopleManagement.order('updated_at DESC')
-  end
+  # def index
+  #   @people_managements = PeopleManagement.order('updated_at DESC')
+  # end
 
   # def new
   #   @people_management = PeopleManagement.new
@@ -25,7 +25,7 @@ class PeopleManagementsController < ApplicationController
   def update
     # ApplicationControllerでpeople_management(１)を取得しているため、ここでは取得していない
     if @people_management.update(people_management_params)
-      redirect_to other_functions_path
+      redirect_to edit_people_management_path
     else
       render :edit
     end
