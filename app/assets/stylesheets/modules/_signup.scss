@@ -71,3 +71,10 @@
   }
   
 }
+
+@media (max-width: 767px){
+  .signup-container-inner{
+    @include make-sm-form;
+  }
+  
+}
