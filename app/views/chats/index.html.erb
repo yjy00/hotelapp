@@ -5,25 +5,7 @@
 
         <h4 class="title">チャット</h4>
 
-      <div class="chat-wrapper card">
-        <% if @chats %>
-          <div id="chats" >
-            <% @chats.each do |chat| %>
-            
-              <div class="from-name card-body">
-                <p class="from-index"><%=  chat.from.name %></p> 
-                <p class="name-index"><%=  chat.by %></p> 
-                <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
-              </div>
-
-            <div class="message-index-wrapper">
-              <%= simple_format(chat.message) %>
-            </div>
-        <% end %>
-</div>
-      </div>
-    <% end %>
-
+     
         <%= form_with model: @chat, class:"chat-form card", local: false do |f| %>
 
           <%= render 'shared/error_messages', model: f.object %>
@@ -50,6 +32,27 @@
 
         <% end %>
 </div>
+
+ <div class="chat-wrapper card">
+        <% if @chats %>
+          <div id="chats" >
+            <% @chats.each do |chat| %>
+            
+              <div class="from-name card-body">
+                <p class="from-index"><%=  chat.from.name %></p> 
+                <p class="name-index"><%=  chat.by %></p> 
+                <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
+              </div>
+
+            <div class="message-index-wrapper">
+              <%= simple_format(chat.message) %>
+            </div>
+        <% end %>
+</div>
+      </div>
+    <% end %>
+
+
 </div>
       </div>
     
