@@ -4,53 +4,76 @@
   <%= render "shared/basic-header" %>
   <div class="item-container-inner">
 
+        <p class="title">アイテム編集画面</p>
+
       <%= form_with model: @item, class:"item-form", local: true do |f| %>
-        
-        <p class="item-form-title">新規アイテム登録</p>
 
         <%= render 'shared/error_messages', model: f.object %>
 
-        <div class='form-group'>
-          <label class="title name-title">アイテム名</label>
-          <%= f.text_area :name, class:"form-control form-control-sm", placeholder:"", maxlength:"40" %>
+      <div class="top-wrapper">
+
+      <div class="name-number card">
+        <div class='form-group card-body'>
+          <label class="name-title">アイテム名</label>
+          <%= f.text_area :name, class:"form-control", placeholder:"", maxlength:"40" %>
         </div>
-        <div class="form-group">
-          <label class="title count-title">数量</label>
-          <%= f.number_field :count, class:"form-control form-control-sm", placeholder:"" %>
+        <div class="form-group card-body">
+          <label class="count-title">数量</label>
+          <%= f.number_field :count, class:"form-control", placeholder:"" %>
         </div>
 
-          <%= f.submit "登録する", class:"btn" %>
+          <%= f.submit "登録する", class:"btn register-btn" %>
+      </div>
 
+        <div class='image form-group card'>
+        <div class="card-body">
+          <label class="image-title">写真</label>
+          <%if @item.image.present? %>
+              <div><%= image_tag @item.image %></div>
+              <%# <label><div class="image-btn">画像を選択する</div> %>
+            <div id="image-list"></div>
+            <%= f.file_field :image, class:"image-form form-control" %>
+        </div>
+          </label>
+            <% else %>
+            <p>画像はありません。</p>
+              <%# <label><div class="image-btn">画像を選択する</div> %>
+            <div id="image-list"></div>
+            <%= f.file_field :image, class:"image-form form-control" %>
+        </div>
+          <% end %>
+        </div>
 
+        </div>
+        <div class="bottom-wrapper">
+
+      <div class="category-place">
         <div class="form-group">
-          <label class="title category-title">カテゴリー</label>
+          <label class="category-title">カテゴリー</label>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"form-control"}) %>
         </div>
 
         <div class="form-group">
-          <label class="title place-title">場所</label>
+          <label class="place-title">場所</label>
           <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"form-control"}) %>
         </div>
 
-        <div class='form-group'>
-          <label class="title detail-title">詳細</label>
-          <%= f.text_area :detail, class:"form-control form-control-lg", placeholder:"アイテムの詳細" %>
         </div>
 
-        <div class='form-group'>
-          <label class="title image-title">写真</label>
-          <%= f.file_field :image, class:"form-control" %>
+        <div class='form-group detail'>
+          <label class="detail-title">詳細</label>
+          <%= f.text_area :detail, class:"detail-form form-control", placeholder:"アイテムの詳細" %>
+        </div>
+
         </div>
         
-          <%= f.submit "登録する", class:"btn" %>
-    <div class="link-list">
-      <%= link_to '詳細ページへ', item_path(@item), method: :get, class: "btn" %>
-      <%= link_to '削除', item_path(@item), method: :delete, class:'btn' %>
+        <div class="link-list">
+          <%= link_to '削除する', item_path(@item), method: :delete, class:'btn' %>
+          <%= f.submit "登録する", class:"btn register-btn" %>
+          <%= link_to '詳細ページ', item_path(@item), method: :get, class: "btn" %>
         </div>
     </div>
   <% end %>
 </div>
 
     <%= render "shared/footer" %>
-
-      
