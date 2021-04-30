@@ -10,7 +10,7 @@ module Users
       redirect_to edit_user_registration_path if resource.email == 'sheroton.fb@sheroton.com'
     end
 
-    def after_sign_up_path_for(resource)
+    def after_sign_up_path_for(_resource)
       usage_of_apps_path
     end
 
