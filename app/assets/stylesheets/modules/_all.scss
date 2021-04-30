@@ -40,3 +40,11 @@ a:hover{
   border-bottom: solid 4px $dark-blue;        /* 線指定 */
   border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
 }
+
+.card{
+  border: $font-color solid 1px;
+}
+
+.error-message{
+  text-align: center;
+}
