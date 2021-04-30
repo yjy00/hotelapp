@@ -1,0 +1,21 @@
+<% if @chats %>
+  <div id="chats" >
+    <% @chats.each do |chat| %>
+
+      <%# <div id="chat" class="from-name-wrapper"></div> %>
+      <div id="chat"> 
+
+        <div class="from-name-wrapper card-body">
+          <p class="from-index"><%=  chat.from.name %></p> 
+          <p class="name-index"><%=  chat.by %></p> 
+          <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
+        </div>
+
+      <div class="message-index-wrapper">
+        <p class="message"><%= simple_format(chat.message) %></p>
+      </div>
+      </div>  
+
+    <% end %>
+  </div>
+<% end %>
