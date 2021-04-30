@@ -10,6 +10,7 @@
         <li class="nav-item"><%= link_to foods_path, data: {"turbolinks" => false}, class: "nav-link card menu-border" do %><span>フード</span><span>一覧</span><% end %></li>
         <li class="nav-item"><%= link_to beverages_path, data: {"turbolinks" => false}, class: "nav-link card menu-border" do %><span>ドリンク</span><span>一覧</span><% end %></li>
         <li class="nav-item"><%= link_to equipments_path, data: {"turbolinks" => false}, class: "nav-link card menu-border" do %><span>備品</span><span>一覧</span><% end %></li>
+        <li class="nav-item"><%= link_to new_item_path, data: {"turbolinks" => false}, class: "nav-link card menu-border" do %><span>新規アイテム</span><span>登録</span><% end %></li>
         <li class="nav-item"><%= link_to kitchen_orders_path, data: {"turbolinks" => false}, class: "nav-link card menu-border" do %><span>キッチン</span><span>発注リスト</span><% end %></li>
         <li class="nav-item"><%= link_to edit_people_management_path(1), data: {"turbolinks" => false}, class: "nav-link menu-border one-line" do %><span>朝食人数:　</span><span><%= @people_management.morning.to_s%></span><% end %></li>
         <li class="nav-item"><%= link_to '天気', root_path, data: {"turbolinks" => false}, class: "nav-link card menu-border one-line weather" %></li>
@@ -18,7 +19,6 @@
           <div class="dropdown-menu dropdown-menu-right">
             <%= link_to 'チャット', chats_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
             <%= link_to '引継ぎ', daily_handovers_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
-            <%= link_to '新規アイテム登録', new_item_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
             <%= link_to 'ホール発注リスト', orders_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
             <%= link_to '常連ゲスト情報', regular_guests_path, data: {"turbolinks" => false}, class: "dropdown-item" %>
             <%= link_to "人数管理", edit_people_management_path(1), data: {"turbolinks" => false}, class: "dropdown-item" %>
