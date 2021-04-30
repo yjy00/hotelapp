@@ -4,58 +4,17 @@
 
 
 
-// 一覧
+
 .chat-container-inner{
   @include make-form;
   margin-top: 0;
   margin-bottom: $outer-big;
-  .title{
-    margin-bottom: 35px;
-  }
-  .chat-wrapper{
-    padding: 25px;
-  }
-    #chats{
-      overflow: scroll;
-      overflow-wrap: break-word;
-      height: 350px;
-      .from-name{
-        display: flex;
-        justify-content: flex-start;
-        border-bottom: 1px solid $gray;
-        height: 32px;
-        width: 99%;
-        padding-top: 5px;
-        position: relative;
-        .from-index{
-          margin-right: $outer;
-        }
-        .name-index{
-          margin-right: $outer;
-        }
-        .time-index{
-          position: absolute;
-          right: 5px;
-        }
-      }
-      .message-index-wrapper{
-        p{
-          text-align: left;
-          padding-left: 20px;
-          height: auto;
-          margin-top: 10px;
-          margin-bottom: 3px;
-        }
-      }
-    }
-
-
+ 
     
 
   // フォーム
   .chat-form{
     margin: $outer auto 0 auto;
-    margin-top: $outer;
     height: 210px;
     padding-bottom: 270px;
     padding-top: 0px;
@@ -98,6 +57,51 @@
       right: 10px;
     }
   }
+
+// 一覧
+  .title{
+    margin-bottom: 35px;
+  }
+  #chat-wrapper{
+    padding: 25px;
+    margin-top: $outer-big;
+
+  }
+    #chats{
+      overflow: scroll;
+      overflow-wrap: break-word;
+      height: 350px;
+      .from-name-wrapper{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid $gray;
+        height: 32px;
+        width: 99%;
+        padding-top: 5px;
+        position: relative;
+        .from-index{
+          margin-right: $outer;
+        }
+        .name-index{
+          margin-right: $outer;
+        }
+        .time-index{
+          position: absolute;
+          right: 5px;
+        }
+      }
+      .message-index-wrapper{
+        p{
+          text-align: left;
+          padding-left: 20px;
+          height: auto;
+          margin-top: 10px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+
+
 }
 
 
@@ -107,7 +111,7 @@
   .chat-container-inner{
     @include make-sm-form;
     // 一覧
-    .chat-wrapper{
+    #chat-wrapper{
       margin: 0 auto $outer auto !important;
       width: 90% !important;
     }

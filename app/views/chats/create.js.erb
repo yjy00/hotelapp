@@ -1,10 +1,18 @@
-var html = 
-       `<p><%= @chat.from.name %></p>
-       <p><%= @chat.by %></p> 
-       <p><%= @chat.message %></p>`;
+var information = 
+       `<div class="from-name-wrapper card-body"><p class="from-index"><%= @chat.from.name %></p>
+       <p class="name-index"><%= @chat.by %></p> 
+       <p class="time-index"><%=  @chat.created_at.strftime('%m/%d %H:%M') %></p></div>`;
 
-var chats = document.getElementById('chats');
-chats.insertAdjacentHTML('beforeend', html);
+var message = `<div class="message-index-wrapper"><p class="message"><%= simple_format(@chat.message) %></p></div>`
+
+
+var chats = document.getElementById('chat');
+chats.insertAdjacentHTML('afterbegin', message);
+
+var chats = document.getElementById('chat');
+chats.insertAdjacentHTML('afterbegin', information);
+
+
 
 var newChat = document.getElementById('chat_message');
 var newChatBy = document.getElementById('chat_by')
