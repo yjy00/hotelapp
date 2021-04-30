@@ -53,9 +53,6 @@
   .title{
     margin-bottom: $outer-big;
   }
-  .error-message{
-    text-align: center;
-  }
   .form-control{
     height: 35px;
   }
@@ -76,6 +73,5 @@
 @media (max-width: 767px){
   .regular-guest-form-container-inner{
     @include make-sm-form;
-
   }
 }
