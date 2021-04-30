@@ -9,6 +9,7 @@ ja:
         dish_wash: 洗い場人数
       regular_guest:
         name: ゲストの名前
+        member_number: 会員番号
       item:
         name: アイテム名
         count: 数量
