@@ -2,7 +2,7 @@
 
 class ChatsController < ApplicationController
   def index
-    @chats = Chat.order('created_at DESC').reverse
+    @chats = Chat.order('created_at DESC')
     @chat = Chat.new
   end
 
