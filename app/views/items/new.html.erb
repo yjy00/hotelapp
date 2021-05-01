@@ -2,7 +2,7 @@
 
 <div class="container">
   <%= render "shared/basic-header" %>
-  <div class="item-new-container-inner">
+  <main role="main" class="item-new-container-inner">
         <h4 class="title">新規アイテム登録</h4>
 
       <%= form_with model: @item, class:"item-form", local: true do |f| %>
@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
           <label class="count-title">数量</label>
-          <%= f.number_field :count, class:"form-control small", placeholder:"" %>
+          <%= f.number_field :count, class:"form-control small item-count", placeholder:"" %>
         </div>
 
         <div class="form-group">

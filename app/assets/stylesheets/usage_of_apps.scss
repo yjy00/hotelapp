@@ -5,6 +5,7 @@
   @include make-form;
   .card{
     margin: 0 auto;
+    
   }
   .card-body{
     padding: $outer-big;
@@ -16,6 +17,13 @@
   ul{
     padding-left: $outer-big;
     list-style-type: disc;
+    li{
+      line-height: 30px;
+    }
+  }
+  .usage{
+    line-height: 30px;
+    margin-top: 15px;
   }
   .function-list{
     padding-left: $outer;
@@ -23,6 +31,14 @@
   ol{
     padding-left: $outer-big;
     list-style-type: decimal;
+    .card{
+      margin: 10px 40px 10px -10px;
+      
+    }
+    .card-body{
+      text-align: center;
+      padding: 20px;
+    }
   }
   .btn-wrapper{
     text-align: center;

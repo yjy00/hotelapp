@@ -2,7 +2,7 @@
 
 <div class="container">
   <%= render "shared/basic-header" %>
-  <div class="item-container-inner">
+  <main role="main" class="item-container-inner">
 
         <p class="title">アイテム編集画面</p>
 
@@ -19,10 +19,10 @@
         </div>
         <div class="form-group card-body">
           <label class="count-title">数量</label>
-          <%= f.number_field :count, class:"form-control", placeholder:"" %>
+          <%= f.number_field :count, class:"form-control item-count", placeholder:"" %>
         </div>
 
-          <%= f.submit "登録する", class:"btn register-btn" %>
+          <%= f.submit "登録する", class:"btn" %>
       </div>
 
         <div class='image form-group card'>
@@ -68,9 +68,9 @@
         </div>
         
         <div class="link-list">
-          <%= link_to '削除する', item_path(@item), method: :delete, class:'btn' %>
-          <%= f.submit "登録する", class:"btn register-btn" %>
-          <%= link_to '詳細ページ', item_path(@item), method: :get, class: "btn" %>
+          <%= link_to '削除する', item_path(@item), method: :delete, class:'btn other-btn' %>
+          <%= f.submit "登録する", class:"btn" %>
+          <%= link_to '詳細ページ', item_path(@item), method: :get, class: "btn other-btn" %>
         </div>
     </div>
   <% end %>

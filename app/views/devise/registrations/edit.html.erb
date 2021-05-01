@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="container">
-<div class="user-information-container-inner">
+<main role="main" class="user-information-container-inner">
 
     <h2 class="title">ユーザー情報編集</h2>
 
@@ -44,7 +44,7 @@
 
       <div class="btns-wrapper">
         <%= f.submit "更新する", class:"btn update-btn" %>
-        <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会されますか?" }, method: :delete, class:"btn" %>
+        <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会されますか?" }, method: :delete, class:"btn quit-btn" %>
 </div>
 
     <% end %>

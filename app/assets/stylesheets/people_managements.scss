@@ -4,6 +4,7 @@
 
 
 .number-container-inner{
+  @include make-form;
   margin-bottom: $outer-big;
   .title{
     margin-bottom: $outer-big;
@@ -37,11 +38,8 @@
     .number-btn{
       margin-top: 50px;
       text-align: center;
-      .number-register-btn{
+      .btn{
         width: 150px;
-        height: 50px;
-        background-color: $light-blue;
-        border: none;
       }
     }
   }

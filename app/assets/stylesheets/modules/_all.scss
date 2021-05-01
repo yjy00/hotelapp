@@ -4,6 +4,10 @@
   color: $font-color;
 }
 
+body{
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+}
+
 .container{
   display: flex;
   flex-direction: column;
@@ -18,7 +22,8 @@ a:hover{
 }
 
 .btn{
-  background-color: $light-blue;
+  background-color: $dark-blue;
+  color: $white;
 }
 
 .btn:hover{
@@ -36,13 +41,13 @@ a:hover{
   margin-bottom: $outer-big;
   position:  relative;    /* 位置調整 */
   font-weight:  normal;   /* 文字の太さ調整 */
-  margin-top: $outer;    /* 周りの余白指定 */
-  border-bottom: solid 4px $dark-blue;        /* 線指定 */
+  margin-top: $outer;
+  border-bottom: solid 4px $light-blue; 
   border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;    /* 角丸指定 */
 }
 
 .card{
-  border: $font-color solid 1px;
+  // border: $font-color solid 1px;
 }
 
 .error-message{

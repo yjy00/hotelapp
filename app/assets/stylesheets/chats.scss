@@ -20,8 +20,8 @@
     padding-top: 0px;
     width: 55vw;
     position: relative;
+    
     .from-name{
-      // @include space-evenly;
       display: flex;
       justify-content: flex-start;
       text-align: left;
@@ -101,6 +101,9 @@
       }
     }
 
+    .card{
+      border: 1px solid $font-color;
+    }
 
 }
 

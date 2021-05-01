@@ -1,13 +1,13 @@
 <%= render "shared/header" %>
 
 <div class="container">
-  <div class="usage-of-app-container-inner">
+  <main  role="main"class="usage-of-app-container-inner">
 
     <h4 class="title">このアプリの目的と使い方</h4>
 
 <div class="card">
 <div class="card-body">
-    <h5>アプリの目的、背景</h5>
+    <h5>アプリの目的・背景</h5>
 
 
       <ul>
@@ -18,19 +18,20 @@
 
 <br>
 
-    <h5>以下の機能があります</h5>
+    <h5>アプリの機能</h5>
     <ol>
         <li class="usage">アイテムの数を管理する機能</li>
           <ul class="function-list">
-            <li>サラダがいくつ用意してるか、前菜がいくつ用意してあるか等。</li>
+            <li>サラダや前菜がいくつ用意してあるか等を管理します。</li>
+            <div class="card"><p class="card-body">アイテムと数量を登録する<br>↓<br>使った数を登録する<br>↓<br>少なくなったら発注リストへ</p></div>
             <li>この画面がホーム画面になります。</li>
-            <li>お酒などの飲み物や、備品も管理できます。</li>
           </ul>
         <li class="usage">その他の機能</li>
           <ul class="function-list">
             <li>キッチンとホール間でのチャット機能</li>
-            <li>常連のお客様を管理する機能</li>
-            <li>翌日への引き継ぎ事項を管理する機能　等</li>
+            <li>常連のお客様をデータベース管理する機能</li>
+            <li>翌日への引き継ぎ事項を管理する機能</li>
+            <li>残りの朝食人数を共有する機能　等</li>
           </ul>
 </ol>
 
@@ -42,5 +43,5 @@
 
   </div>
   </div>
-  </div>
+  </main>
 </div>
