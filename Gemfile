@@ -82,5 +82,6 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'sassc', '~> 2.1.0'
 gem 'kaminari-bootstrap'
+gem 'sassc', '~> 2.1.0'
+gem 'capistrano-dotenv', require: false
