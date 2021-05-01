@@ -18,6 +18,7 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 
 set :deploy_to, '/var/www/rails/hotelapp'
 
+server database: ENV['DB_NAME'], username: ENV['DB_USERNAME'], password: ENV['DB_PASSWORD'], host: ENV['DB_HOSTNAME'] , socket: ENV['DB_SOCKET'] 
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
