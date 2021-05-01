@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.14.1'
+lock '~> 3.16.0'
 
 set :application, 'hotelapp'
 set :repo_url, 'git@github.com:yjy00/hotelapp.git'
