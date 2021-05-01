@@ -11,9 +11,10 @@
 .handover-form-wrapper{
   overflow: scroll;
   overflow-wrap: break-word;
-  height: 500px;
+  max-height: 1300px;
   position: relative;
   margin-top: $outer-big;
+  border: 1px solid $font-color;
   .handover-form-inner{
     margin: $outer;
   }
@@ -85,6 +86,8 @@
   margin-top: 0;
   .card{
     padding: $outer;
+    border: 1px solid $font-color;
+    
   }
   .input-group{
     margin-top: $outer-big;
