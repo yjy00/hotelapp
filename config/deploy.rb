@@ -18,9 +18,9 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 
 set :deploy_to, '/var/www/rails/hotelapp'
 
-invoke 'dotenv:read'
-invoke 'dotenv:check'
-invoke 'dotenv:setup'
+# invoke 'dotenv:read'
+# invoke 'dotenv:check'
+# invoke 'dotenv:setup'
 
 
 set :env_file, '.env'
