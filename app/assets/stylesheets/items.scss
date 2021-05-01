@@ -87,15 +87,8 @@
           margin-bottom: $outer;
       }
   
-        // .image-btn{
-        //   margin-left: 50px;
-        //   border: 2px solid $gray;
-        //   padding: $outer;
-        // }
         .image-form{
-          // width: 200px;
           font-size: 0.6rem;
-          // display: none;
         }
       }
     }
@@ -108,7 +101,6 @@
         width: 20vw;
       }
       
-
       .detail-title{
         margin-left: 60px;
       }
@@ -124,8 +116,9 @@
       @include space-evenly;
       
     }
-    .register-btn{
-      background-color: $dark-yellow
+    .other-btn{
+      background-color: $dark-yellow;
+      color: $font-color;
     }
   }
 }
@@ -263,6 +256,7 @@
   .small{
     height: 30px;
   }
+  
   .detail{
     height: 100px;
   }
@@ -276,4 +270,8 @@
     }
   }
   
+}
+
+.item-count{
+  font-size: 1.1rem;
 }
