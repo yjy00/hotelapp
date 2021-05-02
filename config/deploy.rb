@@ -18,6 +18,9 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 
 set :deploy_to, '/var/www/rails/hotelapp'
 
+set :nginx_config_name, "#{fetch(:application)}.conf"
+set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
+
 # invoke 'dotenv:read'
 # invoke 'dotenv:check'
 # invoke 'dotenv:setup'

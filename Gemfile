@@ -38,6 +38,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv-vars', '~> 0.1'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
