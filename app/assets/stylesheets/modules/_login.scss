@@ -54,10 +54,12 @@
       text-align: center;
       width: 30%;
       background-color: $light-blue;
+      color: $font-color;
       font-size: 1rem;
     }
     .to-signup{
       background-color: $light-blue;
+      color: $font-color;
       font-size: 0.8rem;
     }
   }
@@ -68,7 +70,8 @@
   margin: 4vh auto;
   .guest-login{
     background-color: $dark-yellow;
-    margin-right: 3vw;
+      color: $font-color;
+      margin-right: 3vw;
   }
 }
 

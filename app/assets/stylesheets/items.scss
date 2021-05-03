@@ -25,6 +25,7 @@
         height: 105px;
         padding-top: 25px;
         color: $white;
+        font-size: 1.3rem;
       }
     }
     .basic-card:hover{
@@ -61,7 +62,10 @@
           padding-bottom: 0;
         }
         .form-control{
-          text-align: right;
+          text-align: center;
+          height: 40px;
+          line-height: 30px;
+          font-weight: bold;
         }
         .btn{
           width: 15vw;
@@ -75,7 +79,6 @@
         height: 350px;
         .image-title{
           margin-bottom: $outer;
-          // margin-left: 105px;
         }
         p{
           line-height: 200px;
@@ -133,16 +136,13 @@
     .card{
       width: 65vw !important;
       margin: 0 auto !important;
-      .card-body{
-        // margin: 0 auto;
+      .btn{
+        width: 100px !important;
       }
     }
     img{
       width: 58vw !important;
       height: 35vh !important;
-    }
-    .name-number{
-      // margin-right: 0;
     }
     .bottom-wrapper{
       display: block !important;
@@ -159,7 +159,6 @@
       }
       .form-control{
         width: 100% !important;
-        // margin: 0 auto;
       }
     }
     .link-list{
@@ -262,7 +261,13 @@
   }
   .image-form{
     height: 100px;
+    
   }
+  #image-list{
+    text-align: center;
+    margin-bottom: $outer;
+  }
+  
   .btn-wrapper{
     text-align: center;
     .btn{
@@ -273,5 +278,5 @@
 }
 
 .item-count{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
