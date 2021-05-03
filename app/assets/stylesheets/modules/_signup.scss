@@ -58,6 +58,7 @@
         width: 20vw;
         height: 40px;
         margin: 25px auto $outer-big auto;
+        background-color: $light-blue;
       }
     .to-login{
       height: 20px;
@@ -65,6 +66,7 @@
       margin: 0 auto;
       background-color: $dark-yellow;
       line-height: 8px;
+      color: $font-color;
       font-size: 0.7rem;
     }
     
