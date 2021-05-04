@@ -15,7 +15,7 @@
     border-bottom: $dark-yellow solid 3px;
   }
   ul{
-    padding-left: $outer-big;
+    padding-left: 30px;
     list-style-type: disc;
     li{
       line-height: 30px;
@@ -29,7 +29,7 @@
     padding-left: $outer;
   }
   ol{
-    padding-left: $outer-big;
+    padding-left: 30px;
     list-style-type: decimal;
     .card{
       margin: 10px 40px 10px -10px;
