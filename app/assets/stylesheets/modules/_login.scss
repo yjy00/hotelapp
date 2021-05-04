@@ -1,5 +1,20 @@
 @import "config/variables";
 
+.app-title{
+  text-align: center;
+  color: $white;
+  font-size: 1.1rem;
+  margin-top: 5.5vh;
+  margin-bottom: $outer;
+}
+
+.welcome{
+  text-align: center;
+  color: $white;
+  margin-top: $outer;
+  margin-bottom: $outer-big;
+}
+
 .login-container-inner{
   @include make-form;
   background-color: $dark-blue;
@@ -7,23 +22,13 @@
   border-radius: 15px;
   margin-top: 60px;
   
-  .app-title{
-    text-align: center;
-    color: $white;
-    font-size: 1.1rem;
-    margin-top: 5.5vh;
-    margin-bottom: $outer;
-  }
+  
   .lognin-logo{
     text-align: center;
     color: $white;
     font-size: 3rem;
   }
-  h5{
-    text-align: center;
-    color: $white;
-    margin-top: $outer;
-  }
+  
   .card{
     margin-bottom: 5vh;
     background-color: $dark-blue;
