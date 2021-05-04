@@ -255,12 +255,19 @@
     line-height: 18px;
   
   }
+  img{
+    width: 31vw;
+    height: 28vh;
+    margin-bottom: $outer;
+
+  }
   
   .detail{
     height: 100px;
   }
   .image-form{
     height: 100px;
+    margin-bottom: 0;
     
   }
   #image-list{
@@ -275,6 +282,13 @@
     }
   }
   
+}
+
+@media (max-width: 767px){
+  img{
+    width: 59vw !important;
+    height: 30vh !important;
+  }
 }
 
 .item-count{
