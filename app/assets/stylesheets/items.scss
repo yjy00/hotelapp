@@ -243,8 +243,6 @@
   @include make-form;
   margin-bottom: $outer-big;
   width: 60%;
-  // background-color:khaki;
-  height: auto;
   .title{
     margin-bottom: $outer-big;
   }
@@ -254,6 +252,8 @@
   }
   .small{
     height: 30px;
+    line-height: 18px;
+  
   }
   
   .detail{
