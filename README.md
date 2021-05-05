@@ -1,5 +1,41 @@
-■アプリテーマ
-前職のホテルの料飲部において、キッチンとホールのコミュニケーションの課題を解決するアプリ
+# Restaurant Talks
+
+前職のホテルの料飲部において、キッチンとホールのコミュニケーションの課題を解決するアプリです。
+
+## URL
+https://restaurant-talks.com/
+
+## 使用技術一覧
+
++ フロントエンド
+  + HTML/CSS
+  + JavaScript
+  + bootstrap(4.1.3)
+  + vue.js
+
++ バックエンド
+  + Ruby(3.0.0)
+  + Ruby on Rails(6.1.3)
+  + MySQL(8.0)
+  + RSpec
+  + Rubocop
+
++ インフラ
+  + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
+  + Nginx/puma
+  + Capistrano
+
++ バージョン管理
+  + Git/GitHub
+
++ 開発環境
+  + VScode
+  + Docker
+
+
+
+
+
 
 ■概要
 ・アプリの機能
@@ -23,33 +59,4 @@
 ・ユーザー管理機能
 ・ページネーション機能
 
-■使用技術一覧
 
-◇フロントエンド
-・HTML/CSS
-・JavaScript
-・bootstrap
-・vue.js
-
-◇バックエンド
-・Ruby(3.0.0)
-・Ruby on Rails(6.1.3)
-・MySQL(8.0)
-
-◇インフラ
-・AWS(EC2/S3/EC2/RDS/ALB/S3/ACM/Route53/ECS)
-・Nginx/puma
-
-◇テスト
-・RSpec
-
-◇CI/CD
-・CircleCI
-・Capistrano
-
-◇バージョン管理
-・Git/GitHub
-
-◇開発環境
-・VScode
-・Docker
