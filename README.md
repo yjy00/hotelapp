@@ -32,9 +32,13 @@ https://restaurant-talks.com/
   + VScode
   + Docker
 
+## ER図
 
+## インフラ構成図
 
+## 機能一覧
 
++ 
 
 
 ■概要
