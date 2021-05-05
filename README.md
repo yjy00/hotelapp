@@ -18,7 +18,7 @@ https://restaurant-talks.com/
   + Ruby on Rails(6.1.3)
   + MySQL(8.0)
   + RSpec
-  + Rubocop
+  + Rubocop(0.36.0)
 
 + インフラ
   + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
