@@ -23,15 +23,11 @@
   + RSpec
   + Rubocop(0.36.0)
 
-+ インフラ
++ インフラ　その他
   + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
   + Nginx/puma
   + Capistrano
-
-+ バージョン管理
   + Git/GitHub
-
-+ 開発環境
   + VScode
   + Docker
 
