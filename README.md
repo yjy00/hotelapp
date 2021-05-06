@@ -23,7 +23,7 @@
 + 初めて使う人にも使いやすくするのはどうしたらいいか
 + 自分の前職だけでなく、他の場所でも使えるように　→　スケールできるように
 + シンプルな作りにした
-+ 実際の現場でスマホやタブレットを使いスピーディに使えるアプリを目指し、構成やボタンを工夫しました。
++ 実際の現場でスマホやタブレットを使いスピーディに使えるアプリを目指し、構成やボタンデザインを工夫しました。
 
 
 ## アプリの機能の詳細、使用方法
@@ -62,20 +62,20 @@
 #### フロントエンド
   + HTML/CSS
   + JavaScript
-  + bootstrap(4.1.3)
+  + bootstrap (4.1.3)
   + vue.js
 
 #### バックエンド
-  + Ruby(3.0.0)
-  + Ruby on Rails(6.1.3)
-  + MySQL(8.0)
+  + Ruby (3.0.0)
+  + Ruby on Rails (6.1.3)
+  + MySQL (8.0)
   + RSpec
-  + Rubocop(0.36.0)
+  + Rubocop (0.36.0)
 
 #### インフラ　その他
   + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
-  + Nginx/puma
-  + Capistrano
+  + Nginx/puma (3.12.6)
+  + Capistrano (3.16.0)
   + Git/GitHub
   + VScode
   + Docker
