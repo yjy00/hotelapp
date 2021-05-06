@@ -5,7 +5,8 @@
 + ホールとキッチンの間や、スタッフの間で口頭伝達だったり正確に把握できていないものを管理します。
 
 ## URL
-[Restaurant Talks](https://restaurant-talks.com/)
+### [Restaurant Talks](https://restaurant-talks.com/)<br>
+ログイン画面からゲストログインできます。
 
 ## 使用技術一覧
 
