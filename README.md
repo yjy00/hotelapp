@@ -1,11 +1,11 @@
-# Restaurant Talks
+# <span style="color: #28527a;>Restaurant Talks</span>
 
 + 前職である、ホテルの料飲部の業務改善を目的としたアプリです。
 + ホールとキッチンのコミュニケーションを改善することを主目的としています。
 + ホールとキッチンの間や、スタッフの間で口頭伝達だったり正確に把握できていないものを管理します。
 
 ## URL
-https://restaurant-talks.com/
+[Restaurant Talks](https://restaurant-talks.com/)
 
 ## 使用技術一覧
 
