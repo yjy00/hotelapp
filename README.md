@@ -1,4 +1,4 @@
-# <span style="color: #28527a;>Restaurant Talks</span>
+# <span style="color: #28527a;">Restaurant Talks</span>
 
 + 前職である、ホテルの料飲部の業務改善を目的としたアプリです。
 + ホールとキッチンのコミュニケーションを改善することを主目的としています。
