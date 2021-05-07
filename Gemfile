@@ -61,6 +61,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'rspec_junit_formatter'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -86,4 +87,3 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'sassc', '~> 2.1.0'
 gem 'capistrano-dotenv', require: false
-gem 'rspec_junit_formatter'
