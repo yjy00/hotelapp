@@ -31,13 +31,13 @@ RSpec.describe Menu, type: :model do
         it 'メニュー名が必須であること' do
           @menu.name = nil
           @menu.valid?
-          expect(@menu.errors[:name]).to include('を入力してください')
+          expect(@menu.errors[:name]).to include('をご入力ください')
         end
 
         it 'カテゴリー情報が必須であること' do
           @menu.category_id = nil
           @menu.valid?
-          expect(@menu.errors[:category_id]).to include('を入力してください', 'は数値で入力してください')
+          expect(@menu.errors[:category_id]).to include('をご入力ください', 'は数値でご入力ください')
         end
 
         it 'カテゴリーが1のままでは登録できないこと' do

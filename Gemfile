@@ -32,7 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: %i(mri mingw x64_mingw)
   gem 'capistrano', '3.16.0'
   gem 'capistrano3-puma'
   gem 'capistrano-bundler'
@@ -60,11 +60,12 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'rspec_junit_formatter'
   gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
 
 group :production do
   gem 'rails_12factor'
@@ -76,6 +77,8 @@ gem 'pry-rails'
 # gem "font-awesome-sass"
 gem 'bcrypt_pbkdf'
 gem 'bootstrap', '~> 4.1.1'
+gem 'bundler'
+gem 'capistrano-dotenv', require: false
 gem 'devise'
 gem 'dotenv-rails'
 gem 'ed25519'
@@ -84,5 +87,5 @@ gem 'hirb-unicode'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'rexml'
 gem 'sassc', '~> 2.1.0'
-gem 'capistrano-dotenv', require: false
