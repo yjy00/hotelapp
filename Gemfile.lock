@@ -343,6 +343,7 @@ DEPENDENCIES
   bcrypt_pbkdf
   bootsnap (>= 1.4.4)
   bootstrap (~> 4.1.1)
+  bundler
   byebug
   capistrano (= 3.16.0)
   capistrano-bundler
