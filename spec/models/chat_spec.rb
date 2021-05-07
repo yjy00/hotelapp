@@ -19,19 +19,19 @@ RSpec.describe Chat, type: :model do
         it 'fromが必須であること' do
           @chat.from_id = nil
           @chat.valid?
-          expect(@chat.errors[:from_id]).to include('を入力してください', 'は数値で入力してください')
+          expect(@chat.errors[:from_id]).to include('をご入力ください', 'は数値でご入力ください')
         end
 
         it 'byが必須であること' do
           @chat.by = nil
           @chat.valid?
-          expect(@chat.errors[:by]).to include('を入力してください')
+          expect(@chat.errors[:by]).to include('をご入力ください')
         end
 
         it 'messageが必須であること' do
           @chat.message = nil
           @chat.valid?
-          expect(@chat.errors[:message]).to include('を入力してください')
+          expect(@chat.errors[:message]).to include('をご入力ください')
         end
 
         it 'fromが1のままでは登録できないこと' do
