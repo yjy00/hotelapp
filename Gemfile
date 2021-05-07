@@ -86,3 +86,4 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'sassc', '~> 2.1.0'
 gem 'capistrano-dotenv', require: false
+gem 'rspec_junit_formatter'
