@@ -60,8 +60,8 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
   gem 'rspec_junit_formatter'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -77,6 +77,8 @@ gem 'pry-rails'
 # gem "font-awesome-sass"
 gem 'bcrypt_pbkdf'
 gem 'bootstrap', '~> 4.1.1'
+gem 'bundler'
+gem 'capistrano-dotenv', require: false
 gem 'devise'
 gem 'dotenv-rails'
 gem 'ed25519'
@@ -85,7 +87,5 @@ gem 'hirb-unicode'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
-gem 'sassc', '~> 2.1.0'
-gem 'capistrano-dotenv', require: false
-gem 'bundler'
 gem 'rexml'
+gem 'sassc', '~> 2.1.0'
