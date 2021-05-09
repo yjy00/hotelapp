@@ -47,6 +47,18 @@ RSpec.describe DailyHandover, type: :model do
           @daily_handover.valid?
           expect(@daily_handover.errors[:date]).to include('をご入力ください')
         end
+
+        it '月が-1では登録できないこと' do
+          @daily_handover.month = -1
+          @daily_handover.valid?
+          expect(@daily_handover.errors[:month]).to include
+        end
+
+        it '日が-1では登録できないこと' do
+          @daily_handover.date = -1
+          @daily_handover.valid?
+          expect(@daily_handover.errors[:date]).to include
+        end
       end
     end
   end
