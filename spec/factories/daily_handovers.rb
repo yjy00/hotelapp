@@ -9,6 +9,5 @@ FactoryBot.define do
     to_evening               { '忙しくなると思うので、ライム等多めに準備を忘れないようにしてください。' }
     for_tomorrow             { '明日の魚は鮭だそうです。' }
     created_at               { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
-
   end
 end

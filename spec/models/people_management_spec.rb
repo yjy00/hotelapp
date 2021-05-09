@@ -63,7 +63,6 @@ RSpec.describe PeopleManagement, type: :model do
           @people_management.valid?
           expect(@people_management.errors[:dish_wash]).to include
         end
-
       end
     end
   end
