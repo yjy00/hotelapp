@@ -18,6 +18,9 @@
     }
 
   }
+  .navbar-brand:hover{
+    opacity: 1;
+  }
   
   .nav-link{
     height: 40px;
@@ -33,9 +36,6 @@
     .other-menu{
       color: $white;
     }
-  }
-  .weather{
-    pointer-events: none;
   }
   .card{
     background-color: transparent;
