@@ -11,4 +11,23 @@ class Item < ApplicationRecord
   validates :place_id, numericality: { other_than: 1 }
   validates :category_id, numericality: { other_than: 1 }
   validates :count, numericality: { greater_than_or_equal_to: 0 }
+
+  def self.sort(selection)
+    case selection
+    when '---'
+      return Item.where(category_id: 2..7).order('updated_at DESC')
+    when 'appetiser'
+      return Item.where(category_id: 2).order('updated_at DESC')
+    when 'maindish'
+      return Item.where(category_id: 3).order('updated_at DESC')
+    when 'dessert'
+      return Item.where(category_id: 4).order('updated_at DESC')
+    when 'salad'
+      return Item.where(category_id: 5).order('updated_at DESC')
+    when 'fruit'
+      return Item.where(category_id: 6).order('updated_at DESC')
+    when 'barmenu'
+      return Item.where(category_id: 7).order('updated_at DESC')
+    end
+  end
 end
