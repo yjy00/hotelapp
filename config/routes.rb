@@ -14,13 +14,15 @@ Rails.application.routes.draw do
   resources :beverages,          only: :index
   resources :equipments,         only: :index
   resources :other_functions,    only: :index
-  resources :chats,              only: %i[index create]
-  resources :daily_handovers,    only: %i[index new create edit update]
-  resources :regular_guests,     only: %i[index new create edit update destroy]
-  resources :menus,              only: %i[index new create edit update destroy]
+  resources :chats,              only: %i(index create)
+  resources :daily_handovers,    only: %i(index new create edit update)
+  resources :regular_guests,     only: %i(index new create edit update destroy)
+  resources :menus,              only: %i(index new create edit update destroy)
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
-  resources :people_managements, only: %i[edit update]
+  resources :people_managements, only: %i(edit update)
   resources :items
   resources :usage_of_apps, only: :index
+
+  get 'search' => 'foods#search'
 end
