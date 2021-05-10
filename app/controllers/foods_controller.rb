@@ -9,5 +9,4 @@ class FoodsController < ApplicationController
     selection = params[:category]
     @items = Item.sort(selection)
   end
-
 end
