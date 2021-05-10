@@ -12,6 +12,15 @@
   .title{
     margin-bottom: $outer-big;
   }
+  .category-sort-form{
+    text-align: right;
+    margin-bottom: $outer;
+  }
+
+  .btn{
+    background-color: $dark-yellow;
+    color: $font-color;
+  }
   .card-columns{
     margin: 0 auto;
     .card{
@@ -34,7 +43,10 @@
     li{
       display: inline;
     }
+    
   }
+  
+
 }
 
 
