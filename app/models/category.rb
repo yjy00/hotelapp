@@ -3,15 +3,15 @@
 class Category < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: 'Appetizer' },
-    { id: 3, name: 'Main Dish' },
-    { id: 4, name: 'Dessert' },
-    { id: 5, name: 'Salad' },
-    { id: 6, name: 'Fruit' },
-    { id: 7, name: 'Bar Menu' },
-    { id: 8, name: 'Alcohol' },
-    { id: 9, name: 'Juice' },
-    { id: 10, name: 'Equipment' }
+    { id: 2, name: '前菜' },
+    { id: 3, name: 'メインディッシュ' },
+    { id: 4, name: 'デザート' },
+    { id: 5, name: 'サラダ' },
+    { id: 6, name: 'フルーツ' },
+    { id: 7, name: 'バーメニュー' },
+    { id: 8, name: 'アルコール' },
+    { id: 9, name: 'その他の飲み物' },
+    { id: 10, name: '備品' }
   ]
 
   include ActiveHash::Associations
