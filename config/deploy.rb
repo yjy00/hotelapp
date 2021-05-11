@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:yjy00/hotelapp.git'
 
 set :linked_dirs,
     fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system',
-                                 'public/uploads')
+                                 'public/uploads', "public/storage")
 set :linked_files, fetch(:linked_files, []).push('config/master.key')
 set :rbenv_type, :user
 
@@ -19,15 +19,13 @@ set :ssh_options, auth_methods: ['publickey'], keys: ['~/.ssh/hotelapp06.pem']
 set :deploy_to, '/var/www/rails/hotelapp'
 
 set :nginx_config_name, "#{fetch(:application)}.conf"
-set :nginx_sites_enabled_path, "/etc/nginx/conf.d"
+set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
 
 # invoke 'dotenv:read'
 # invoke 'dotenv:check'
 # invoke 'dotenv:setup'
 
-
 set :env_file, '.env'
-
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
