@@ -90,3 +90,4 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'rexml'
 gem 'sassc', '~> 2.1.0'
+gem "aws-sdk-s3", require: false
