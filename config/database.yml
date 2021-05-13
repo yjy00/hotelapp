@@ -1,11 +1,10 @@
 default: &default
   adapter: mysql2
   encoding: utf8
+  username: root
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
   # username: <%= ENV['MYSQL_USER'] %>
-  # password: <%= ENV['MYSQL_PASSWORD'] %>
-  # host: <%= ENV['MYSQL_HOST'] %>
 
   # database: <%= ENV['DB_NAME'] %>
   # username: root
@@ -21,7 +20,8 @@ default: &default
 development:
   <<: *default
   database: hotelapp_development
-  username: root
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: <%= ENV['MYSQL_HOST'] %>
 
   # socket: /tmp/mysql.sock
   # password: "Konokinannoki1"
@@ -40,6 +40,8 @@ development:
 test:
   <<: *default
   database: hotelapp_test
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+  host: <%= ENV['MYSQL_HOST'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -64,7 +66,6 @@ test:
 production:
   <<: *default
   database: hotelapp_production
-  username: root
   password: "Konokinannoki1"
   host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
