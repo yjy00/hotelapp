@@ -67,7 +67,7 @@
     margin-bottom: 35px;
   }
   #chat-wrapper{
-    padding: 25px;
+    padding: 23px;
     margin-top: $outer-big;
 
   }
@@ -75,18 +75,32 @@
       overflow: scroll;
       overflow-wrap: break-word;
       height: 350px;
-      .from-name-wrapper{
+      .upper-wrapper{
         display: flex;
         justify-content: flex-start;
         border-bottom: 1px solid $gray;
-        height: 32px;
+        height: 34px;
         width: 99%;
         padding-top: 5px;
         position: relative;
         .from-index{
           margin-right: $outer;
+          height: 25px;
+          width: 80px;
+          line-height: 25px;
+          text-align: center;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          margin-left: -15px;
+        }
+        .hall{
+          background-color: $dark-yellow;
+        }
+        .kitchen{
+          background-color: $light-blue;
         }
         .name-index{
+          font-size: 0.9rem;
           margin-right: $outer;
         }
         .time-index{
@@ -129,6 +143,10 @@
       margin: 0 auto $outer auto !important;
       width: 90% !important;
     }
+    .from-index{
+      width: 60px !important;
+      margin-left: -10px !important;
+    }
     // フォーム
     .card-body{
       padding: 10px;
@@ -152,7 +170,7 @@
     }
     .image-form{
       width: 250px !important;
-      font-size: 0.8rem ;
+      font-size: 0.8rem !important;
     }
     .message-title{
       margin-top: $outer !important;
