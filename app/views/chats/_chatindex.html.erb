@@ -13,6 +13,7 @@
 
       <div class="message-index-wrapper">
         <p class="message"><%= simple_format(chat.message) %></p>
+        <% if chat.image.present? %><%= image_tag chat.image, class:"image" %><% end %>
       </div>
       </div>  
 
