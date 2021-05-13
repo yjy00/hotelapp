@@ -4,7 +4,7 @@ module Users
   class RegistrationsController < Devise::RegistrationsController
     # before_action :configure_sign_up_params, only: [:create]
     before_action :configure_account_update_params, only: [:update]
-    before_action :check_guest, only: %i[destroy update]
+    before_action :check_guest, only: %i(destroy update)
 
     def check_guest
       redirect_to edit_user_registration_path if resource.email == 'sheroton.fb@sheroton.com'
@@ -55,7 +55,7 @@ module Users
     end
 
     def configure_account_update_params
-      devise_parameter_sanitizer.permit(:account_update, keys: %i[name managers_name])
+      devise_parameter_sanitizer.permit(:account_update, keys: %i(name managers_name))
     end
 
     # If you have extra params to permit, append them to the sanitizer.
