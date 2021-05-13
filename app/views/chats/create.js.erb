@@ -3,7 +3,10 @@ var information =
        <p class="name-index"><%= @chat.by %></p> 
        <p class="time-index"><%=  @chat.created_at.strftime('%m/%d %H:%M') %></p></div>`;
 
-var message = `<div class="message-index-wrapper"><p class="message"><%= simple_format(@chat.message) %></p></div>`
+var message = `<div class="message-index-wrapper">
+        <p class="message"><%= simple_format(@chat.message) %></p>
+        <% if @chat.image.present? %><%= image_tag @chat.image %><% end %>
+      </div>`
 
 
 var chats = document.getElementById('chat');
@@ -17,7 +20,9 @@ chats.insertAdjacentHTML('afterbegin', information);
 var newChat = document.getElementById('chat_message');
 var newChatBy = document.getElementById('chat_by')
 var newChatId = document.getElementById('chat_from_id')
+var newChatImage = document.getElementById('chat_image')
 
 newChat.value='';
 newChatBy.value='';
 newChatId.value='1';
+newChatImage.value='';

@@ -2,7 +2,7 @@
 
 class ChatsController < ApplicationController
   def index
-    @chats = Chat.order('created_at DESC')
+    @chats = Chat.includes(image_attachment: :blob).order('created_at DESC')
     @chat = Chat.new
   end
 
@@ -22,6 +22,6 @@ class ChatsController < ApplicationController
   private
 
   def chat_params
-    params.require(:chat).permit(:from_id, :by, :message)
+    params.require(:chat).permit(:from_id, :by, :message, :image)
   end
 end

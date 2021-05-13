@@ -6,32 +6,8 @@
         <h4 class="title">チャット</h4>
 
      
-        <%= form_with model: @chat, class:"chat-form card", local: false do |f| %>
-
-          <%= render 'shared/error_messages', model: f.object %>
-
-      <div class="card-body">
-        <div class="from-name">
-          <div class="form-group">
-            <label>部署</label>
-            <%= f.collection_select(:from_id, From.all, :id, :name, {}, {class:"form-control form from-form"}) %>
-          </div>
-
-          <div class='form-group'>
-            <label>名前</label>
-            <%= f.text_area :by, class:"form-control form", placeholder:"名前", maxlength:"40" %>
-          </div>
-        </div>
-
-          <div class='form-group'>
-            <label class="message-title">メッセージ</label>
-            <%= f.text_area :message, class: "form-control message-form", placeholder:"メッセージ" %>
-          </div>
-
-            <%= f.submit "送信", class:"btn" %>
-
-        <% end %>
-</div>
+    <%= render partial: 'chats/form' %>
+       
 
   <div id="chat-wrapper" class="card">
     <%= render partial: 'chats/chatindex', locals: { chats: @chats } %>
