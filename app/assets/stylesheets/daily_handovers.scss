@@ -51,6 +51,7 @@
     justify-content: center;
     .btn{
       background-color: $dark-yellow;
+      color: $font-color;
     }
     .current{
       display: block;
@@ -87,11 +88,12 @@
   .card{
     padding: $outer;
     border: 1px solid $font-color;
-    
   }
   .input-group{
     margin-top: $outer-big;
-
+    .form-control{
+      width: 290px;
+    }
   }
   .form-group{
     height: 120px;
