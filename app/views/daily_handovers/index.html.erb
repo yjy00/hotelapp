@@ -4,34 +4,11 @@
 
     <h4 class="title">引き継ぎ帳</h4>
     
-      <div class="handover-form-wrapper card">
+      <div id="dailyhandover-pagenate" class="handover-form-wrapper card">
 
-        <% @daily_handovers.each do |daily_handover| %>
+      <%= render "daily_handovers/dailyhandover-index" %>
+
         
-          <ul>
-            <li class="card-body">
-
-      <div class="handover-form-inner">
-
-              <div class="date-edit">
-                <h5 class="handover-date"><%= daily_handover.month %>月<%= daily_handover.date %>日</h5>
-                <%= link_to "編集する", edit_daily_handover_path(daily_handover), class: "btn" %>
-              </div>
-
-                <label>今日のリマーク</label>
-                  <div class="card"><%= simple_format(daily_handover.daily_remark, class: 'card-body') %></div>
-                <label>早番へ</label>
-                  <div class="card"><%= simple_format(daily_handover.to_morning, class: 'card-body') %></div>
-                <label>遅番へ</label>
-                  <div class="card"><%= simple_format(daily_handover.to_evening, class: 'card-body') %></div>
-                <label>明日へ</label>
-                  <div class="card"><%= simple_format(daily_handover.for_tomorrow, class: 'card-body') %></div>
-
-          </div>
-            </li>
-          </ul>
-        <% end %>
-
   </div>
 
       <div class="handover-btn-pagenate-wrapper">
