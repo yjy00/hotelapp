@@ -38,7 +38,7 @@
     @include make-sm-form;
 
     th{
-      font-size: 0.8rem;
+      font-size: $small-font;
     }
     .status{
       width: 10vw;
