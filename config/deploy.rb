@@ -22,8 +22,6 @@ set :nginx_config_name, "#{fetch(:application)}.conf"
 set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
 
 
-set :linked_files, %w{.env}
-
 # invoke 'dotenv:read'
 # invoke 'dotenv:check'
 # invoke 'dotenv:setup'
