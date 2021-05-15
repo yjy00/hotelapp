@@ -26,13 +26,13 @@
   + Rubocop (0.36.0)
 
 #### インフラ　その他
-  + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
+  + AWS (EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
   + Nginx/puma (3.12.6)
   + Capistrano (3.16.0)
   + Git/GitHub
   + VScode
   + Docker
-  + Circle CI CI/CD
+  + Circle CI
 
 ## ER図
 <img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
