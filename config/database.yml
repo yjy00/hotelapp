@@ -65,13 +65,18 @@ test:
 #
 production:
   <<: *default
-  database: hotelapp_production
+  # database: hotelapp_production
   # password: "Konokinannoki1"
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
   
-  database: <%= ENV['DB_NAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOSTNAME'] %>
+  # database: <%= ENV['DB_NAME'] %>
+  # password: <%= ENV['DB_PASSWORD'] %>
+  # host: <%= ENV['DB_HOSTNAME'] %>
+
+  host:     <%= Rails.application.credentials.db[:host] %>
+  database: <%= Rails.application.credentials.db[:database] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
 
   # username: <%= ENV['DB_USERNAME'] %>
