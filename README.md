@@ -11,6 +11,36 @@
 <img width="977" alt="ログイン画面" src="https://user-images.githubusercontent.com/66105826/117378321-1fa24d80-af10-11eb-9dac-7415d9a35ab2.png">
 
 
+## 使用技術一覧
+
+#### フロントエンド
+  + HTML/CSS
+  + JavaScript
+  + bootstrap (4.1.3)
+
+#### バックエンド
+  + Ruby (3.0.0)
+  + Ruby on Rails (6.1.3)
+  + MySQL (8.0)
+  + RSpec
+  + Rubocop (0.36.0)
+
+#### インフラ　その他
+  + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
+  + Nginx/puma (3.12.6)
+  + Capistrano (3.16.0)
+  + Git/GitHub
+  + VScode
+  + Docker
+  + Circle CI CI/CD
+
+## ER図
+<img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
+
+## インフラ構成図
+<img width="873" alt="インフラ構成図" src="https://user-images.githubusercontent.com/66105826/117227014-dfc86100-ae50-11eb-9bf4-51c86bb69754.png">
+
+
 ## 開発背景
 1. ホールとキッチン間でのコミュニケーション不足からストレスがあったこと
     + 例えば、ホール側は、前菜やサラダなど何がいくつ用意されているかわかりません。そのため、忙しい時に口頭で確認し合わないといけないということが発生し、お互いにストレスになっていました。
@@ -34,8 +64,9 @@
 	+ 業務改善アプリということがあり、toC向けのアプリに比べ初めて使う人が使い方を理解しやすい作りにすることに苦労しました。
 + 自分の前職だけでなく、他の場所でも使えるようにすること　→　スケールできるようにすること
 	+ 当初入れる予定で考えていた機能であまりに使用条件が限定的な機能は外し、シンプルさを心がけました。
-+ 実際の現場でスマホやタブレットを使いスピーディに使えるアプリを目指し、構成やボタンデザインを工夫すること
-	+ デザインをシンプルにしたり、一覧表示を大きめにすることで、実際の現場でも素早く使えるような作りを心がけました。
++ 実際の現場でスマホやタブレットを使い、スピーディに使えるアプリを目指すこと
+	+ レスポンシブ対応を徹底しました。
+  + 数を編集することがメイン機能なので、一覧画面から詳細画面ではなく編集画面に飛べるようにすること、登録ボタンを複数設置することでUXを高めました。
 
 ## 機能一覧(使い方の詳細は一覧の下に記述しています。)
 
@@ -91,43 +122,15 @@
 	
 	
 	
-## 使用技術一覧
 
-#### フロントエンド
-  + HTML/CSS
-  + JavaScript
-  + bootstrap (4.1.3)
-
-#### バックエンド
-  + Ruby (3.0.0)
-  + Ruby on Rails (6.1.3)
-  + MySQL (8.0)
-  + RSpec
-  + Rubocop (0.36.0)
-
-#### インフラ　その他
-  + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
-  + Nginx/puma (3.12.6)
-  + Capistrano (3.16.0)
-  + Git/GitHub
-  + VScode
-  + Docker
-  + Circle CI CI/CD
-
-## ER図
-<img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
-
-## インフラ構成図
-<img width="873" alt="インフラ構成図" src="https://user-images.githubusercontent.com/66105826/117227014-dfc86100-ae50-11eb-9bf4-51c86bb69754.png">
 
 
 ## 今後の改良計画
 + Vue.jsでの部分SPA化
-+ Dockerの改善
 + 発注リストから実際に発注できる機能をつける
 + 天気の表示機能
 + テストの充実化
 + チャット一覧画面において、部署ごとに色分けをすることでわかりやすくする
-+ 何度も出てくるコードをまとめる
++ コードの共通化
 + 運営側のページの作成
 + 運営企業への問い合わせなど
