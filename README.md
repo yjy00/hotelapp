@@ -8,7 +8,7 @@
 ### https://restaurant-talks.com/
 ログイン画面からゲストログインできます。
 
-<img width="977" alt="ログイン画面" src="https://user-images.githubusercontent.com/66105826/117378321-1fa24d80-af10-11eb-9dac-7415d9a35ab2.png">
+<img width="800" alt="ログイン画面" src="https://user-images.githubusercontent.com/66105826/117378321-1fa24d80-af10-11eb-9dac-7415d9a35ab2.png">
 
 
 ## 使用技術一覧
@@ -38,7 +38,7 @@
 <img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
 
 ## インフラ構成図
-<img width="873" alt="インフラ構成図" src="https://user-images.githubusercontent.com/66105826/117227014-dfc86100-ae50-11eb-9bf4-51c86bb69754.png">
+<img width="800" alt="インフラ構成図" src="https://user-images.githubusercontent.com/66105826/117227014-dfc86100-ae50-11eb-9bf4-51c86bb69754.png">
 
 
 ## 開発背景
@@ -88,7 +88,7 @@
 ### 在庫管理機能
   + 料理その他の在庫を管理するメインの機能です。<br>
 
-<img width="1440" alt="フード" src="https://user-images.githubusercontent.com/66105826/118343388-acc65180-b563-11eb-8199-b6b9888c6bc7.png">
+<img width="800" alt="フード" src="https://user-images.githubusercontent.com/66105826/118343388-acc65180-b563-11eb-8199-b6b9888c6bc7.png">
 
   + 料理の在庫管理<br>
 		1. キッチンが料理を仕込んだり作ったりした際に、作った数を登録する。<br>
@@ -105,7 +105,7 @@
   + リアルタイムで素早くチャットするというよりも、報告事項をメールよりも手軽に共有できたり、確認事項を確認することを目的とした機能です。
   + 無線を使った突発的なお互いの都合を無視したコミュニケーションを減らし、お互いに時間がある時にメッセージのやりとりをすることで、効率を改善します。
 
-  <img width="1067" alt="チャット" src="https://user-images.githubusercontent.com/66105826/118343383-a33ce980-b563-11eb-8e6a-b77f3b783744.png">
+  <img width="800" alt="チャット" src="https://user-images.githubusercontent.com/66105826/118343383-a33ce980-b563-11eb-8e6a-b77f3b783744.png">
 
 ### 引き継ぎ帳機能
   + 毎日次の日に向けてホール内で引き継ぎを書く機能です。
