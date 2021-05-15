@@ -65,7 +65,7 @@ test:
 #
 production:
   <<: *default
-  database: hotelapp_production
+  # database: hotelapp_production
   # password: "Konokinannoki1"
   # host: hotelapp06-mysql.cob5uwti9onp.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
@@ -73,5 +73,4 @@ production:
   database: <%= ENV['DB_NAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOSTNAME'] %>
-
-  # username: <%= ENV['DB_USERNAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
