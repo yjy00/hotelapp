@@ -26,13 +26,13 @@
   + Rubocop (0.36.0)
 
 #### インフラ　その他
-  + AWS(EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
+  + AWS (EC2/S3/RDS/VPC/IAM/ALB/ACM/Route53/Cloudfront)
   + Nginx/puma (3.12.6)
   + Capistrano (3.16.0)
   + Git/GitHub
   + VScode
   + Docker
-  + Circle CI CI/CD
+  + Circle CI
 
 ## ER図
 <img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
@@ -88,7 +88,7 @@
 ### 在庫管理機能
   + 料理その他の在庫を管理するメインの機能です。<br>
 
-<img width="1440" alt="フード一覧" src="https://user-images.githubusercontent.com/66105826/117378366-3779d180-af10-11eb-85fb-614cf8805041.png">
+<img width="1440" alt="フード" src="https://user-images.githubusercontent.com/66105826/118343388-acc65180-b563-11eb-8199-b6b9888c6bc7.png">
 
   + 料理の在庫管理<br>
 		1. キッチンが料理を仕込んだり作ったりした際に、作った数を登録する。<br>
@@ -105,7 +105,7 @@
   + リアルタイムで素早くチャットするというよりも、報告事項をメールよりも手軽に共有できたり、確認事項を確認することを目的とした機能です。
   + 無線を使った突発的なお互いの都合を無視したコミュニケーションを減らし、お互いに時間がある時にメッセージのやりとりをすることで、効率を改善します。
 
-<img width="1440" alt="チャット画面" src="https://user-images.githubusercontent.com/66105826/117378415-52e4dc80-af10-11eb-8b95-29e3fbe467c7.png">
+  <img width="1067" alt="チャット" src="https://user-images.githubusercontent.com/66105826/118343383-a33ce980-b563-11eb-8e6a-b77f3b783744.png">
 
 ### 引き継ぎ帳機能
   + 毎日次の日に向けてホール内で引き継ぎを書く機能です。
