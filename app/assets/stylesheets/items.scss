@@ -16,13 +16,15 @@
     text-align: right;
     margin-bottom: $outer;
   }
-
   .btn{
     background-color: $dark-yellow;
     color: $font-color;
+    margin-bottom: 3px;
   }
   .card-columns{
     margin: 0 auto;
+    // column-count: 3;
+
     .card{
       margin: 0 auto 20px auto;
       background-color: $dark-blue;
@@ -43,10 +45,7 @@
     li{
       display: inline;
     }
-    
   }
-  
-
 }
 
 
@@ -305,4 +304,8 @@
 
 .item-count{
   font-size: 1.2rem;
+}
+
+.form-row{
+  display: flex;
 }
