@@ -28,12 +28,6 @@ RSpec.describe Chat, type: :model do
           expect(@chat.errors[:by]).to include('をご入力ください')
         end
 
-        it 'messageが必須であること' do
-          @chat.message = nil
-          @chat.valid?
-          expect(@chat.errors[:message]).to include('をご入力ください')
-        end
-
         it 'fromが1のままでは登録できないこと' do
           @chat.from_id = 1
           @chat.valid?
