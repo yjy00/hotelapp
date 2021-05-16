@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ItemsController < ApplicationController
+  before_action :get_item, only: %i(edit show update destroy)
+
   def index
     @items = Item.order('updated_at DESC')
   end
@@ -25,16 +27,11 @@ class ItemsController < ApplicationController
     end
   end
 
-  def edit
-    @item = Item.find(params[:id])
-  end
+  def edit; end
 
-  def show
-    @item = Item.find(params[:id])
-  end
+  def show; end
 
   def update
-    @item = Item.find(params[:id])
     if @item.update(item_params)
       case @item.category_id
       when 2..7
@@ -50,7 +47,6 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
     if @item.destroy
       case @item.category_id
       when 2..7
@@ -69,5 +65,9 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:image, :name, :count, :category_id, :place_id, :detail)
+  end
+
+  def get_item
+    @item = Item.find(params[:id])
   end
 end

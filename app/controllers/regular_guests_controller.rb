@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RegularGuestsController < ApplicationController
+  before_action :get_regularguest, only: %i(edit update destroy)
+
   def index
     @regular_guests = RegularGuest.order('updated_at DESC')
   end
@@ -18,12 +20,9 @@ class RegularGuestsController < ApplicationController
     end
   end
 
-  def edit
-    @regular_guest = RegularGuest.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @regular_guest = RegularGuest.find(params[:id])
     if @regular_guest.update(regular_guest_params)
       redirect_to regular_guests_path
     else
@@ -32,7 +31,6 @@ class RegularGuestsController < ApplicationController
   end
 
   def destroy
-    @regular_guest = RegularGuest.find(params[:id])
     if @regular_guest.destroy
       redirect_to regular_guests_path
     else
@@ -44,5 +42,9 @@ class RegularGuestsController < ApplicationController
 
   def regular_guest_params
     params.require(:regular_guest).permit(:name, :status_id, :member_number, :information)
+  end
+
+  def get_regularguest
+    @regular_guest = RegularGuest.find(params[:id])
   end
 end
