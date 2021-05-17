@@ -35,10 +35,10 @@
   + Circle CI
 
 ## ER図
-<img width="649" alt="ER図４" src="https://user-images.githubusercontent.com/66105826/117236903-b0bbea80-ae64-11eb-84bd-e8c5203da9ac.png">
+<img width="674" alt="ER図６" src="https://user-images.githubusercontent.com/66105826/118458949-33328d00-b736-11eb-8a2f-6bc3f9c464a8.png">
 
 ## インフラ構成図
-<img width="800" alt="インフラ構成図" src="https://user-images.githubusercontent.com/66105826/117227014-dfc86100-ae50-11eb-9bf4-51c86bb69754.png">
+<img width="656" alt="インフラ図３" src="https://user-images.githubusercontent.com/66105826/118458913-29a92500-b736-11eb-9134-a50d6696d000.png">
 
 
 ## 開発背景
