@@ -38,7 +38,7 @@
 <img width="674" alt="ER図６" src="https://user-images.githubusercontent.com/66105826/118458949-33328d00-b736-11eb-8a2f-6bc3f9c464a8.png">
 
 ## インフラ構成図
-<img width="656" alt="インフラ図３" src="https://user-images.githubusercontent.com/66105826/118458913-29a92500-b736-11eb-9134-a50d6696d000.png">
+<img width="676" alt="インフラ図４" src="https://user-images.githubusercontent.com/66105826/118461372-932a3300-b738-11eb-86ac-3b784ec075e5.png">
 
 
 ## 開発背景
