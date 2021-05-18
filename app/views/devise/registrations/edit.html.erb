@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <main role="main" class="user-information-container-inner">
+
+      <h2 class="title">ユーザー情報編集</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="form-group">
+          <p><%= f.label :ホテルのお名前 %></p>
+          <%= f.text_area :name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm"  %>
+        </div>
+
+          <div class="form-group">
+            <p><%= f.label :メールアドレス %></p>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"  %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="form-group">
+          <p><%= f.label :password %> <i>(変更されない場合は、空欄で更新してください。)</i></p>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder:"6文字以上、半角英数を両方含む"  %>
+        </div>
+
+        <div class="form-group">
+          <p><%= f.label :password_confirmation %></p>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+        <p><%= f.label :マネージャー様のお名前 %></p>
+        <%= f.text_area :managers_name, autofocus: true, autocomplete: "name", class: "form-control form-control-sm" %>
+      </div>
+
+        <main class="btns-wrapper">
+          <%= f.submit "更新する", class:"btn update-btn" %>
+          <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会されますか?" }, method: :delete, class:"btn quit-btn" %>
+        </m>
+
+      <% end %>
+
+  </main>
+</div>
