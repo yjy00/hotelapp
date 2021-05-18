@@ -1,0 +1,296 @@
+@import "config/variables";
+@import "mixin/make-form";
+@import "mixin/flexbox";
+
+
+
+// 一覧
+.item-index-container-inner{
+  width: 70vw;
+  margin: 0 auto;
+
+  .title{
+    margin-bottom: $outer-big;
+  }
+  .category-sort-form{
+    text-align: right;
+    margin-bottom: $outer;
+  }
+  .btn{
+    background-color: $dark-yellow;
+    color: $font-color;
+    margin-bottom: 3px;
+  }
+  .card-columns{
+    margin: 0 auto;
+    .card{
+      margin: 0 auto 20px auto;
+      background-color: $dark-blue;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.664);
+      .card-body{
+        height: 105px;
+        padding-top: 25px;
+        color: $white;
+        font-size: 1.3rem;
+      }
+    }
+    .basic-card:hover{
+      opacity: 0.8;
+    }
+    li{
+      display: inline;
+    }
+  }
+}
+
+
+// 編集フォーム
+.item-container-inner{
+  @include make-form;
+  width: 90%;
+  .title{
+    margin-bottom: $outer-big;
+  }
+  .item-form{
+    label{
+      margin: 5px;
+    }
+    .top-wrapper{
+      @include space-evenly;
+      flex-flow: row-reverse;
+      margin: $outer-big auto 0 auto;
+      .name-number{
+        height: 350px;
+        width: 24vw;
+        .form-group{
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+        .form-control{
+          text-align: center;
+          height: 40px;
+          line-height: 30px;
+          font-weight: bold;
+        }
+        .btn{
+          width: 15vw;
+          margin: 0 auto $outer-big auto;
+        }
+      }
+      
+      
+      .image{
+        width: 35vw;
+        height: 350px;
+        .image-title{
+          margin-bottom: $outer;
+        }
+        p{
+          line-height: 200px;
+        }
+        img{
+          width: 31vw;
+          height: 28vh;
+          object-fit: contain;
+          margin-bottom: $outer;
+      }
+        .image-form{
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .bottom-wrapper{
+      @include make-center;
+      height: 200px;
+      margin: $outer-big auto 0 auto;
+      .form-control{
+        width: 20vw;
+      }
+      .detail-title{
+        margin-left: 60px;
+      }
+      .detail-form{
+        height: 100px;
+        margin-left: 50px;
+        width: 300px;
+      }
+    }
+    .link-list{
+      text-align: center;
+      margin-top: $outer;
+      @include space-evenly;
+    }
+    .other-btn{
+      background-color: $dark-yellow;
+      color: $font-color;
+    }
+  }
+}
+
+
+@media (max-width: 767px){
+  .item-container-inner{
+    @include make-sm-form;
+    .top-wrapper{
+      display: block !important;
+    }
+    .card{
+      width: 65vw !important;
+      margin: 0 auto !important;
+      .btn{
+        width: 100px !important;
+      }
+    }
+    img{
+      width: 58vw !important;
+      height: 35vh !important;
+    }
+    .bottom-wrapper{
+      display: block !important;
+      width: 60vw;
+      .detail{
+        margin: 0 !important;
+        height: 150px !important;
+        label{
+          margin-left: 5px !important;
+        }
+        .detail-form{
+          margin: 0 !important;
+        }
+      }
+      .form-control{
+        width: 100% !important;
+      }
+    }
+    .link-list{
+      margin-top: 150px !important;
+    }
+  }
+}
+
+
+// 詳細ページ
+.item-show-container-inner{
+  @include make-form;
+  text-align: center;
+  height: auto;
+.title{
+    margin-bottom: $outer-big;
+  }
+  .basic-table{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .detail-item {
+    background-color: #eee;
+    border: 1px solid #dedede;
+    font-size: 1rem;
+    text-align: center;
+    width: 15vw;
+    min-height: 21px;
+  }
+  .detail-value {
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-size: 1rem;
+    min-height: 21px;
+    width: 45vw;
+  }
+  .image-title{
+    line-height: 400px;
+  }
+  img{
+    width: 40vw;
+    height: 60vh;
+    object-fit: contain;
+  }
+  .btns{
+    margin-top: $outer-big;
+    .to-edit{
+      margin-right: 100px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .item-show-container-inner{
+    @include make-sm-form;
+    tr{
+      display: flex;
+    }
+    .detail-item{
+      display: block;
+      width: 20vw;
+      padding: 20px;
+    }
+    .detail-value{
+      width: 45vw;
+      display: block;
+      padding: 20px
+    }
+    .detail-image{
+      height: 40vh;
+    }
+  }
+}
+
+
+
+// 新規登録フォーム
+.item-new-container-inner{
+  @include make-form;
+  margin-bottom: $outer-big;
+  width: 60%;
+  .title{
+    margin-bottom: $outer-big;
+  }
+  label{
+    height: 22px;
+    margin-bottom: 0;
+  }
+  .small{
+    height: 30px;
+    line-height: 18px;
+  }
+  img{
+    width: 31vw;
+    height: 28vh;
+    margin-bottom: $outer;
+  }
+  .detail{
+    height: 100px;
+  }
+  .image-form{
+    height: 100px;
+    margin-bottom: 0;
+  }
+  #image-list{
+    text-align: center;
+    margin-bottom: $outer;
+  }
+  .btn-wrapper{
+    text-align: center;
+    .btn{
+      width: 50%;
+    }
+  }
+}
+
+
+@media (max-width: 767px){
+  img{
+    width: 59vw !important;
+    height: 30vh !important;
+  }
+}
+
+.item-count{
+  font-size: 1.2rem;
+}
+
+.form-row{
+  display: flex;
+}

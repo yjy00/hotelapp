@@ -1,0 +1,14 @@
+@import "config/variables";
+@import "mixin/make-form";
+
+.order-container-inner{
+  @include make-form;
+
+  .title{
+    margin-bottom: $outer-big;
+  }
+  .btn-wrapper{
+    text-align: center;
+    margin-top: $outer-big;
+  }
+}

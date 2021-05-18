@@ -1,0 +1,55 @@
+@import "config/variables";
+@import "mixin/flexbox";
+@import "mixin/make-form";
+
+
+.number-container-inner{
+  @include make-form;
+  margin-bottom: $outer-big;
+  .title{
+    margin-bottom: $outer-big;
+  }
+  .number-form{
+    margin: 0 auto;
+    width: $form-width;
+    .title-form-wrapper{
+      display: flex;
+      justify-content: space-around;
+      width: 300px;
+      margin: 0 auto;
+      p{
+        width: 70px;
+        height: 60px;
+        margin-top: 10px;
+        margin-right: 5px;
+        text-align: center;
+      }
+      .morning-title{
+        margin-right: 10px;
+      }
+      .form{
+        text-align: center;
+        width: 80px;
+        height: 60px;
+        border: $font-color 1px solid;
+      }
+    }
+    .number-btn{
+      margin-top: 50px;
+      text-align: center;
+      .btn{
+        width: 150px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px){
+  .number-container-inner{
+    @include make-sm-form;
+    .number-btn{
+      margin-top: 10PX !important;
+    }
+  }
+}
