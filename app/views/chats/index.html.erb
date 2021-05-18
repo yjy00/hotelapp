@@ -1,0 +1,17 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <main role="main" class="chat-container-inner">
+
+      <h4 class="title">チャット</h4>
+
+      
+      <%= render partial: 'chats/form' %>
+        
+
+    <div id="chat-wrapper" class="card">
+      <%= render partial: 'chats/chatindex', locals: { chats: @chats } %>
+    </div>
+
+  </main>
+</div>

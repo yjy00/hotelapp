@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <main role="main" class="item-new-container-inner">
+
+    <h4 class="title">新規アイテム登録</h4>
+
+      <%= form_with model: @item, class:"item-form", local: true do |f| %>
+        
+
+        <%= render 'shared/error_messages', model: f.object %>
+
+        <div class='form-group'>
+          <label class="name-title">アイテム名</label>
+          <%= f.text_area :name, class:"form-control small", placeholder:"", maxlength:"40" %>
+        </div>
+        <div class="form-group">
+          <label class="count-title">数量</label>
+          <%= f.number_field :count, class:"form-control small item-count", placeholder:"" %>
+        </div>
+
+        <div class="form-group">
+          <label class="category-title">カテゴリー</label>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"small form-control"}) %>
+        </div>
+
+        <div class="form-group">
+          <label class="place-title">場所</label>
+          <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"small form-control"}) %>
+        </div>
+
+        <div class='form-group'>
+          <label class="detail-title">詳細</label>
+          <%= f.text_area :detail, class:"form-control detail", placeholder:"" %>
+        </div>
+
+        <div class='form-group image-form'>
+          <label class="image-title">写真</label>
+          <%= f.file_field :image, class:"form-control" %>
+        </div>
+
+         <div id="image-list"></div>
+
+        <div class="btn-wrapper">
+          <%= f.submit "登録する", class:"btn" %>
+        </div>
+        
+      <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <main  role="main"class="usage-of-app-container-inner">
+
+    <h4 class="title">このアプリの目的と使い方</h4>
+
+    <div class="card">
+    <div class="card-body">
+      <h5>アプリの目的・背景</h5>
+
+
+      <ul>
+        <li>前職である、ホテルの料飲部の業務改善を目的としたアプリです。</li>
+        <li>ホールとキッチンのコミュニケーションを改善することを主目的としています。</li>
+        <li>ホールとキッチンの間や、スタッフの間で口頭伝達だったり正確に把握できていないものを管理します。</li>
+      </ul>
+
+    <br>
+
+    <h5>アプリの機能</h5>
+    <ol>
+        <li class="usage">アイテムの数を管理する機能</li>
+          <ul class="function-list">
+            <li>サラダや前菜がいくつ用意してあるか等を管理します。</li>
+            <div class="card"><p class="card-body">アイテムと数量を登録する<br>↓<br>使った数を登録する<br>↓<br>少なくなったら発注リストへ</p></div>
+            <li>この画面がホーム画面になります。</li>
+          </ul>
+        <li class="usage">その他の機能</li>
+          <ul class="function-list">
+            <li>キッチンとホール間でのチャット機能</li>
+            <li>常連のお客様をデータベース管理する機能</li>
+            <li>翌日への引き継ぎ事項を管理する機能</li>
+            <li>残りの朝食人数を共有する機能　等</li>
+          </ul>
+      </ol>
+
+  <div class="btn-wrapper">
+      <%= link_to "ホーム画面へ移動する", root_path, class:"btn" %>
+  </div>
+
+
+
+  </div>
+  </div>
+  </main>
+</div>

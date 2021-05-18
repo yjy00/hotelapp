@@ -1,0 +1,32 @@
+<% if @chats %>
+  <div id="chats" >
+    <% @chats.each do |chat| %>
+
+      <%# <div id="chat" class="upper-wrapper"></div> %>
+      <div id="chat"> 
+
+<% if chat.from.name == "ホール" %>
+        <div class="upper-wrapper card-body">
+          <p class="from-index hall"><%=  chat.from.name %></p> 
+          <p class="name-index"><%=  chat.by %></p> 
+          <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
+        </div>
+
+      <% else%>
+      <div class="upper-wrapper card-body">
+          <p class="from-index kitchen"><%=  chat.from.name %></p> 
+          <p class="name-index"><%=  chat.by %></p> 
+          <p class="time-index"><%=  chat.created_at.strftime('%m/%d %H:%M') %></p> 
+        </div>
+
+      <% end %>
+
+      <div class="message-index-wrapper">
+        <p class="message"><%= simple_format(chat.message) %></p>
+        <% if chat.image.present? %><%= image_tag chat.image, class:"image" %><% end %>
+      </div>
+      </div>  
+
+    <% end %>
+  </div>
+<% end %>

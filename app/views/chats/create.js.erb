@@ -1,0 +1,40 @@
+var information = 
+       `<% if @chat.from.name == "ホール" %>
+        <div class="upper-wrapper card-body">
+          <p class="from-index hall"><%=  @chat.from.name %></p> 
+          <p class="name-index"><%=  @chat.by %></p> 
+          <p class="time-index"><%=  @chat.created_at.strftime('%m/%d %H:%M') %></p> 
+        </div>
+
+      <% else%>
+      <div class="upper-wrapper card-body">
+          <p class="from-index kitchen"><%=  @chat.from.name %></p> 
+          <p class="name-index"><%=  @chat.by %></p> 
+          <p class="time-index"><%=  @chat.created_at.strftime('%m/%d %H:%M') %></p> 
+        </div>
+
+      <% end %>`;
+
+var message = `<div class="message-index-wrapper">
+        <p class="message"><%= simple_format(@chat.message) %></p>
+        <% if @chat.image.present? %><%= image_tag @chat.image, class:"image"  %><% end %>
+      </div>`
+
+
+var chats = document.getElementById('chat');
+chats.insertAdjacentHTML('afterbegin', message);
+
+var chats = document.getElementById('chat');
+chats.insertAdjacentHTML('afterbegin', information);
+
+
+
+var newChat = document.getElementById('chat_message');
+var newChatBy = document.getElementById('chat_by')
+var newChatId = document.getElementById('chat_from_id')
+var newChatImage = document.getElementById('chat_image')
+
+newChat.value='';
+newChatBy.value='';
+newChatId.value='1';
+newChatImage.value='';

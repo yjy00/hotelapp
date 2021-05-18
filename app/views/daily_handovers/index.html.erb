@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+
+<div class="container">
+  <main role="main" class="daily-handover-container-inner">
+
+    <h4 class="title">引き継ぎ帳</h4>
+    
+      <div id="dailyhandover-pagenate" class="handover-form-wrapper card">
+        <%= render "daily_handovers/dailyhandover-index" %>
+      </div>
+
+      <div class="handover-btn-pagenate-wrapper">
+        <%= link_to '明日の引き継ぎを登録', new_daily_handover_path, class: "btn" %>
+        <div class="pagenation-wrapper"><%= paginate(@daily_handovers) %></div>
+      </div>
+
+  </main>
+</div>
