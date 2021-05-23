@@ -11,6 +11,8 @@ class Item < ApplicationRecord
   validates :place_id, numericality: { other_than: 1 }
   validates :category_id, numericality: { other_than: 1 }
   validates :count, numericality: { greater_than_or_equal_to: 0 }
+  validates :name, length:   { maximum: 40 }
+  validates :detail, length: { maximum: 1000 }
 
   def self.sort(selection)
     case selection
