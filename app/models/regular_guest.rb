@@ -7,4 +7,5 @@ class RegularGuest < ApplicationRecord
 
   validates :name, presence: true
   validates :member_number, allow_blank: true, numericality: { only_integer: true }, length: { in: 0..10 }
+  validates :name, length: { maximum: 40 }
 end
