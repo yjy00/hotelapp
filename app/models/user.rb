@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   validates :name, :managers_name, presence: true
   validates :password, on: :create, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}+\z/i }
+  validates :name, length: { maximum: 40 }
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
