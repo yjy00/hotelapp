@@ -62,43 +62,62 @@
       @include space-evenly;
       flex-flow: row-reverse;
       margin: $outer-big auto 0 auto;
+      .label-title{
+        margin-left: $outer;
+        margin-top: $outer;
+      }
+      .item-name{
+        width: 70%;
+        margin: 0 auto;
+      }
       .name-number{
-        height: 350px;
-        width: 24vw;
+        height: 380px;
+        width: 40%;
         .form-group{
           margin-bottom: 0;
-          padding-bottom: 0;
+          padding: 0;
+          .btn{
+            color: $font-color;
+            background-color: $light-blue;
+            width: 20%;
+          }
+          .item-count{
+            width: 40%;
+          }
         }
         .form-control{
           text-align: center;
           height: 40px;
           line-height: 30px;
-          font-weight: bold;
         }
         .btn{
-          width: 15vw;
+          width: 50%;
           margin: 0 auto $outer-big auto;
         }
       }
       
-      
+      .img-card{
+        margin-right: $outer-big;
+      }
       .image{
-        width: 35vw;
-        height: 350px;
+        width: 50%;
+        height: 380px;
         .image-title{
           margin-bottom: $outer;
         }
         p{
-          line-height: 200px;
+          text-align: center;
+          line-height: 220px;
         }
         img{
-          width: 31vw;
-          height: 28vh;
+          width: 75%;
+          height: 250px;
           object-fit: contain;
-          margin-bottom: $outer;
+          margin-bottom: 20px;
+          margin-left: 50px
       }
         .image-form{
-          font-size: 0.6rem;
+          font-size: 0.8rem;
         }
       }
     }
@@ -122,6 +141,9 @@
       text-align: center;
       margin-top: $outer;
       @include space-evenly;
+      .register-btn{
+        width: 30%;
+      }
     }
     .other-btn{
       background-color: $dark-yellow;
@@ -138,15 +160,13 @@
       display: block !important;
     }
     .card{
-      width: 65vw !important;
-      margin: 0 auto !important;
-      .btn{
-        width: 100px !important;
-      }
+      width: 80% !important;
+      margin: 0 auto $outer auto !important;
     }
     img{
-      width: 58vw !important;
-      height: 35vh !important;
+      width: 100% !important;
+      height: 235px !important;
+      margin-left: 0 !important;
     }
     .bottom-wrapper{
       display: block !important;
@@ -167,6 +187,9 @@
     }
     .link-list{
       margin-top: 150px !important;
+    }
+    .btn{
+      margin-bottom: $outer !important;
     }
   }
 }
@@ -255,9 +278,27 @@
     height: 30px;
     line-height: 18px;
   }
+  .btn-wrapper{
+    justify-content: space-between;
+    .item-count{
+      width: 52%;
+      text-align: center;
+
+    }
+    .btn{
+      width: 23%;
+      background-color: $light-blue;
+      color: $font-color;
+    }
+  }
+  .field_with_errors{
+    .item-count{
+      width: 100%;
+      text-align: center;
+    }
+  }
   img{
-    width: 31vw;
-    height: 28vh;
+    width: 55%;
     margin-bottom: $outer;
   }
   .detail{
@@ -266,30 +307,45 @@
   .image-form{
     height: 100px;
     margin-bottom: 0;
+    .form-image{
+      font-size: 0.9rem;
+    }
   }
   #image-list{
     text-align: center;
     margin-bottom: $outer;
   }
-  .btn-wrapper{
+  .btn-wrapper-bottom{
     text-align: center;
     .btn{
-      width: 50%;
+      width: 65%;
+    }
+  }
+
+  @media (max-width: 767px){
+    img{
+      width: 100% !important;
+      height: 10% !important;
+    }
+    .form-image{
+      font-size: 0.7rem !important;
     }
   }
 }
 
 
-@media (max-width: 767px){
-  img{
-    width: 59vw !important;
-    height: 30vh !important;
-  }
-}
+
 
 .item-count{
   font-size: 1.2rem;
 }
+
+.btn-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 
 .form-row{
   display: flex;
