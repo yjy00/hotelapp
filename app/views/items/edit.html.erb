@@ -13,14 +13,17 @@
 
       <div class="name-number card">
         <div class='form-group card-body'>
-          <label class="name-title">アイテム名</label>
-          <%= f.text_area :name, class:"form-control", placeholder:"", maxlength:"40" %>
+          <label class="label-title">アイテム名</label>
+          <%= f.text_area :name, class:"form-control item-name", placeholder:"", maxlength:"40" %>
         </div>
         <div class="form-group card-body">
-          <label class="count-title">数量</label>
+          <label class="label-title">数量</label>
+          <div class="btn-wrapper">
+           <button class="btn" id="down">－</button>
           <%= f.number_field :count, class:"form-control item-count", placeholder:"" %>
+          <button class="btn" id="up">＋</button>
         </div>
-
+</div>
           <%= f.submit "登録する", class:"btn" %>
       </div>
 
@@ -28,16 +31,16 @@
         <div class="card-body">
           <label class="image-title">写真</label>
           <%if @item.image.present? %>
-              <div><%= image_tag @item.image %></div>
-            <div id="image-list"></div>
               <%= f.file_field :image, class:"image-form form-control" %>
             </div>
+            <div id="image-list"></div>
+              <div class="img-wrapper"><%= image_tag @item.image %></div>
           </label>
           <% else %>
-            <p>画像はありません。</p>
-            <div id="image-list"></div>
               <%= f.file_field :image, class:"image-form form-control" %>
             </div>
+            <div id="image-list"></div>
+            <p>画像はありません。</p>
           <% end %>
         </div>
 
@@ -67,9 +70,12 @@
           
           <div class="link-list">
             <%= link_to '削除する', item_path(@item), method: :delete, class:'btn other-btn' %>
-            <%= f.submit "登録する", class:"btn" %>
+            <%= f.submit "登録する", class:"btn register-btn" %>
             <%= link_to '詳細ページ', item_path(@item), method: :get, class: "btn other-btn" %>
           </div>
       </div>
     <% end %>
   </div>
+
+<%= javascript_pack_tag 'count' %>
+<%= javascript_pack_tag 'preview' %>
