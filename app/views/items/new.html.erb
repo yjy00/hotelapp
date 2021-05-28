@@ -16,8 +16,12 @@
         </div>
         <div class="form-group">
           <label class="count-title">数量</label>
-          <%= f.number_field :count, class:"form-control small item-count", placeholder:"" %>
-        </div>
+        <div class="btn-wrapper">
+           <button class="btn" id="down">－</button>
+          <%= f.number_field :count, class:"form-control item-count", placeholder:"" %>
+          <button class="btn" id="up">＋</button>
+          </div>
+          </div>
 
         <div class="form-group">
           <label class="category-title">カテゴリー</label>
@@ -36,12 +40,12 @@
 
         <div class='form-group image-form'>
           <label class="image-title">写真</label>
-          <%= f.file_field :image, class:"form-control" %>
+          <%= f.file_field :image, class:"form-control form-image" %>
         </div>
 
          <div id="image-list"></div>
 
-        <div class="btn-wrapper">
+        <div class="btn-wrapper-bottom">
           <%= f.submit "登録する", class:"btn" %>
         </div>
         
@@ -49,3 +53,7 @@
 
   </div>
 </div>
+
+
+<%= javascript_pack_tag 'count' %>
+<%= javascript_pack_tag 'preview' %>
