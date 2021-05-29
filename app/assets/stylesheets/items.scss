@@ -197,29 +197,41 @@
   @include make-form;
   text-align: center;
   height: auto;
-.title{
+  .title{
     margin-bottom: $outer-big;
   }
   .basic-table{
     margin: 0 auto;
     width: 100%;
   }
+  tr{
+    display: flex;
+  }
   .detail-item {
     background-color: #eee;
     border: 1px solid #dedede;
     font-size: 1rem;
     text-align: center;
-    width: 15vw;
-    min-height: 21px;
+    width: 22%;
+    line-height: 62px;
   }
   .detail-value {
     padding: 20px;
     border: 1px solid #dedede;
     font-size: 1rem;
-    min-height: 21px;
-    width: 45vw;
+    width: 54vw;
+    overflow-wrap: break-word
+  }
+  .detail-content{
+    width: 53.6vw;
+  }
+  .detail{
+    min-height: 62px;
   }
   .image-title{
+    line-height: 400px;
+  }
+  .detail-image{
     line-height: 400px;
   }
   img{
@@ -238,9 +250,6 @@
 @media (max-width: 767px){
   .item-show-container-inner{
     @include make-sm-form;
-    tr{
-      display: flex;
-    }
     .detail-item{
       display: block;
       width: 32%;
