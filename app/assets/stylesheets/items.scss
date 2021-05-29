@@ -102,9 +102,6 @@
       .image{
         width: 50%;
         height: 380px;
-        .image-title{
-          margin-bottom: $outer;
-        }
         p{
           text-align: center;
           line-height: 220px;
@@ -246,16 +243,20 @@
     }
     .detail-item{
       display: block;
-      width: 20vw;
+      width: 32%;
       padding: 20px;
     }
     .detail-value{
-      width: 45vw;
+      width: 68%;
       display: block;
       padding: 20px
     }
+    .image-title{
+      line-height: 300px;
+    }
     .detail-image{
-      height: 40vh;
+      height: 342px;
+      line-height: 300px;
     }
   }
 }
@@ -332,9 +333,6 @@
     }
   }
 }
-
-
-
 
 .item-count{
   font-size: 1.2rem;
