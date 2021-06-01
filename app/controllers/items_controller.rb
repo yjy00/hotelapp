@@ -3,6 +3,10 @@
 class ItemsController < ApplicationController
   before_action :get_item, only: %i(edit show update destroy)
 
+  def index
+    @items = Item.order('updated_at DESC')
+  end
+
   def new
     @item = Item.new
   end
