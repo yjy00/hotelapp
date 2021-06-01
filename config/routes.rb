@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   resources :orders,             only: :index
   resources :kitchen_orders,     only: :index
   resources :people_managements, only: %i(edit update)
-  resources :items,              only: %i(new create edit show update destroy)
+  resources :items,              only: %i(index new create edit show update destroy)
   resources :usage_of_apps, only: :index
 
   get 'search' => 'foods#search'
+  get 'bevsearch' => 'beverages#search'
 end
