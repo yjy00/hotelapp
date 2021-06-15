@@ -1,4 +1,4 @@
 <%= form_with model: @item, url: search_path, method: :get, class: "category-sort-form", local: true do |form| %>
-  <%= form.select :category, [ ['カテゴリーで絞る', '---'], ['前菜', 'appetiser'], ['メイン', 'maindish'], ['フルーツ', 'fruit'], ['サラダ', 'salad'], ['デザート', 'dessert'], ['バーメニュー', 'barmenu'] ] %>
-  <%= form.submit "選択する", class:"btn" %>
+  <%= form.select :category, [ ['カテゴリーで検索', '---'], ['全種類', 'all-food'], ['前菜', 'appetiser'], ['メイン', 'maindish'], ['フルーツ', 'fruit'], ['サラダ', 'salad'], ['デザート', 'dessert'], ['バーメニュー', 'barmenu'] ] %>
+  <%= form.submit "検索する", class:"btn" %>
 <% end %>
