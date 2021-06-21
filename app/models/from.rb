@@ -4,7 +4,7 @@ class From < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: 'ホール' },
-    { id: 3, name: 'キッチン' }
+    { id: 3, name: 'キッチン・洗い場' }
 
   ]
 
