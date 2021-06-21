@@ -17,7 +17,11 @@ class Item < ApplicationRecord
   def self.sort(selection)
     case selection
     when '---'
-      Item.where(category_id: 2..7).order('updated_at DESC')
+      Item.where(category_id: 0).order('updated_at DESC')
+    when 'all-food'
+      Item.where(category_id: 1..7).order('updated_at DESC')
+    when 'all-bev'
+      Item.where(category_id: 8..9).order('updated_at DESC')
     when 'appetiser'
       Item.where(category_id: 2).order('updated_at DESC')
     when 'maindish'
@@ -30,6 +34,10 @@ class Item < ApplicationRecord
       Item.where(category_id: 6).order('updated_at DESC')
     when 'barmenu'
       Item.where(category_id: 7).order('updated_at DESC')
+    when 'alcohol'
+      Item.where(category_id: 8).order('updated_at DESC')
+    when 'other'
+      Item.where(category_id: 9).order('updated_at DESC')
     end
   end
 end

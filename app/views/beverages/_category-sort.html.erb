@@ -1,0 +1,4 @@
+<%= form_with model: @item, url: bevsearch_path, method: :get, class: "category-sort-form", local: true do |form| %>
+  <%= form.select :category, [['カテゴリーで検索', '---'], ['全種類', 'all-bev'], ['アルコール', 'alcohol'], ['その他飲み物', 'other']] %>
+  <%= form.submit "検索する", class:"btn" %>
+<% end %>
