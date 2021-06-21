@@ -7,7 +7,10 @@ module Users
     before_action :check_guest, only: %i(destroy update)
 
     def check_guest
-      redirect_to edit_user_registration_path if resource.email == 'sheroton.fb@sheroton.com'
+      if resource.email == 'sheroton.fb@sheroton.com'
+        flash.now[:alert] = 'ゲストユーザーは更新・削除できません。'
+        render :edit
+      end
     end
 
     def after_sign_up_path_for(_resource)
