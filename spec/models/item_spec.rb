@@ -7,8 +7,6 @@ RSpec.describe Item, type: :model do
     describe '#create' do
       before do
         @item = build(:item)
-        # 前のアプリを参考に書いたが、これをコメントアウトを外すとエラーになる
-        # @item.image = fixture_file_upload('public/images/RSpec.image.png')
       end
 
       context '登録されること' do
