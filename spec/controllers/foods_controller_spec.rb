@@ -10,7 +10,10 @@ describe FoodsController, type: :controller do
 #       # get :index
 #       # expect(assigns(:items)).to match(items.sort{ |a, b| b.created_at <=> a.created_at } )
 #     end
-#   end
+  #   end
+    before do
+      @user = build(:user)
+    end
 
   it 'index.html.erbに遷移すること' do
     get :index
